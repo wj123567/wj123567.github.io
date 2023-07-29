@@ -125,9 +125,6 @@ p{
         display: initial;
     }
     
-    /* .navbar img{
-        display: none;
-    } */
     .navbar .list{
         position: absolute;
         top:100%; left:0; right:0;
@@ -152,6 +149,10 @@ p{
 
     #menu-bar:checked ~ .list{
         display: initial;
+    }
+
+    .navbar button{
+        width: 75px;
     }
 
     
