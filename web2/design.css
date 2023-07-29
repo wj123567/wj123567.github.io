@@ -100,9 +100,9 @@ nav{
 
 .navbar button a{
     text-decoration: none;
-    color: black;
+    color: hsl(266, 39%, 17%);
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -166,7 +166,7 @@ p{
     }
 
     .navbar button a{
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
 
