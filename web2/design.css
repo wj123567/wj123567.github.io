@@ -152,8 +152,15 @@ p{
     }
 
     .navbar button{
-        width: 75px;
+        width: 65px;
+        margin-right: 2px;
+
     }
+
+    .navbar button a{
+        font-size: 0.8em;
+    }
+
 
     
 }
