@@ -169,6 +169,13 @@ nav{
         font-size: 0.8em;
     }
 
+    .register{
+        width: 30px;
+        overflow: scroll;
+        margin-top: 50%;
+      
+    }
+
     
 }
 
