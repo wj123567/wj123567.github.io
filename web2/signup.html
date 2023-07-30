@@ -55,7 +55,7 @@
                 </div>
                 <div class="button-field">
                     <button type="button"id="signup2">Sign Up</button>
-                    <button type="button" id="login2"class="disable">Login</button>
+                    <button type="button" id="login2">Login</button>
 
                 </div>
             </form>
@@ -71,17 +71,17 @@ let forgetpass = document.getElementById("forgetpass");
 login.onclick = function(){
     username.style.maxHeight ="0";
     title.innerHTML ="Login";
-    signup2.classList.add("disable");
-    login2.classList.remove("disable")
-    forgetpass.style.visibility ="visible"
-}
+    forgetpass.style.visibility ="visible";
+    signup2.style.display ="none";
+    login2.style.display="block";
+}   
 
 signup.onclick = function(){
     username.style.maxHeight ="60px";
     title.innerHTML ="Sign Up";
-    signup2.classList.remove("disable");
-    login2.classList.add("disable")
-    forgetpass.style.visibility ="hidden"
+    forgetpass.style.visibility ="hidden";
+    signup2.style.display ="block";
+    login2.style.display="none";
 }
 </script>
         

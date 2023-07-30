@@ -249,7 +249,7 @@ nav{
 .register .button-field{
     width: 93%;
     display:flex;
-    justify-content: space-between;
+    justify-content: right;
     margin-left: 15px;
 }
 
@@ -262,7 +262,6 @@ nav{
     outline: 0;
     border: 0;
     cursor: pointer;
-    transition: background-color 0.5s;
 }
 
 .register .button-field button:hover{
@@ -274,14 +273,7 @@ nav{
     height: 280px;
 }
 
-.register .button-field button.disable{
-    background-color:rgb(163, 178, 181);
-    color:rgb(41, 26, 61) ;
-
-}
-
-.register .button-field button.disable:hover{
-    background-color:rgb(199, 217, 222);
-
+#login2{
+    display: none;
 }
 
