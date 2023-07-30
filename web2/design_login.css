@@ -252,15 +252,18 @@ nav{
     text-decoration: underline;
 }
 
-.register .button-field{
-    width: 93%;
-    display:flex;
-    justify-content: right;
-    margin-left: 15px;
+#username{
+    display:none;
 }
 
-.register .button-field button{
-    flex-basis: 48%;
+.register .button-field{
+    width: 93%;
+    display:block;
+    margin-left: 15px;
+    
+}
+
+.register .button-field input{
     background-color:rgb(41, 26, 61);
     color:hwb(6 45% 9%);
     height: 40px;
@@ -270,20 +273,19 @@ nav{
     cursor: pointer;
 }
 
-.register .button-field button:hover{
+.register .button-field input:hover{
     background-color:rgb(68, 42, 102);
-}
-
-
-.input-group{
-    height: 280px;
-}
-
-#username{
-    display:none;
 }
 
 #signup2{
     display: none;
 }
+
+.input-group{
+    height: 280px;
+}
+
+
+
+
 
