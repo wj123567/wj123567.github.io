@@ -88,7 +88,7 @@ nav{
     display:block;
 }
 
-/*sigup */
+/* login*/
 .navbar button{
     float:right;
     background-color: hsl(332, 66%, 55%);
@@ -169,7 +169,6 @@ nav{
         font-size: 0.8em;
     }
 
-
     
 }
 
@@ -239,7 +238,7 @@ nav{
 
 .register a{
     text-decoration: none;
-    visibility:hidden;
+    visibility:visible;
 }
 
 .register a:hover{
@@ -255,8 +254,8 @@ nav{
 
 .register .button-field button{
     flex-basis: 48%;
-    background-color:rgb(41, 26, 61);
-    color:hwb(6 45% 9%);
+    background-color:rgb(163, 178, 181);
+    color:rgb(41, 26, 61) ;
     height: 40px;
     border-radius: 20px;
     outline: 0;
@@ -266,7 +265,7 @@ nav{
 }
 
 .register .button-field button:hover{
-    background-color:rgb(68, 42, 102);
+    background-color:rgb(199, 217, 222);
 }
 
 
@@ -275,13 +274,16 @@ nav{
 }
 
 .register .button-field button.disable{
-    background-color:rgb(163, 178, 181);
-    color:rgb(41, 26, 61) ;
+    background-color:rgb(41, 26, 61);
+    color:hwb(6 45% 9%);
 
 }
 
 .register .button-field button.disable:hover{
-    background-color:rgb(199, 217, 222);
+    background-color:rgb(68, 42, 102);
+}
 
+#username{
+    display:none;
 }
 

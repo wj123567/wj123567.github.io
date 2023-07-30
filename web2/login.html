@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
         <title>GamerHub</title>
-        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="design_login.css">
         <link rel="icon" type="image/x-icon" href="./image/favicon.png">
     </head>
 
@@ -35,7 +35,7 @@
 
         
         <div class="register">
-            <h1 id="title">Sign Up</h1>
+            <h1 id="title">Login</h1>
             <form action="home.html">
                 <div class="input-group"> 
                     <div class="input-field" id="username">
@@ -71,17 +71,18 @@ let forgetpass = document.getElementById("forgetpass");
 login.onclick = function(){
     username.style.maxHeight ="0";
     title.innerHTML ="Login";
-    signup2.classList.add("disable");
-    login2.classList.remove("disable")
-    forgetpass.style.visibility ="visible"
+    signup2.classList.remove("disable");
+    login2.classList.add("disable");
+    forgetpass.style.visibility ="visible";
 }
 
 signup.onclick = function(){
     username.style.maxHeight ="60px";
     title.innerHTML ="Sign Up";
-    signup2.classList.remove("disable");
-    login2.classList.add("disable")
-    forgetpass.style.visibility ="hidden"
+    signup2.classList.add("disable");
+    login2.classList.remove("disable");
+    forgetpass.style.visibility ="hidden";
+    username.style.display ="flex";
 }
 </script>
         
