@@ -253,7 +253,7 @@ nav{
 }
 
 #username{
-    display:none;
+    max-height: 0px;
 }
 
 .register .button-field{
@@ -283,6 +283,7 @@ nav{
 .input-group{
     height: 280px;
 }
+
 
 
 
