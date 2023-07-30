@@ -88,7 +88,7 @@ nav{
     display:block;
 }
 
-/*sigup */
+/* login*/
 .navbar button{
     float:right;
     background-color: hsl(332, 66%, 55%);
@@ -174,8 +174,7 @@ nav{
         overflow: scroll;
         margin-top: 50%;
       
-    }   
-
+    }
 
     
 }
@@ -244,7 +243,7 @@ nav{
     color: hsl(266, 39%, 17%);
 }
 
-.register a{
+#forgetpass{
     text-decoration: none;
     visibility:hidden;
 }
@@ -253,10 +252,10 @@ nav{
     text-decoration: underline;
 }
 
+
 .register .button-field{
     width: 93%;
     display:block;
-    justify-content: right;
     margin-left: 15px;
 }
 
@@ -274,12 +273,15 @@ nav{
     background-color:rgb(68, 42, 102);
 }
 
+#login2{
+    display: none;
+}
 
 .input-group{
     height: 280px;
 }
 
-#login2{
-    display: none;
-}
+
+
+
 
