@@ -7,6 +7,7 @@
         <title>GamerHub</title>
         <link rel="stylesheet" href="design.css">
         <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
 
     <body>
@@ -39,17 +40,17 @@
             <form action="#" method="post">
                 <div class="input-group"> 
                     <div class="input-field" id="username">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
-                       <input type="text" placeholder="Username"minlength="6" maxlength="20">
+                        <i class="fa-solid fa-user"></i>
+                       <input type="text" placeholder="Username"minlength="6" maxlength="20" id="userplaceholder" required> 
                     </div>
                     <div class="input-field">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                        <input type="email" placeholder="Email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" id="emailplaceholder" required>
                     </div>
 
                     <div class="input-field">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H392.6c-5.4-9.4-8.6-20.3-8.6-32V352c0-2.1 .1-4.2 .3-6.3c-31-26-71-41.7-114.6-41.7H178.3zM528 240c17.7 0 32 14.3 32 32v48H496V272c0-17.7 14.3-32 32-32zm-80 32v48c-17.7 0-32 14.3-32 32V480c0 17.7 14.3 32 32 32H608c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32V272c0-44.2-35.8-80-80-80s-80 35.8-80 80z"/></svg>
-                        <input type="password" placeholder="Password"minlength="6" maxlength="20" required>
+                        <i class="fa-solid fa-user-lock"></i>
+                        <input type="password" placeholder="Password"minlength="6" maxlength="20" id="passplaceholder" required>
                     </div>
                 <a id="forgetpass" href="#"><p>Forgot password?</p></a>
                 </div>
@@ -67,6 +68,11 @@ let login = document.getElementById("login");
 let username = document.getElementById("username");
 let title = document.getElementById("title");
 let forgetpass = document.getElementById("forgetpass");
+let userplaceholder =document.getElementById("userplaceholder");
+let emailplaceholder =document.getElementById("emailplaceholder");
+let passplaceholder =document.getElementById("passplaceholder")
+
+
 
 login.onclick = function(){
     username.style.maxHeight ="0px";
@@ -74,7 +80,12 @@ login.onclick = function(){
     forgetpass.style.visibility ="visible";
     signup2.style.display ="none";
     login2.style.display="block";
-    username.removeAttribute="required";
+    userplaceholder.removeAttribute('required');
+    userplaceholder.value = "";
+    passplaceholder.value = "";
+    emailplaceholder.value = "";
+    
+    
 }
 
 signup.onclick = function(){
@@ -84,7 +95,11 @@ signup.onclick = function(){
     username.style.display ="flex";
     signup2.style.display ="block";
     login2.style.display="none";
-    username.setAttr('required', '');
+    userplaceholder.setAttribute('required', '');
+    userplaceholder.value = "";
+    passplaceholder.value = "";
+    emailplaceholder.value = "";
+    
 }
 </script>
         

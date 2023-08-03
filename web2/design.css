@@ -232,7 +232,7 @@ nav{
     padding: 18px 15px;
 }
 
-.register svg{
+.register i{
     margin-left: 15px;
     color: hsl(266, 39%, 17%);
 }
@@ -267,10 +267,11 @@ nav{
     background-color:rgb(41, 26, 61);
     color:hwb(6 45% 9%);
     height: 40px;
-    border-radius: 20px;
+    border-radius: 25px;
     outline: 0;
     border: 0;
     cursor: pointer;
+    padding-bottom: 27px;
 }
 
 .register .button-field input:hover{
