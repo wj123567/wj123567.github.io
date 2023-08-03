@@ -56,8 +56,8 @@
                 <a id="forgetpass" href="#"><p>Forgot password?</p></a>
                 </div>
                 <div class="button-field">
-                   <a href="#"><input type="submit" id="signup2" value="Sign Up"></a> 
-                    <a href="#"><input type="submit" id="login2" value="Login" ></a>
+                   <input type="submit" id="signup2" value="Sign Up">
+                    <input type="submit" id="login2" value="Login" >
 
                 </div>
             </form>
@@ -131,11 +131,11 @@ signup.onclick = function(){
      
     //----- New Registration code start	  
 	  document.getElementById("signup2").addEventListener("click", function() {
-        var userplaceholder =  document.getElementById("userplaceholder").value;
+          var userplaceholder =  document.getElementById("userplaceholder").value;
 		  var emailplaceholder =  document.getElementById("emailplaceholder").value;
 		  var passplaceholder = document.getElementById("passplaceholder").value;
 		  //For new registration
-		  createUserWithEmailAndPassword(auth, email, password)
+		  createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
 		  .then((userCredential) => {
 		    // Signed in 
 		    const user = userCredential.user;
@@ -158,13 +158,15 @@ signup.onclick = function(){
 		  var email =  document.getElementById("emailplaceholder").value;
 		  var password = document.getElementById("passplaceholder").value;
 
-		  signInWithEmailAndPassword(auth, email, password)
+		  signInWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
 		  .then((userCredential) => {
 		    // Signed in 
 		    const user = userCredential.user;
 		    console.log(user);
 		    alert(user.email+" Login successfully!!!");
 		    document.getElementById('logout').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
 		    // ...
 		  })
 		  .catch((error) => {
@@ -183,6 +185,8 @@ signup.onclick = function(){
 			  console.log('Sign-out successful.');
 			  alert('Sign-out successful.');
 			  document.getElementById('logout').style.display = 'none';
+              document.getElementById('signup').style.display = 'block';
+            document.getElementById('login').style.display = 'block';
 			}).catch((error) => {
 			  // An error happened.
 			  console.log('An error happened.');

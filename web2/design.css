@@ -90,6 +90,7 @@ nav{
 
 /* login*/
 .navbar button{
+    display: block;
     float:right;
     background-color: hsl(332, 66%, 55%);
     margin-top: 10px;
