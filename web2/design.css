@@ -14,7 +14,7 @@
 
 body{
     margin: 0;
-    background-color: #44318D;
+    background-color: hsl(252, 48%, 37%);
 }
 
 .logo{
@@ -122,6 +122,23 @@ nav{
     display: none;
     float: left;
     padding: 17px;
+}
+
+/* footer */
+footer{
+    background-color: hsl(266, 39%, 17%);
+    border: 2px solid black;
+    margin-top: 5px;
+}
+footer img{
+    width: 10%;
+    padding: 10px 10px;
+    display: inline;
+}
+
+footer ul li{
+    color:white ;
+    text-align: left;
 }
 
 @media(max-width:991px){
@@ -264,18 +281,21 @@ nav{
     margin-right: auto;
 }
 
-.register .button-field input{
+.register .button-field button{
     background-color:rgb(41, 26, 61);
-    color:hwb(6 45% 9%);
+    width: 100%;
     height: 40px;
     border-radius: 25px;
     outline: 0;
     border: 0;
     cursor: pointer;
-    padding-bottom: 27px;
+}
+.register .button-field button a{
+    color:hwb(6 45% 9%);
+    text-decoration: none;
 }
 
-.register .button-field input:hover{
+.register .button-field button:hover{
     background-color:rgb(68, 42, 102);
 }
 

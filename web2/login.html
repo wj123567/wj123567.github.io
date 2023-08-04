@@ -56,8 +56,8 @@
                 <a id="forgetpass" href="#"><p>Forgot password?</p></a>
                 </div>
                 <div class="button-field">
-                   <input type="submit" id="signup2" value="Sign Up">
-                    <input type="submit" id="login2" value="Login" >
+                  <button id="signup2"><a href="#">Sign Up</a></button>
+                  <button id="login2"><a href="#">Login</a></button>
 
                 </div>
             </form>
@@ -100,11 +100,11 @@ signup.onclick = function(){
 
 </script>
 </body>
-
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -126,73 +126,84 @@ signup.onclick = function(){
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   //initialize variable
-    const auth = getAuth();
+  const auth = getAuth();
+  const database =getDatabase(app);
 
      
     //----- New Registration code start	  
-	  document.getElementById("signup2").addEventListener("click", function() {
+      document.getElementById("signup2").addEventListener("click", function() {
           var userplaceholder =  document.getElementById("userplaceholder").value;
-		  var emailplaceholder =  document.getElementById("emailplaceholder").value;
-		  var passplaceholder = document.getElementById("passplaceholder").value;
-		  //For new registration
-		  createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
-		  .then((userCredential) => {
-		    // Signed in 
-		    const user = userCredential.user;
-		    console.log(user);
-		    alert("Registration successfully!!");
-		    // ...
-		  })
-		  .catch((error) => {
-		    const errorCode = error.code;
-		    const errorMessage = error.message;
-		    // ..
-		    console.log(errorMessage);
-		    alert(error);
-		  });		  		  
-	  });
-	  //----- End
+          var emailplaceholder =  document.getElementById("emailplaceholder").value;
+          var passplaceholder = document.getElementById("passplaceholder").value;
+          //For new registration
+          createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
+          .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
 
-	  //----- Login code start	  
-	  document.getElementById("login2").addEventListener("click", function() {
-		  var email =  document.getElementById("emailplaceholder").value;
-		  var password = document.getElementById("passplaceholder").value;
+            set(ref(database, 'users/' + user.uid),{
+              username: userplaceholder,
+              email: emailplaceholder
 
-		  signInWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
-		  .then((userCredential) => {
-		    // Signed in 
-		    const user = userCredential.user;
-		    console.log(user);
-		    alert(user.email+" Login successfully!!!");
-		    document.getElementById('logout').style.display = 'block';
+            })
+
+
+            console.log(user);
+            alert("Registration successfully!!");
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            console.log(errorMessage);
+            alert(error);
+          });		  		  
+      });
+      //----- End
+
+      //----- Login code start	  
+      document.getElementById("login2").addEventListener("click", function() {
+          var emailplaceholder =  document.getElementById("emailplaceholder").value;
+          var passplaceholder = document.getElementById("passplaceholder").value;
+
+          signInWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
+          .then((userCredential) => {
+            // Signed in 
+            
+            const user = userCredential.user;
+            console.log(user);
+            alert(user.email+" Login successfully!!!");
+            document.getElementById('logout').style.display = 'block';
             document.getElementById('signup').style.display = 'none';
             document.getElementById('login').style.display = 'none';
-		    // ...
-		  })
-		  .catch((error) => {
-		    const errorCode = error.code;
-		    const errorMessage = error.message;
-		    console.log(errorMessage);
-		    alert(errorMessage);
-		  });		  		  
-	  });
-	  //----- End
+            window.location.assign("index.html");
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+            alert(errorMessage);
+          });		  		  
+      });
+      //----- End
 
-	  //----- Logout code start	  
-	  document.getElementById("logout").addEventListener("click", function() {
-		  signOut(auth).then(() => {
-			  // Sign-out successful.
-			  console.log('Sign-out successful.');
-			  alert('Sign-out successful.');
-			  document.getElementById('logout').style.display = 'none';
-              document.getElementById('signup').style.display = 'block';
-            document.getElementById('login').style.display = 'block';
-			}).catch((error) => {
-			  // An error happened.
-			  console.log('An error happened.');
-			});		  		  
-	  });
-	  //----- End
+      //----- Logout code start	  
+      document.getElementById("logout").addEventListener("click", function() {
+          signOut(auth).then(() => {
+              // Sign-out successful.
+              console.log('Sign-out successful.');
+              alert('Sign-out successful.');
+              document.getElementById('logout').style.display = 'none';
+             document.getElementById('signup').style.display = 'block';
+             document.getElementById('login').style.display = 'block ';
+            }).catch((error) => {
+              // An error happened.
+              console.log('An error happened.');
+            });		  		  
+      });
+      //----- End
 
-	</script>
+    </script>
 </html>
