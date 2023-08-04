@@ -196,6 +196,12 @@ font-size: 1.2em;
     color: hwb(6 45% 9%);
 }
 
+.footer p{
+    color: white;
+    font-size: 0.6em;
+    float: right;
+}
+
 @media(max-width:991px){
 
     .navbar{
@@ -255,6 +261,7 @@ font-size: 1.2em;
         width: 30%;
         margin-bottom: 30px;
     }
+    
 
     
 }
