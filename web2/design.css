@@ -14,9 +14,16 @@
     display: none;
 }
 
+html{
+    height: 100%;
+
+}
 body{
+    position: relative;
+    min-height: 100%;
     margin: 0;
     background-color: hsl(252, 48%, 37%);
+    padding-bottom: 210px;
 }
 
 .logo{
@@ -53,6 +60,7 @@ nav{
     text-align: left;
     font-size: 0.9em;
     font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
 }
 
 .list>li>a:hover{
@@ -129,14 +137,13 @@ nav{
 /* footer */
 footer{
     background-color: hsl(266, 39%, 17%);
-    position: relative;  
+    position: absolute;  
     width: 100%;
     overflow: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     bottom: 0;
     left: 0;
     right: 0;
-    box-sizing: border-box;
 }
 
 footer .container{
@@ -262,6 +269,7 @@ font-size: 1.2em;
     .footer .footer-col{
         width: 30%;
         margin-bottom: 30px;
+        max-height: 205px;
     }
 
 }
