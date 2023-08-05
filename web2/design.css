@@ -397,6 +397,29 @@ font-size: 1.2em;
 }
 
 
+/* gamebuddy */
+
+.buddyContainer{
+    padding-top: 80px;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.buddyContainer .card{
+    width: 100%;
+    background-color: hsl(332, 66%, 55%);
+}
+
+.buddyContainer .buddyimg{
+    width: 100%;
+    height: 310px;
+}
+.buddyContainer .buddyimg img{
+    width: 100%;
+}
 
 
 
