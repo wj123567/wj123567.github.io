@@ -24,6 +24,7 @@ body{
     margin: 0;
     background-color: hsl(252, 48%, 37%);
     padding-bottom: 210px;
+    z-index: 1;
 }
 
 .logo{
@@ -41,6 +42,7 @@ nav{
     position: fixed;
     background-color: hsl(266, 39%, 17%);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 
@@ -81,7 +83,7 @@ nav{
     width: 150px;
     background: hsl(266, 39%, 17%);
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     display: none;
 
 }
