@@ -411,15 +411,49 @@ font-size: 1.2em;
 .buddyContainer .card{
     width: 100%;
     background-color: hsl(332, 66%, 55%);
+    border-radius: 10px;
 }
 
 .buddyContainer .buddyimg{
     width: 100%;
-    height: 310px;
+    overflow: hidden;
 }
 .buddyContainer .buddyimg img{
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
 }
 
+.buddyContainer .buddyimg:hover img{
+    transform: scale(1.2);
+}
 
+.buddyContainer .card .content .buddyname h2{
+    font-size: 1.3em;
+    color: hsl(266, 39%, 17%);
+    margin: 5px 3px;
+}
+
+.buddyContainer .card .content .buddyprice_rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 3px;
+}
+
+.buddyContainer .card .content .buddyprice_rating h3{
+    font-size: 1.1em;
+}
+
+.buddyContainer .card .content .buddyprice_rating .rating i{
+    color: rgba(255, 255, 0, 0.8);
+} 
+
+.buddyContainer .card .content .buddyprice_rating .rating i.gray{
+    color: hsla(0, 0%, 100%, 0.8);
+}
 
