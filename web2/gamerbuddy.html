@@ -34,12 +34,26 @@
 
         </nav>
 
-        <!-- <div class="test" style="border: 2px solid black; width: 300px; height: 700px; float: left; margin-top:95px; margin-right: 30px; display: flex;" >
-            
-        </div> -->
+        <div class="filter">
+            <ul class="filterContent">
+                <li class="list active" dataFilter="all"><a href="#">All</a></li>
+                <li class="list" dataFilter="fortnite"><a href="#">Fortnite</a></li>
+                <li class="list" dataFilter="valorant"><a href="#">Valorant</a></li>
+                <li class="list" dataFilter="csgo"><a href="#">CSGO</a></li>
+            </ul>
+            <div class="filterCondition">
+                <span>Sort: </span>
+                <select name="" id="">
+                    <option value="Default">Default</option>
+                    <option value="LowtoHigh">Low to High</option>
+                    <option value="HightoLow">High to Low</option>
+
+                </select>
+            </div>
+        </div>
 
         <div class="buddyContainer">
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -49,7 +63,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm15/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -61,8 +75,8 @@
                     </div>
             </div>
 
-            <div class="card valorant">
-                <div class="buddyimg " >
+            <div class="card valorant" data-item="valorant">
+                <div class="buddyimg ">
                 <img src="./image/buddy/ninja.png" alt=""/>
 
                 </div>
@@ -72,7 +86,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm20/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -84,7 +98,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -94,7 +108,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm10/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -106,7 +120,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -116,7 +130,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm25/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -128,7 +142,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant"> 
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -139,7 +153,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm35/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -151,7 +165,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -161,7 +175,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm15/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -173,7 +187,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -183,7 +197,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm50/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -195,7 +209,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -206,7 +220,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm10/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -218,7 +232,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -228,7 +242,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm17/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -240,7 +254,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -251,7 +265,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm8/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -263,7 +277,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -273,7 +287,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm28/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -285,7 +299,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -295,7 +309,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm38/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -307,7 +321,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -318,7 +332,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm40/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -330,29 +344,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
-                <div class="buddyimg">
-                <img src="./image/buddy/pokimane.png" alt=""/>
-                </div>
-                    <div class="content">
-                        <div class="buddyname">
-                            <h2>Pokimane</h2>
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
-                            <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star gray"></i>
-                        </div>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -362,7 +354,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm15/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -374,7 +366,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -385,7 +377,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm20/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -397,7 +389,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -407,7 +399,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm10/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -419,7 +411,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -429,7 +421,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm25/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -440,7 +432,8 @@
                         </div>
                     </div>
             </div>
-            <div class="card valorant">
+
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -451,7 +444,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm35/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -463,7 +456,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -473,7 +466,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm15/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -485,7 +478,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -495,7 +488,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm50/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -507,7 +500,7 @@
                     </div>
             </div>
 
-            <div class="card valorant">
+            <div class="card valorant" data-item="valorant">
                 <div class="buddyimg " >
                 <img src="./image/buddy/ninja.png" alt=""/>
 
@@ -518,7 +511,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm10/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -530,7 +523,7 @@
                     </div>
             </div>
 
-            <div class="card csgo">
+            <div class="card csgo" data-item="csgo">
                 <div class="buddyimg">
                 <img src="./image/buddy/pokimane.png" alt=""/>
                 </div>
@@ -540,7 +533,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm17/hour</h3>
                             <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -552,7 +545,7 @@
                     </div>
             </div>
 
-            <div class="card fortnite">
+            <div class="card fortnite" data-item="fortnite">
                 <div class="buddyimg">
                 <img src="./image/buddy/s1mple.png" alt=""/>
                 </div>
@@ -562,7 +555,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="buddyprice_rating">
-                            <h3>15/hour</h3>
+                            <h3>Rm50/hour</h3>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -570,19 +563,55 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="card valorant" data-item="valorant" >
+                <div class="buddyimg " >
+                <img src="./image/buddy/ninja.png" alt=""/>
+
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Ninja</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm10/hour</h3>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>        
+                        </div>
+                    </div>
+            </div>
+
+            <div class="card csgo" data-item="csgo">
+                <div class="buddyimg">
+                <img src="./image/buddy/pokimane.png" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Pokimane</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm17/hour</h3>
+                            <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star gray"></i>
+                        </div>
                         </div>
                     </div>
             </div>
         </div>
-
-        
-
-
-
-
-
-
-
 
 
         <footer class="footer">
@@ -628,6 +657,38 @@
             </div> 
             <p>Copyright &copy; 2023 GamerHub</p> 
         </footer>
+
+
+        <script>
+            let list = document.querySelectorAll(".list");
+            let card = document.querySelectorAll(".card");
+
+            for(let i = 0; i<list.length; i++){
+                list[i].addEventListener('click',function(){
+                    for(let j=0; j<list.length; j++){
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    let dataFilter= this.getAttribute('dataFilter');
+
+                    for(let k=0; k<card.length; k++){
+                        card[k].classList.remove('active');
+                        card[k].classList.add('hide');
+
+                        if(card[k].getAttribute("data-item") == dataFilter||dataFilter == "all"){
+                            card[k].classList.remove('hide');
+                            card[k].classList.add('active');
+                        }
+                    }
+
+                })
+
+            }
+
+
+
+        </script>
         
 
     </body>

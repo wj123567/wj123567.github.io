@@ -281,7 +281,6 @@ font-size: 1.2em;
     .footer img{
         display: none;
        }
-   
   }
 
 /* signup */
@@ -412,10 +411,16 @@ font-size: 1.2em;
     margin: auto;
 }
 
+
 .buddyContainer .card{
     width: 100%;
     background-color: hsl(332, 66%, 55%);
     border-radius: 10px;
+    display: block;
+}
+
+.buddyContainer .card.hide{
+    display: none;
 }
 
 .buddyContainer .buddyimg{
@@ -475,5 +480,60 @@ font-size: 1.2em;
 
 .buddyContainer .card .content .buddyprice_rating .rating i.gray{
     color: hsla(0, 0%, 100%, 0.8);
+}
+
+.filter{
+    width: 100%;
+    display: flex;
+    padding-top: 95px;
+    align-items: center;
+    border-bottom: 2px black solid;
+    justify-content: space-between;
+}
+
+.filter .filterContent li{
+    list-style-type: none;
+    padding: 20px;
+    margin: 10px;
+    float: left;
+    border-radius: 35px;
+}
+
+.filter .filterContent li a{
+    text-decoration: none;
+    color: white;
+}
+
+.filter .filterContent li.active{
+    background: rgb(0, 0, 0);
+}
+
+.filter .filterContent li.active a{
+    color: yellow;
+    font-weight: bold;
+}
+
+.filter .filterCondition{
+    padding: 20px;
+    height: 100px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.filter .filterCondition span{
+    color: black;
+}
+.filter .filterCondition select{
+    width: 150px;
+    padding: 20px 0px;
+    margin: 10px 0px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    cursor: pointer;
+}
+
+.filter .filterCondition select option{
+    background-color: hsl(266, 39%, 17%);
 }
 
