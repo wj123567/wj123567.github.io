@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filter Product</title>
+	<link rel="stylesheet" type="text/css" href="fontawesome-5/fontawesome-css/all.css">
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body>
+
+	<select id="sort-select">
+		<option value="default">Default</option>
+		<option value="low-to-high">Low to High</option>
+		<option value="high-to-low">High to Low</option>
+	</select>
+
+	<div class="buddyContainer">
+		<a href=""class="card ><div class="card fortnite" data-item="fortnite" data-price=" ">
+			<div class="buddyimg">
+			<img src="./image/buddy/s1mple.png" alt=""/>
+			</div>
+				<div class="content">
+					<div class="buddyname">
+						<h2>S1MPLE</h2>
+						<i class="fa-solid fa-heart"></i>
+					</div>
+					<div class="buddyprice_rating">
+						<div class="price">
+							<h3>Rm15/hour</h3>
+						</div>
+							<div class="rating">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+					</div>
+				</div>
+		</div></a>
+
+		<a href=""class="card ><div class="card valorant" data-item="valorant" data-price=" ">
+			<div class="buddyimg ">
+			<img src="./image/buddy/ninja.png" alt=""/>
+
+			</div>
+				<div class="content">
+					<div class="buddyname">
+						<h2>Ninja</h2>
+						<i class="fa-solid fa-heart"></i>
+					</div>
+					<div class="buddyprice_rating">
+						<div class="price">
+							<h3>Rm20/hour</h3>
+						</div>
+							<div class="rating">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>        
+					</div>
+				</div>
+		</div></a>
+
+		<a href="" class="card><div class="card csgo" data-item="csgo" data-price=" ">
+			<div class="buddyimg">
+			<img src="./image/buddy/pokimane.png" alt=""/>
+			</div>
+				<div class="content">
+					<div class="buddyname">
+						<h2>Pokimane</h2>
+						<i class="fa-solid fa-heart"></i>
+					</div>
+					<div class="buddyprice_rating">
+						<div class="price">
+							<h3>Rm10/hour</h3>
+						</div>
+						<div class="rating">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star gray"></i>
+					</div>
+					</div>
+				</div>
+		</div></a>
+
+		<a href="" class="card ><div class="fortnite" data-item="fortnite" data-price=" ">
+			<div class="buddyimg">
+			<img src="./image/buddy/s1mple.png" alt=""/>
+			</div>
+				<div class="content">
+					<div class="buddyname">
+						<h2>S1MPLE</h2>
+						<i class="fa-solid fa-heart"></i>
+					</div>
+					<div class="buddyprice_rating">
+						<div class="price">
+							<h3>Rm25/hour</h3>
+						</div>
+							<div class="rating">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+					</div>
+				</div>
+		</div></a>
+
+		<a href="" class="card ><div class="card valorant" data-item="valorant" data-price=" "> 
+			<div class="buddyimg " >
+			<img src="./image/buddy/ninja.png" alt=""/>
+
+			</div>
+				<div class="content">
+					<div class="buddyname">
+						<h2>Ninja</h2>
+						<i class="fa-solid fa-heart"></i>
+					</div>
+					<div class="buddyprice_rating">
+						<div class="price">
+							<h3>Rm35/hour</h3>
+						</div>
+							<div class="rating">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>        
+					</div>
+				</div>
+		</div></a>
+
+    <script>
+const buddyContainer = document.querySelector('.buddyContainer');
+const sortSelect = document.getElementById('sort-select');
+const cards = Array.from(document.querySelectorAll('.card'));
+
+sortSelect.addEventListener('change', () => {
+    const sortValue = sortSelect.value;
+    let sortedCards = [...cards]; // Create a copy of the cards array
+
+    if (sortValue === 'low-to-high') {
+        sortedCards.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price h3').textContent.substring(2));
+            const priceB = parseFloat(b.querySelector('.price h3').textContent.substring(2));
+            return priceA - priceB;
+        });
+    } else if (sortValue === 'high-to-low') {
+        sortedCards.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price h3').textContent.substring(2));
+            const priceB = parseFloat(b.querySelector('.price h3').textContent.substring(2));
+            return priceB - priceA;
+        });
+    }
+
+    // Remove all cards from the container
+    buddyContainer.innerHTML = '';
+
+    // Append the sorted cards to the container
+    sortedCards.forEach(card => {
+        buddyContainer.appendChild(card);
+    });
+});
+
+    </script>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/main.js"></script>

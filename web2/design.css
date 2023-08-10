@@ -411,12 +411,18 @@ font-size: 1.2em;
     margin: auto;
 }
 
+.buddyContainer>a{
+    text-decoration: none;
+    color: black;
+}
+
 
 .buddyContainer .card{
     width: 100%;
     background-color: hsl(332, 66%, 55%);
     border-radius: 10px;
     display: block;
+    cursor: pointer;
 }
 
 .buddyContainer .card.hide{
@@ -468,6 +474,7 @@ font-size: 1.2em;
     justify-content: space-between;
     align-items: center;
     margin: 5px 3px;
+    padding-bottom: 5px;
 }
 
 .buddyContainer .card .content .buddyprice_rating h3{
@@ -505,7 +512,7 @@ font-size: 1.2em;
 }
 
 .filter .filterContent li.active{
-    background: rgb(0, 0, 0);
+    background: hsl(266, 39%, 17%);
 }
 
 .filter .filterContent li.active a{
@@ -520,7 +527,7 @@ font-size: 1.2em;
     font-weight: bold;
 }
 .filter .filterCondition span{
-    color: black;
+    color: hsl(266, 39%, 17%);
 }
 .filter .filterCondition select{
     width: 150px;
