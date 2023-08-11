@@ -425,7 +425,7 @@ font-size: 1.2em;
     cursor: pointer;
 }
 
-.buddyContainer .card.hide{
+.buddyContainer .link.hide{
     display: none;
 }
 
@@ -492,9 +492,11 @@ font-size: 1.2em;
 .filter{
     width: 100%;
     display: flex;
+    max-height: 185px;
     padding-top: 95px;
     align-items: center;
     border-bottom: 2px black solid;
+    border-top: 2px black solid;
     justify-content: space-between;
 }
 
@@ -544,3 +546,47 @@ font-size: 1.2em;
     background-color: hsl(266, 39%, 17%);
 }
 
+.productContainer{
+    line-height: 1.5em;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 95px;
+}
+
+.productContainer img{
+    width: 100%;
+    display: block;
+}
+
+.productContainer .imagePreview{
+    overflow: hidden;
+}
+
+.productContainer .productImg{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.productContainer .productImg img{
+    min-width: 100%;
+}
+
+.productContainer .imageSelect{
+    display: flex;
+    max-width: 100%;
+}
+
+.productContainer .imageItem{
+    margin: 0.3em;
+}
+
+.imageItem:nth-child(1),
+.imageItem:nth-child(2),
+.imageItem:nth-child(3){
+    margin-right: 0;
+}
+
+.imageItem:hover{
+    opacity: 0.8;
+}
