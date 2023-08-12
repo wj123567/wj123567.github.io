@@ -279,6 +279,7 @@ font-size: 1.2em;
         display: flex;
         flex-flow: row wrap;
         max-width:100%;
+        padding-bottom: 400px;
     }
 
     .productContainer .allProductimg{
@@ -291,12 +292,20 @@ font-size: 1.2em;
         margin: 0 auto;
     }
 
+    .buddyRecommend{
+        padding-bottom: 20px;
+    }
+
 }
 
 @media(max-width: 574px){
     .footer img{
         display: none;
        }
+
+    .productContainer .productCard{
+        padding-bottom: 20px;
+    }
   }
 
 /* signup */
@@ -708,7 +717,7 @@ font-size: 1.2em;
     background-color: hsl(266, 39%, 17%);;
     border-radius: 5px;
     padding: 5px;
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .productDetail .productDec .decButton{
@@ -822,13 +831,14 @@ font-size: 1.2em;
 .productDetail .productPurchase input,
 .productDetail .productPurchase button{
     border: none;
-    border-radius: 15px;
+    border-radius: 8px;
     text-align: center;
     padding: 3px 7px;
     outline: none;
     margin-right: 5px;
     margin-bottom: 3px;
-    height: 25px;
+    height: 30px;
+    width: 70px;
 }
 
 .productDetail .productPurchase input{
@@ -845,4 +855,20 @@ font-size: 1.2em;
 
 .productDetail .productPurchase button:hover{
     background-color: hsl(332, 80%, 60%);
+}
+
+.buddyRecommend{
+    max-width: 1400px;
+    margin: auto;
+}
+.buddyRecommend h2{
+    font-size: 1.8em;
+    margin: 2px 5px;
+    color: white;
+
+}
+
+.buddyRecommend .buddyContainer{
+    padding-top: 10px;
+    margin: 2px auto;
 }
