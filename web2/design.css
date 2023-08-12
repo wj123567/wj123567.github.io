@@ -296,6 +296,12 @@ font-size: 1.2em;
         padding-bottom: 20px;
     }
 
+    .filter{
+        display: flex;
+        flex-flow:row wrap ;
+
+    }
+
 }
 
 @media(max-width: 574px){
@@ -305,6 +311,11 @@ font-size: 1.2em;
 
     .productContainer .productCard{
         padding-bottom: 20px;
+    }
+
+    .filter{
+        max-width: 100%;
+        min-height: 500px;
     }
   }
 
