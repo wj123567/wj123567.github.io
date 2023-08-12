@@ -36,39 +36,44 @@
 
         <div class="productContainer">
             <div class="productCard">
-                <div class="imagePreview">
-                    <div class="productImg">
-                        <img src="./image/buddy/ninja.png" alt=""/>
-                        <img src="./image/buddy/ninja2.png" alt=""/>
-                        <img src="./image/buddy/ninja3.png" alt=""/>
-                        <img src="./image/buddy/fortniteRank.png" alt=""/>
-                    </div>
-                </div>
-                <div class="imageSelect">
-                    <div class="imageItem">
-                        <a href="#" data-id = "1">
+                <!-- left -->
+                <div class="allProductimg">
+                    <div class="imagePreview">
+                        <div class="productImg">
                             <img src="./image/buddy/ninja.png" alt=""/>
-                        </a>
-                    </div>
-                    <div class="imageItem">
-                        <a href="#" data-id = "1">
                             <img src="./image/buddy/ninja2.png" alt=""/>
-                        </a>
-                    </div>
-                    <div class="imageItem">
-                        <a href="#" data-id = "1">
                             <img src="./image/buddy/ninja3.png" alt=""/>
-                        </a>
-                    </div>
-                    <div class="imageItem">
-                        <a href="#" data-id = "1">
                             <img src="./image/buddy/fortniteRank.png" alt=""/>
-                        </a>
+                        </div>
+                    </div>
+                    <div class="imageSelect">
+                        <div class="imageItem">
+                            <a href="#" data-id = "1">
+                                <img src="./image/buddy/ninja.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "2">
+                                <img src="./image/buddy/ninja2.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "3">
+                                <img src="./image/buddy/ninja3.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "4">
+                                <img src="./image/buddy/fortniteRank.png" alt=""/>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
+                
+                <!-- right -->
                 <div class="productDetail">
-                    <h2 class="product-name">Ninja</h2>
+                    <h2 class="productName">Ninja<button id="favouriteButton" class="favouriteButton">+ Favourite</button></h2>
                     <div class="productRating">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -83,7 +88,132 @@
                     </div>
 
                     <div class="productDec">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque nulla quis et, cupiditate sequi ratione delectus suscipit ipsa animi ullam expedita, mollitia facere voluptatibus beatae distinctio veniam quae consequuntur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reprehenderit similique illo labore aliquam illum enim harum eum deserunt minima omnis ex explicabo, voluptatem necessitatibus, culpa ad nemo cupiditate praesentium.</p>
+                        <div class="decButton">
+                        <button id="aboutbuddy" class="buddydec active">About Buddy <i class="fa-solid fa-circle-info"></i></button>
+                        <button id="skill" class="buddydec">Skill<i class="fa-solid fa-gamepad"></i></button>
+                        <button id="gift" class="buddydec">Gift<i class="fa-solid fa-gift"></i></button>
+                        </div>
+                        <div class="about" id="aboutdiv">
+                        <h3>About Buddy: </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque nulla quis et, cupiditate sequi ratione delectus suscipit ipsa animi ullam expedita, mollitia facere voluptatibus beatae distinctio veniam quae consequuntur?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reprehenderit similique illo labore aliquam illum enim harum eum deserunt minima omnis ex explicabo, voluptatem necessitatibus, culpa ad nemo cupiditate praesentium.</p>
+                        <audio controls>
+                            <source src="./audio/Bully.mp3" type="audio/mpeg">
+                        </audio>
+                        </div>                       
+                        <div class="skill" id="skilldiv">
+                        <h3>Skill: </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque nulla quis et, cupiditate sequi ratione delectus suscipit ipsa animi ullam expedita, mollitia facere voluptatibus beatae distinctio veniam quae consequuntur?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reprehenderit similique illo labore aliquam illum enim harum eum deserunt minima omnis ex explicabo, voluptatem necessitatibus, culpa ad nemo cupiditate praesentium.</p>
+                        </div>
+                        <div class="gift" id="giftdiv">
+                            <div class="giftImg">
+                                <div class="giftRow1">
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow2">
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow3">
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow4">
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/3d-rocket-icon-spaceship-icon_280599-71-removebg-preview.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
                     </div>
 
                     <div class="productPurchase">
@@ -142,6 +272,87 @@
             <p>Copyright &copy; 2023 GamerHub</p> 
         </footer>
         
+        <script>
+            //follow button
+            let favouriteButton = document.getElementById("favouriteButton");
+            let added = false;
 
+            favouriteButton.addEventListener('click', ()=>{
+                added = !added;
+
+                if(added){
+                    favouriteButton.textContent="Added";
+                    favouriteButton.style.background="hsl(332, 66%, 55%)"
+                }else{
+                    favouriteButton.textContent="+ Favourite"
+                    favouriteButton.style.background="hsl(266, 39%, 17%)"
+                }
+            })
+
+            //slide image
+            const imgs = document.querySelectorAll(".imageSelect a");// select all photo in a tag
+            const imgBtns = [...imgs];// put all the photo into array
+            let imgId = 1;// initialize the value
+
+
+            imgBtns.forEach((imgItem)=>{
+                imgItem.addEventListener('click',(event)=>{   // add click event listeners to imgItem
+                    event.preventDefault(); // prevent going to the image location
+                    imgId = imgItem.dataset.id;  // update the selected image from the data-id attribute
+                    slideImage(); // slide to the selected image
+                });
+
+            });
+
+            function slideImage(){ // function for slideImage
+                    // calculate the display width of a single image
+                const displayWidth = document.querySelector('.productImg img:first-child').clientWidth;
+                   // apply css transform to slide the image
+                document.querySelector('.productImg').style.transform =`translateX(${- (imgId - 1) * displayWidth}px)`;
+            }
+
+            // adjust image position base on the windwos size
+            window.addEventListener('resize', slideImage);
+
+            //switch between div
+
+            let aboutbuddy=document.getElementById("aboutbuddy");
+            let skill=document.getElementById("skill");
+            let gift=document.getElementById("gift");
+            let aboutdiv=document.getElementById("aboutdiv");
+            let skilldiv=document.getElementById("skilldiv");
+            let giftdiv=document.getElementById("giftdiv");
+
+            aboutbuddy.onclick=function(){
+                aboutdiv.style.display=("block");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.add('active');
+                skill.classList.remove('active');
+                gift.classList.remove('active');
+            }
+
+            skill.onclick=function(){
+                aboutdiv.style.display=("none");
+                skilldiv.style.display=("block");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.remove('active');
+                skill.classList.add('active');
+                gift.classList.remove('active');
+            }
+
+            gift.onclick=function(){
+                aboutdiv.style.display=("none");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("block");
+                aboutbuddy.classList.remove('active');
+                skill.classList.remove('active');
+                gift.classList.add('active');
+            }
+
+
+
+   
+        </script>
     </body>
 </html>

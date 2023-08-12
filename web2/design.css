@@ -275,6 +275,22 @@ font-size: 1.2em;
         max-height: 205px;
     }
 
+    .productContainer .productCard{
+        display: flex;
+        flex-flow: row wrap;
+        max-width:100%;
+    }
+
+    .productContainer .allProductimg{
+        align-content: center;
+        margin: 0 0 0 30px;
+    }
+
+    .productContainer .productDetail{
+        max-width:95%;
+        margin: 0 auto;
+    }
+
 }
 
 @media(max-width: 574px){
@@ -551,42 +567,282 @@ font-size: 1.2em;
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 95px;
+    padding-bottom: 100px;
+    max-height: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productContainer .productCard{
+    display: flex;
 }
 
 .productContainer img{
     width: 100%;
     display: block;
+    border-radius: 25px;
 }
 
-.productContainer .imagePreview{
+.productContainer .allProductimg{
+    display: flex;
+    flex: 3 1 400px;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-right: 30px;
+}
+
+.productContainer .allProductimg .imagePreview{
     overflow: hidden;
 }
 
-.productContainer .productImg{
+.productContainer .allProductimg .productImg{
     display: flex;
     width: 100%;
     transition: all 0.5s ease;
 }
 
-.productContainer .productImg img{
+.productContainer .allProductimg .productImg img{
     min-width: 100%;
 }
 
-.productContainer .imageSelect{
+.productContainer .allProductimg .imageSelect{
     display: flex;
-    max-width: 100%;
 }
 
-.productContainer .imageItem{
-    margin: 0.3em;
+.productContainer .allProductimg .imageSelect{
+    width: 100%;
+
 }
 
-.imageItem:nth-child(1),
-.imageItem:nth-child(2),
-.imageItem:nth-child(3){
+.productContainer .allProductimg .imageItem{
+    margin: 6px;
+}
+
+.productContainer .allProductimg .imageItem:nth-child(1),
+.productContainer .allProductimg .imageItem:nth-child(2),
+.productContainer .allProductimg .imageItem:nth-child(3){
     margin-right: 0;
 }
 
-.imageItem:hover{
+.productContainer .allProductimg .imageItem:hover{
     opacity: 0.8;
+}
+
+.productContainer .productDetail{
+    flex: 3 1 900px;
+    padding-top: 0;
+
+}
+
+.productDetail .productName{
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-weight: 800;
+    position: relative;
+    color: white;
+    margin: 10px 0;
+
+}
+
+.productDetail .favouriteButton {
+    color: white;
+    font-size: 9pt;
+    background: transparent;
+    border: 1px solid;
+    border-color: hsl(266, 39%, 17%);
+    background: hsl(266, 39%, 17%);
+    border-radius: 15px;
+    width: 85px;
+    height: 30px;
+    position: absolute;	 
+    cursor: pointer;
+    margin-left: 5px;	
+    transition: all ease-in-out 0.3s;	    
+  }
+
+.productDetail .favouriteButton:hover{
+    opacity: 0.9;
+  }
+
+.productDetail .productRating{
+    margin: 3px 0;
+}
+
+.productDetail .productRating i{
+    color: rgba(255, 255, 0, 0.86);
+}
+
+.productDetail .productRating i.gray{
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+.productDetail .productRating span{
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: white;
+}
+
+.productDetail .productPrice{
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: white;
+}
+
+.productDetail .productDec h3{
+    text-transform: capitalize;
+    color: white;
+    margin: 5px 0;
+}
+
+
+.productDetail .productDec p{
+    font-size: 1em;
+    margin: 5px 0;
+    color: white;
+}
+
+.productDetail .productDec{
+    background-color: hsl(266, 39%, 17%);;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 400px;
+}
+
+.productDetail .productDec .decButton{
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+.productDetail .productDec .buddydec{
+    color: white;
+    font-size: 0.85em;
+    background: hsl(332, 66%, 55%);
+    border: 1px solid;
+    border-color: hsl(266, 39%, 17%);
+    border-radius: 5px;
+    width: 120px;
+    height: 40px; 
+    cursor: pointer;
+    margin: 7px 5px;	
+    transition: all ease-in-out 0.3s;	
+}
+
+.productDetail .productDec .buddydec.active{
+    background-color: hsl(252, 48%, 37%);
+}
+
+.productDetail .productDec i{
+    margin-left: 4px;
+}
+
+
+.productDetail .productDec .about{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.productDetail .productDec .about audio{
+    margin: 40px 0;
+    width: 250px;
+    height: 40px;
+}
+
+.productDetail .productDec .skill{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.productDetail .productDec .gift{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.productDetail .productDec .gift img{
+    width: 35%;
+    margin:auto;
+}
+
+.productDetail .productDec .gift .giftImg{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.productDetail .productDec .gift .giftImg .present{
+    text-align: center;
+    line-height: 0.6;
+    font-size: 0.8em;
+    border-radius: 25px;
+    cursor: pointer;
+    min-height: 120px;
+}
+
+.productDetail .productDec .gift .giftImg .present:hover{
+    background-color:hsla(252, 51%, 44%, 0.729) ;
+}
+
+.productDetail .productDec .gift .giftImg .present:hover .presentText{
+    display: none;
+}
+
+.productDetail .productDec .gift .giftImg .present .purchasePresent{
+    margin: 5px auto;
+    display: none;
+    color: white;
+    font-size: 0.85em;
+    background: hsl(332, 66%, 55%);
+    border: 1px solid;
+    border-color: hsl(266, 39%, 17%);
+    border-radius: 5px;
+    width: 50px;
+    height: 20px; 
+    cursor: pointer;	
+    transition: all ease-in-out 0.2s;	
+}
+
+.productDetail .productDec .gift .giftImg .present .purchasePresent:hover{
+    background: hsl(332, 70%, 72%);
+}
+
+.productDetail .productDec .gift .giftImg .present:hover .purchasePresent{
+    display: block;
+}
+
+
+
+.productDetail .productPurchase{
+    margin: 10px 0;
+}
+
+.productDetail .productPurchase input,
+.productDetail .productPurchase button{
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 3px 7px;
+    outline: none;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    height: 25px;
+}
+
+.productDetail .productPurchase input{
+    width: 50px;
+}
+
+.productDetail .productPurchase button{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(332, 66%, 55%);
+    color: hsl(266, 39%, 17%);
+    font-weight: bold;
+}
+
+.productDetail .productPurchase button:hover{
+    background-color: hsl(332, 80%, 60%);
 }
