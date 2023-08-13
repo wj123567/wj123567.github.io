@@ -258,7 +258,7 @@ font-size: 1.2em;
     }
 
     .register{
-        overflow: scroll;     
+        max-width: 100%;
     }
 
     .footer{
@@ -292,10 +292,7 @@ font-size: 1.2em;
 .register{
     width: 100%;
     max-width: 550px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-right: auto;
+    margin: auto;
     background-color: hsl(332, 66%, 55%);
     padding: 70px 60px 70px;
     text-align: center;

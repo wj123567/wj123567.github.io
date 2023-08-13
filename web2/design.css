@@ -261,8 +261,9 @@ font-size: 1.2em;
     }
 
     .register{
-        overflow: scroll; 
+        max-width: 100%;
     }
+
     
     .footer{
         min-width: 100%;
@@ -297,8 +298,10 @@ font-size: 1.2em;
     }
 
     .filter{
-        display: flex;
-        flex-flow:row wrap ;
+        max-width: 100%;
+        min-height: 200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     }
 
@@ -315,7 +318,7 @@ font-size: 1.2em;
 
     .filter{
         max-width: 100%;
-        min-height: 500px;
+        min-height: 400px;
     }
   }
 
@@ -328,10 +331,7 @@ font-size: 1.2em;
 .register{
     width: 100%;
     max-width: 550px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-right: auto;
+    margin: auto;
     background-color: hsl(332, 66%, 55%);
     padding: 70px 60px 70px;
     text-align: center;
@@ -732,8 +732,9 @@ font-size: 1.2em;
 }
 
 .productDetail .productDec .decButton{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgba(233, 227, 227, 0.679);
     display: flex;
+    justify-content: space-between;
 }
 
 .productDetail .productDec .buddydec{
@@ -754,6 +755,13 @@ font-size: 1.2em;
     background-color: hsl(252, 48%, 37%);
 }
 
+.productDetail .productDec button.buddychat{
+    width: 70px;
+}
+
+.productDetail .productDec button.buddychat:hover{
+    background-color:hsl(332, 70%, 72%); 
+}
 .productDetail .productDec i{
     margin-left: 4px;
 }
@@ -769,6 +777,28 @@ font-size: 1.2em;
     margin: 40px 0;
     width: 250px;
     height: 40px;
+}
+
+.productDetail .productDec .comment{
+    width: 100%;
+    max-height: 350px;
+    height: auto;
+    display: none;
+    overflow:scroll;
+}
+
+.productDetail .productDec .comment i{
+    color: white;
+    font-size: 1.3em;
+}
+.productDetail .productDec .comment .usercomment span{
+    color: white;
+    margin-left: 3px;
+    font-size: 0.9em;
+
+}
+.productDetail .productDec .comment .usercomment{
+    margin-bottom: 30px;
 }
 
 .productDetail .productDec .skill{

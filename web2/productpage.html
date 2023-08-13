@@ -89,9 +89,13 @@
 
                     <div class="productDec">
                         <div class="decButton">
+                        <div>
                         <button id="aboutbuddy" class="buddydec active">About Buddy <i class="fa-solid fa-circle-info"></i></button>
+                        <button id="comment" class="buddydec">Comment<i class="fa-solid fa-comments"></i></button>
                         <button id="skill" class="buddydec">Skill<i class="fa-solid fa-gamepad"></i></button>
                         <button id="gift" class="buddydec">Gift<i class="fa-solid fa-gift"></i></button>
+                        </div>
+                        <button id="gift" class="buddydec buddychat">Chat<i class="fa-solid fa-comment"></i></button>
                         </div>
                         <div class="about" id="aboutdiv">
                         <h3>About Buddy: </h3>
@@ -100,6 +104,24 @@
                         <audio controls>
                             <source src="./audio/Bully.mp3" type="audio/mpeg">
                         </audio>
+                        </div>
+                        <div class="comment" id="commentdiv">
+                        <h3>Comment: </h3>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>PS5</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Hamburger</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>XxSuperMarketxX</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
                         </div>                       
                         <div class="skill" id="skilldiv">
                         <h3>Skill: </h3>
@@ -217,8 +239,8 @@
                     </div>
 
                     <div class="productPurchase">
-                        <input type="number" min="0" value="1">
-                        <button type="button" class="book">Buy</button>
+                        <input type="number" value="1" min="0" max="9">
+                        <button type="button" class="book">Order</button>
 
                     </div>
 
@@ -439,35 +461,54 @@
             //switch between div
 
             let aboutbuddy=document.getElementById("aboutbuddy");
+            let comment=document.getElementById("comment");
             let skill=document.getElementById("skill");
             let gift=document.getElementById("gift");
             let aboutdiv=document.getElementById("aboutdiv");
+            let commentdiv=document.getElementById("commentdiv");
             let skilldiv=document.getElementById("skilldiv");
             let giftdiv=document.getElementById("giftdiv");
 
             aboutbuddy.onclick=function(){
                 aboutdiv.style.display=("block");
+                commentdiv.style.display=("none");
                 skilldiv.style.display=("none");
                 giftdiv.style.display=("none");
                 aboutbuddy.classList.add('active');
+                comment.classList.remove('active');
+                skill.classList.remove('active');
+                gift.classList.remove('active');
+            }
+
+            comment.onclick=function(){
+                aboutdiv.style.display=("none");
+                commentdiv.style.display=("block");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.remove('active');
+                comment.classList.add('active');
                 skill.classList.remove('active');
                 gift.classList.remove('active');
             }
 
             skill.onclick=function(){
                 aboutdiv.style.display=("none");
+                commentdiv.style.display=("none");
                 skilldiv.style.display=("block");
                 giftdiv.style.display=("none");
                 aboutbuddy.classList.remove('active');
+                comment.classList.remove('active');
                 skill.classList.add('active');
                 gift.classList.remove('active');
             }
 
             gift.onclick=function(){
                 aboutdiv.style.display=("none");
+                commentdiv.style.display=("none");
                 skilldiv.style.display=("none");
                 giftdiv.style.display=("block");
                 aboutbuddy.classList.remove('active');
+                comment.classList.remove('active');
                 skill.classList.remove('active');
                 gift.classList.add('active');
             }
