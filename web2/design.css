@@ -319,6 +319,19 @@ font-size: 1.2em;
     .filter{
         max-width: 100%;
         min-height: 400px;
+        
+    }
+
+    .productDetail .productDec .buddydec{
+        max-width: 100px;
+    }
+
+    .productDetail .productDec .decButton2{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-gap:10px;
+        max-width: 210px;
+        margin-right: 6px;
     }
   }
 
