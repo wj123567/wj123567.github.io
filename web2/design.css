@@ -281,6 +281,7 @@ font-size: 1.2em;
         flex-flow: row wrap;
         max-width:100%;
         padding-bottom: 400px;
+        margin: 900px 0 0 0;
     }
 
     .productContainer .allProductimg{
@@ -295,6 +296,7 @@ font-size: 1.2em;
 
     .buddyRecommend{
         padding-bottom: 20px;
+        margin: 450px auto 0;
     }
 
     .filter{
@@ -314,6 +316,11 @@ font-size: 1.2em;
 
     .productContainer .productCard{
         padding-bottom: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .buddyRecommend{
+        margin: 0 auto;
     }
 
     .filter{
@@ -813,7 +820,6 @@ font-size: 1.2em;
 .productDetail .productDec .comment{
     width: 100%;
     max-height: 350px;
-    height: auto;
     display: none;
     overflow:scroll;
 }
@@ -840,8 +846,9 @@ font-size: 1.2em;
 
 .productDetail .productDec .gift{
     width: 100%;
-    height: auto;
+    max-height: 360px;
     display: none;
+    overflow: scroll;
 }
 
 .productDetail .productDec .gift img{
@@ -931,7 +938,7 @@ font-size: 1.2em;
 
 .buddyRecommend{
     max-width: 1400px;
-    margin: auto;
+    margin: 0 auto;
 }
 .buddyRecommend h2{
     font-size: 1.8em;
@@ -943,4 +950,13 @@ font-size: 1.2em;
 .buddyRecommend .buddyContainer{
     padding-top: 10px;
     margin: 2px auto;
+}
+
+/* search-bar from You */
+.right-section {
+    height: 60px;
+    display: flex;   
+    justify-content: end;
+    align-items: center;
+    right: 0;
 }
