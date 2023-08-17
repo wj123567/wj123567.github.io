@@ -445,7 +445,6 @@ font-size: 1.2em;
     transition: max-height 0.5s;
     overflow: hidden;
 }
-
 .register input{
     width: 100%;
     background-color: transparent;
