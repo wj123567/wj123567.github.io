@@ -32,7 +32,6 @@
       document.getElementById('logout').style.display = 'block';
       document.getElementById('signup').style.display = 'none';
       document.getElementById('login').style.display = 'none';
-
     }else{
       console.log('user logged out')
       document.getElementById('logout').style.display = 'none';
@@ -92,7 +91,7 @@
             const user = userCredential.user;
             console.log(user);
             alert(user.email+" Login successfully!!!");
-            // window.location.assign("index.html");
+            window.location.assign("index.html");
           })
           .catch((error) => {
             const errorCode = error.code;

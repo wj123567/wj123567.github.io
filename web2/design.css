@@ -320,7 +320,7 @@ font-size: 1.2em;
         display: flex;
         flex-flow: row wrap;
         max-width:100%;
-        margin: 1600px 0 1200px 0;
+        margin: 700px 0 0 0;
     }
 
     .productContainer .allProductimg{
@@ -334,7 +334,9 @@ font-size: 1.2em;
     }
 
     .buddyRecommend{
+        position: relative;
         padding-bottom: 20px;
+        padding-top: 600px;
         margin: 0 auto;
     }
 
@@ -360,6 +362,7 @@ font-size: 1.2em;
 
     .buddyRecommend{
         margin: 0 auto;
+        padding: 0 0 20px 0;
     }
 
     .filter{
@@ -991,11 +994,3 @@ font-size: 1.2em;
     margin: 2px auto;
 }
 
-/* search-bar from You */
-.right-section {
-    height: 60px;
-    display: flex;   
-    justify-content: end;
-    align-items: center;
-    right: 0;
-}
