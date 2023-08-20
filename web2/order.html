@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
+        <title>GamerHub</title>
+        <link rel="stylesheet" href="design.css">
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script type="module" src="firebase.js"></script>
+    </head>
+
+    <body>
+
+        
+         <nav class="navbar">
+            <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
+            <button class=button id="login"><a href="login.html">Login</a></button>
+            <div class="userLogin" id="logout">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="userName">User
+                    <ul class="dropdown">
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="#">Topup</a></li>
+                        <li><a id="logout2">Logout</a></li>
+                    </ul>
+                </span>
+            </div>
+            <input type="checkbox" id="menu-bar"\>
+            <label for="menu-bar">&#9776;</label>
+            <ul class="list"> 
+             <li><a href="index.html">Home</a></li>  
+             <li>
+                <a>Services &#x25BC;</a>
+             <ul class="dropdown">
+                <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                <li><a href="gamerboosting.html">Game Boosting</a></li>
+            </ul>
+            </li>
+             <li><a href="index.html">About Us</a></li>                   
+            </ul>
+
+        </nav>
+
+        <div class="orderContainer">
+            <h1>Order</h1>
+            <div class="orderBuddy">
+                <ul class="orderTitle">
+                    <li>Buddy</li>
+                    <li>Name</li>
+                    <li>Skill</li>
+                    <li>Price</li>
+                    <li>Quantity</li>
+                    <li>Time</li>
+                    <li>Total</li>
+                </ul>
+                <div class="orderDetail">
+                    <div class="orderDetail2">
+                        <img src="./image/buddy/ninja.png" alt="">
+                    </div>
+                    <div class="orderDetail2">
+                        <P>Ninja</P>
+                    </div>
+                    <div class="orderDetail2">
+                        <P>Fortnite</P>
+                    </div>
+                    <div class="orderDetail2">
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="singleprice">20/hour</p></div>
+                    </div>
+                    <div class="orderDetail2">
+                        <input id="orderQuantity" type="number" min="0" max="20" value="1">
+                    </div>
+                    <div class="orderDetail2">
+                        <input type="datetime-local" id="start-date">
+                    </div>
+                    <div class="orderDetail2">
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="totalprice">20</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orderBottom">
+                <div class="remark">
+                    <h3>Remark<h3>
+                    <textarea name="comment"placeholder="remark"></textarea>
+                </div>
+                <div class="confirmOrder">
+                    <div class="confirmButton">
+                    <button>Confirm Purchase</button>
+                    <button>Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+        
+
+        <footer class="footer">
+            <div class="container">
+                <a href="index.html"><img src="./image/logo.png" alt=""></a>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
+                        <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
+                        <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                        <li><a href="gamerboosting.html">Game Boosting</a></li>
+                    </ul>
+    
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Live Chat</a></li>
+                    <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+              
+                <div class="icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                
+            </div>  
+            </div> 
+            <p>Copyright &copy; 2023 GamerHub</p> 
+        </footer>
+
+        <script>
+            const orderQuantity = document.getElementById('orderQuantity');
+            const singlePrice = document.getElementById('singleprice');
+            const totalPrice = document.getElementById('totalprice');
+
+             function updateTotalPrice() {
+              const singlePriceText = parseFloat(singlePrice.textContent);
+              const quantity = orderQuantity.value;
+              const totalAmount = singlePriceText * quantity;
+
+              totalPrice.textContent = totalAmount;
+             }
+            orderQuantity.addEventListener('input', updateTotalPrice);
+
+            let dateInput = document.getElementById("start-date");
+            dateInput.min = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"));
+         </script>
+
+        
+
+    </body>
+</html>

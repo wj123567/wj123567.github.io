@@ -54,20 +54,24 @@
                         <i class="fa-solid fa-user"></i>
                        <input type="text" placeholder="Username"minlength="6" maxlength="20" id="userplaceholder" required> 
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="emial">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" placeholder="Email" id="emailplaceholder" required>
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field" id="password">
                         <i class="fa-solid fa-user-lock"></i>
                         <input type="password" placeholder="Password"minlength="6" maxlength="20" id="passplaceholder" required>
                     </div>
-                <a id="forgetpass" href="#"><p>Forgot password?</p></a>
+                <p id="forgetpass">Forgot password?</p>
+                <p class="errormsg"></p>
                 </div>
                 <div class="button-field">
                   <button id="signup2"><a href="#">Sign Up</a></button>
                   <button id="login2"><a href="#">Login</a></button>
+                  <button id="reset"><a>Reset</a></button>
+                  <p id="or">OR</p>
+                  <button id="google"><a><i class="fa-brands fa-google"></i>Sign in with Google</a></button>
 
                 </div>
             </div>
@@ -120,46 +124,61 @@
           <p>Copyright &copy; 2023 GamerHub</p>
       </footer>
 
-<script>
-let signup = document.getElementById("signup");
-let login = document.getElementById("login");
-let username = document.getElementById("username");
-let title = document.getElementById("title");
-let forgetpass = document.getElementById("forgetpass");
-let userplaceholder =document.getElementById("userplaceholder");
-let emailplaceholder =document.getElementById("emailplaceholder");
-let passplaceholder =document.getElementById("passplaceholder")
-
-
-
-login.onclick = function(){
-    username.style.maxHeight ="0px";
-    title.innerHTML ="Login";
-    forgetpass.style.visibility ="visible";
-    signup2.style.display ="none";
-    login2.style.display="block";
-    userplaceholder.removeAttribute('required');
-    userplaceholder.value = "";
-    passplaceholder.value = "";
-    emailplaceholder.value = "";
-    
-    
-}
-
-signup.onclick = function(){
-    username.style.maxHeight ="60px";
-    title.innerHTML ="Sign Up";
-    forgetpass.style.visibility ="hidden";
-    username.style.display ="flex";
-    signup2.style.display ="block";
-    login2.style.display="none";
-    userplaceholder.setAttribute('required', '');
-    userplaceholder.value = "";
-    passplaceholder.value = "";
-    emailplaceholder.value = "";
-    
-}
-
-</script>
+      <script>
+        let signup = document.getElementById("signup");
+        let login = document.getElementById("login");
+        let reset = document.getElementById("reset");
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let title = document.getElementById("title");
+        let forgetpass = document.getElementById("forgetpass");
+        let userplaceholder =document.getElementById("userplaceholder");
+        let emailplaceholder =document.getElementById("emailplaceholder");
+        let passplaceholder =document.getElementById("passplaceholder")
+        let errormsg = document.querySelector(".errormsg")
+        
+        
+        
+        login.onclick = function(){
+            username.style.maxHeight ="0px";
+            password.style.maxHeight="65px"
+            title.innerHTML ="Login";
+            forgetpass.style.visibility ="visible";
+            signup2.style.display ="none";
+            login2.style.display="block";
+            reset.style.display="none";
+            userplaceholder.removeAttribute('required');
+            userplaceholder.value = "";
+            passplaceholder.value = "";
+            emailplaceholder.value = "";
+            errormsg.innerHTML = " ";  
+        }
+        
+        signup.onclick = function(){
+            username.style.maxHeight ="65px";
+            password.style.maxHeight="65px"
+            title.innerHTML ="Sign Up";
+            forgetpass.style.visibility ="hidden";
+            username.style.display ="flex";
+            signup2.style.display ="block";
+            login2.style.display="none";
+            reset.style.display="none";
+            userplaceholder.setAttribute('required', '');
+            userplaceholder.value = "";
+            passplaceholder.value = "";
+            emailplaceholder.value = "";
+            errormsg.innerHTML = " ";  
+            
+        }
+        
+        forgetpass.onclick=function(){
+            password.style.maxHeight="0px"
+            title.innerHTML ="Reset Password";
+            signup2.style.display ="none";
+            login2.style.display="none";
+            reset.style.display="block";
+            errormsg.innerHTML = " ";  
+        }
+        </script>
     </body>
 </html>

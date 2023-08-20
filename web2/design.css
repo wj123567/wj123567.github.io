@@ -348,6 +348,30 @@ font-size: 1.2em;
 
     }
 
+    .orderContainer .orderBuddy{
+        display: grid;
+        grid-template-columns: 25% 70%;
+        grid-gap: 5%;
+    }
+
+    .orderContainer .orderBuddy .orderTitle li{
+        float: none;
+        width: 100%;
+    }
+
+    .orderContainer .orderDetail{
+        height: 700px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2{
+        clear: both;
+        max-height: 100px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2 img{
+        max-width: 50px;
+    }
+
 }
 
 @media(max-width: 574px){
@@ -397,6 +421,7 @@ font-size: 1.2em;
         max-width: 210px;
         margin-right: 6px;
     }
+    
   }
 
 /* signup */
@@ -458,12 +483,13 @@ font-size: 1.2em;
     color: hsl(266, 39%, 17%);
 }
 
-.register a>p{
+.register p{
     padding-left: 15px;
     text-align: left;
     font-size: 0.8em;
     color: hsl(266, 39%, 17%);
     font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 
@@ -474,6 +500,12 @@ font-size: 1.2em;
 
 .register #forgetpass:hover{
     text-decoration: underline;
+}
+
+.register .errormsg{
+    text-align: center; 
+    font-size: 1.1em; 
+    margin-top: 5px;
 }
 
 
@@ -502,7 +534,42 @@ font-size: 1.2em;
     background-color:rgb(68, 42, 102);
 }
 
-#login2{
+.register .button-field #google{
+    margin-top: 20px; 
+    background-color: #4285f4;
+}
+
+.register .button-field #google:hover{
+    background-color: #4286f4d9;
+}
+
+.register .button-field #google a{
+    color: white;
+}
+
+.register .button-field #google i{
+    margin-right:10px; 
+    color: white; 
+    font-size: 1.3em
+}
+
+.register .button-field #or{
+    margin: 25px auto 0px auto;
+    padding-right:10px ;
+    display: flex;
+    flex-direction: row;
+}
+
+.register .button-field #or:before,
+.register .button-field #or:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid rgb(41, 26, 61);
+    margin: auto 5px;
+ }     
+
+
+#login2, #reset{
     display: none;
 }
 
@@ -591,6 +658,7 @@ font-size: 1.2em;
 
 .buddyContainer .card .content .buddyprice_rating h3{
     font-size: 1.1em;
+    display: inline;
 }
 
 .buddyContainer .card .content .buddyprice_rating .rating i{
@@ -948,7 +1016,6 @@ font-size: 1.2em;
     margin: 10px 0;
 }
 
-.productDetail .productPurchase input,
 .productDetail .productPurchase button{
     border: none;
     border-radius: 8px;
@@ -959,19 +1026,13 @@ font-size: 1.2em;
     margin-bottom: 3px;
     height: 30px;
     width: 70px;
-}
-
-.productDetail .productPurchase input{
-    width: 50px;
-}
-
-.productDetail .productPurchase button{
     cursor: pointer;
     color: white;
     background-color: hsl(332, 66%, 55%);
     color: hsl(266, 39%, 17%);
     font-weight: bold;
 }
+
 
 .productDetail .productPurchase button:hover{
     background-color: hsl(332, 80%, 60%);
@@ -993,3 +1054,122 @@ font-size: 1.2em;
     margin: 2px auto;
 }
 
+
+/* order */
+.orderContainer{
+    padding-top: 90px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.orderContainer h1{
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.orderContainer .orderTitle{
+    list-style-type: none;
+}
+
+.orderContainer .orderTitle li{
+    float: left;
+    width: 14.2857%;
+    background-color: hsl(332, 66%, 55%);
+    padding: 20px;
+
+}
+
+
+.orderContainer .orderDetail .orderDetail2 img{
+    width:100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.orderContainer .orderDetail .orderDetail2{
+    display: block;
+    height: 150px;
+    float: left;
+    width: 14.2857%;
+}
+
+
+.orderContainer .orderDetail .orderDetail2>p{
+    margin: 50px 20px;
+    font-size: 1.1em;
+    color: white;
+}
+.orderContainer .orderDetail .orderDetail2 .price{
+    margin: 50px 20px;
+    color: white;
+}
+
+.orderContainer .orderDetail .orderDetail2 .price p{
+    display: inline;
+    margin-left: 5px;
+    font-size: 1.1em;
+
+}
+
+.orderContainer .orderDetail .orderDetail2 input{
+    margin: 50px 20px;
+    width: 50px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.orderContainer .orderDetail .orderDetail2 input[type=datetime-local]{
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.orderContainer .orderBottom{
+    display: grid; 
+    grid-template-columns: 70% 25%; 
+    grid-gap:5%;
+    width: 100%;
+}
+
+.orderContainer .remark{
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    color: white;
+
+}
+
+.orderContainer .remark textarea{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    resize: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.orderContainer .confirmOrder{
+    padding-top: 60px;
+    margin: 0 auto;
+}
+
+.orderContainer .confirmOrder .confirmButton{
+    width: 100%;
+    padding-top: 100px;
+}
+
+.orderContainer .confirmOrder button{
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    color: white;
+    background-color: hsl(332, 66%, 55%);
+    color: hsl(266, 39%, 17%);
+    font-weight: bold;
+}

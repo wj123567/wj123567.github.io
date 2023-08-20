@@ -369,7 +369,7 @@ font-size: 1.2em;
     display:flex;
     align-items: center;
     max-height: 65px;
-    transition: max-height 0.5s;
+    transition: all 0.5s;
     overflow: hidden;
 }
 
@@ -386,12 +386,13 @@ font-size: 1.2em;
     color: hsl(266, 39%, 17%);
 }
 
-.register a>p{
+.register p{
     padding-left: 15px;
     text-align: left;
     font-size: 0.8em;
     color: hsl(266, 39%, 17%);
     font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 .register #forgetpass{
@@ -432,9 +433,44 @@ font-size: 1.2em;
     background-color:rgb(68, 42, 102);  
 }
 
-#signup2{
+.register .button-field #google{
+    margin-top: 20px; 
+    background-color: #4285f4;
+}
+
+.register .button-field #google:hover{
+    background-color: #4286f4d9;
+}
+
+.register .button-field #google a{
+    color: white;
+}
+
+.register .button-field #google i{
+    margin-right:10px; 
+    color: white; 
+    font-size: 1.3em
+}
+
+.register .button-field #or{
+    margin: 25px auto 0px auto;
+    padding-right:10px ;
+    display: flex;
+    flex-direction: row;
+}
+
+.register .button-field #or:before,
+.register .button-field #or:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid rgb(41, 26, 61);
+    margin: auto 5px;
+ }     
+
+#signup2, #reset{
     display: none;
 }
+
 
 .input-group{
     height: 280px;

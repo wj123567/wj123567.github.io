@@ -2,7 +2,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
   import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getAuth,signInWithRedirect,GoogleAuthProvider,sendPasswordResetEmail, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -40,7 +40,7 @@
     }
 })
      
-    //----- New Registration code start	  
+    //Sign Up  
     document.addEventListener('DOMContentLoaded', function(){
       var signup2 = document.getElementById('signup2');
       if ( signup2 ) { //if the element exists add the click event
@@ -48,6 +48,7 @@
           var userplaceholder =  document.getElementById("userplaceholder").value;
           var emailplaceholder =  document.getElementById("emailplaceholder").value;
           var passplaceholder = document.getElementById("passplaceholder").value;
+          var errormsg = document.querySelector(".errormsg");
           //For new registration
           createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
           .then((userCredential) => {
@@ -59,27 +60,23 @@
               email: emailplaceholder
 
             })
-
-
             console.log(user);
-            alert("Registration successfully!!");
-            // ...
+            errormsg.innerHTML = "Registration successfully";
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ..
             console.log(errorMessage);
-            alert(error);
+            errormsg.innerHTML = errorCode;
           });		  	
         });
       }
     });  
-      //----- End
 
-      //----- Login code start	  
+      //Login	  
       document.addEventListener('DOMContentLoaded', function(){
         var login2 = document.getElementById("login2");
+        var errormsg = document.querySelector(".errormsg");
         if ( login2 ) { //if the element exists add the click event
           login2.addEventListener('click', function(){
             var emailplaceholder =  document.getElementById("emailplaceholder").value;
@@ -87,24 +84,43 @@
           signInWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
           .then((userCredential) => {
             // Signed in 
-            
             const user = userCredential.user;
             console.log(user);
-            alert(user.email+" Login successfully!!!");
+            errormsg.innerHTML = "Login successfully";
             window.location.assign("index.html");
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             console.log(errorMessage);
-            alert(errorMessage);
+            errormsg.innerHTML = errorCode;
           });		  		  
           });
         }
       });
-      //----- End
 
-      //----- Logout code start	  
+      // google
+      document.addEventListener('DOMContentLoaded', function(){
+        var google = document.getElementById("google");
+        var errormsg = document.querySelector(".errormsg");
+        const googleProvider = new GoogleAuthProvider();
+        if ( google ) { //if the element exists add the click event
+          google.addEventListener('click', function(){
+          signInWithRedirect(auth,googleProvider)
+          .then(() => {
+            window.location.assign("./profile");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+            errormsg.innerHTML = errorCode;
+          });		  		  
+          });
+        }
+      });
+
+      //Logout  
       document.addEventListener('DOMContentLoaded', function(){
         var logout = document.getElementById('logout2');
         if ( logout ) { //if the element exists add the click event
@@ -120,4 +136,27 @@
           });
         }
       });
-      //----- End
+      
+      // reset
+      document.addEventListener('DOMContentLoaded', function(){
+        var reset = document.getElementById('reset');
+        var errormsg = document.querySelector(".errormsg");
+        if ( reset ) { //if the element exists add the click event
+          reset.addEventListener('click', function(){
+            var emailplaceholder =  document.getElementById("emailplaceholder").value;
+
+            sendPasswordResetEmail(auth, emailplaceholder).then(()=>{
+              console.log('Link has been sent')
+              errormsg.innerHTML = "Link has been sent";
+            })
+            .catch(error =>{
+              const errorMessage = error.message;
+              const errorCode = error.code;;
+              console.log(errorMessage);
+              errormsg.innerHTML = errorCode;
+            })
+          })
+          
+
+        }
+      });
