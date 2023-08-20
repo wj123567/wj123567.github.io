@@ -350,27 +350,43 @@ font-size: 1.2em;
 
     .orderContainer .orderBuddy{
         display: grid;
-        grid-template-columns: 25% 70%;
-        grid-gap: 5%;
+        grid-template-columns: 30% 70%;  
     }
 
     .orderContainer .orderBuddy .orderTitle li{
         float: none;
-        width: 100%;
+        min-width: 100px;
+        height: 80px;
+        width: 90%;
     }
 
     .orderContainer .orderDetail{
-        height: 700px;
+        height: 500px;
     }
 
     .orderContainer .orderDetail .orderDetail2{
         clear: both;
-        max-height: 100px;
+        float: none;
+        max-height: 75px;
+        margin: 0 0 0 20px;
     }
 
     .orderContainer .orderDetail .orderDetail2 img{
+        margin-left: 20px;
         max-width: 50px;
     }
+
+    .orderContainer .orderDetail .orderDetail2 .price i{
+        display: inline;       
+    }
+
+    .orderContainer .confirmOrder button{
+        max-width: 120px;
+        margin-top: 5px;
+    }
+
+
+    
 
 }
 
@@ -421,7 +437,16 @@ font-size: 1.2em;
         max-width: 210px;
         margin-right: 6px;
     }
-    
+
+    .orderContainer .confirmOrder{
+        margin-top: 0px;
+    }
+
+    .orderContainer .confirmOrder button{
+        max-width: 70px;
+        margin-top: 5px;
+    }
+
   }
 
 /* signup */
@@ -1172,4 +1197,5 @@ font-size: 1.2em;
     background-color: hsl(332, 66%, 55%);
     color: hsl(266, 39%, 17%);
     font-weight: bold;
+    margin-top: 5px;
 }
