@@ -44,6 +44,16 @@
 
         </nav>
 
+        <div class="popupOrder" id="popupOrder">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="closePopup"  id="closePopup""><i class="fa-solid fa-circle-xmark"></i></div>
+                <h1>Thank For Purchases</h1>
+                <p>Our buddy will contact you in a while</p>
+            </div>
+
+        </div>
+
         <div class="orderContainer">
             <h1>Order</h1>
             <div class="orderBuddy">
@@ -88,8 +98,8 @@
                 </div>
                 <div class="confirmOrder">
                     <div class="confirmButton">
-                    <button>Confirm Purchase</button>
-                    <button>Cancel</button>
+                    <button id="confirmOrder">Confirm Purchase</button>
+                    <button onclick="history.back()">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -161,6 +171,21 @@
 
             let dateInput = document.getElementById("start-date");
             dateInput.min = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"));
+
+
+            const confirmOrder=document.getElementById("confirmOrder");
+            const popupOrder=document.getElementById("popupOrder")
+            const closePopup=document.getElementById("closePopup");
+            
+            confirmOrder.addEventListener("click", function(){
+                popupOrder.classList.add("active");
+            })
+            closePopup.addEventListener("click",function(){
+                popupOrder.classList.remove("active");
+
+            })
+            
+
          </script>
 
         

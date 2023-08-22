@@ -446,7 +446,14 @@ font-size: 1.2em;
         max-width: 70px;
         margin-top: 5px;
     }
-
+    
+.popupOrder .content{
+    max-width: 300px;
+    height: 220px;
+}
+.popupOrder .content h1{
+    font-size: 1.3em;
+}
   }
 
 /* signup */
@@ -883,6 +890,10 @@ font-size: 1.2em;
     color: white;
 }
 
+.productDetail .productPrice i{
+    margin-right: 3px;
+}
+
 .productDetail .productDec h3{
     text-transform: capitalize;
     color: white;
@@ -1101,8 +1112,8 @@ font-size: 1.2em;
     float: left;
     width: 14.2857%;
     background-color: hsl(332, 66%, 55%);
+    color: hsl(266, 39%, 17%);
     padding: 20px;
-
 }
 
 
@@ -1198,4 +1209,55 @@ font-size: 1.2em;
     color: hsl(266, 39%, 17%);
     font-weight: bold;
     margin-top: 5px;
+}
+
+.orderContainer .confirmOrder button:hover{
+    background-color: hsl(332, 80%, 60%);
+}
+
+.popupOrder .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    display: none;
+}
+
+.popupOrder .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0);
+    background-color: hsl(332, 66%, 55%);
+    color: hsl(266, 39%, 17%);
+    width: 450px;
+    height: 220px;
+    z-index: 3;
+    text-align: center;
+    padding: 20px;
+}
+
+.popupOrder .content h1{
+    margin: 10px auto;
+    
+}
+
+.popupOrder .closePopup{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.popupOrder.active .overlay{
+    display: block;
+}
+
+.popupOrder.active .content{
+    transform: translate(-50%,-50%)scale(1);
+    transition: all ease-in-out 0.3s;
 }
