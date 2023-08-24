@@ -471,6 +471,16 @@ font-size: 1.2em;
 }
   }
 
+  @media(max-width:460px){
+    .filter{
+        min-height: 360px;
+    }
+
+    .filter .filterContent{
+        padding-top: 100px;
+    }
+  }
+
 /* signup */
 #adjReg{
     padding-bottom: 200px;

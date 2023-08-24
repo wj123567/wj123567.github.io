@@ -102,3 +102,18 @@ button.search-icon {
     font-family: Opensans, Verdana, Geneva;
     font-weight: bold;
 }
+
+@media(max-width: 460px){
+    .right-section .row{
+        clear: both;
+        margin: 50px auto;
+        width: 100%;
+        display: block;
+  }
+  .navbar{
+    height: 150px;
+  }
+  .navbar{
+    padding-bottom: 100px;
+  }
+}
