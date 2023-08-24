@@ -21,6 +21,7 @@ body {
 @media (max-width:768px){
   .master-box {
     padding: 100px 0!important;
+    width: 90%;
   }  
     .footer .icon{
     margin-left: 10px;
