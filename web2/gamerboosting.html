@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="./image/favicon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script type="module" src="firebase.js"></script>
+        <link rel="stylesheet" href="searchbar.css">
     </head>
 
     <body>
@@ -23,7 +24,7 @@
                 <span id="userName">User
                     <ul class="dropdown">
                         <li><a href="#">Favourite</a></li>
-                        <li><a href="#">Topup</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
                         <li><a id="logout2">Logout</a></li>
                     </ul>
                 </span>
@@ -33,14 +34,28 @@
             <ul class="list"> 
              <li><a href="index.html">Home</a></li>  
              <li>
-                <a>Services &#x25BC;</a>
+                <a href="#">Services &#x25BC;</a>
              <ul class="dropdown">
                 <li><a href="gamerbuddy.html">Game Buddy</a></li>
                 <li><a href="gamerboosting.html">Game Boosting</a></li>
-            </ul>
             </li>
-             <li><a href="index.html">About Us</a></li>                   
+             </ul>
+             <li><a href="leaderboard.html">Leaderboard</a></li>  
+             <li><a href="AboutUs.html">About Us</a></li>                   
             </ul>
+
+            <div class="right-section">
+                <div class="row">
+                    <div class="search-button">
+                        <input id="search-bar" class="search-bar" type="text" placeholder="Search" autocomplete="on">
+                        
+                        <a id=""><button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                </div>
+            </div>
+            <script src="autocomplete2.js"></script>
 
         </nav>
         
@@ -656,10 +671,11 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="">About Us</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
                         <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
                         <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
                         <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                        <li><a href="game_coach.html">Join Us</a></li>
                     </ul>
 
                 </div>
@@ -675,8 +691,8 @@
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Live Chat</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="live_bot_chat.html">Live Chat</a></li>
                     <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
                     </ul>
                 </div>

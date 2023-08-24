@@ -12,15 +12,24 @@
         <link rel="stylesheet" href="searchbar.css"/>
         <script src="https://kit.fontawesome.com/12132f9a71.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="game_coach.css"/>
-        
+        <script type="module" src="firebase.js"></script>
     </head>
 
     <body>
-         <nav class="navbar">
+        <nav class="navbar">
             <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
             <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
             <button class=button id="login"><a href="login.html">Login</a></button>
-            <button class=button id="logout" style="display: none;"><a href="#">Logout</a></button>
+            <div class="userLogin" id="logout">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="userName">User
+                    <ul class="dropdown">
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
+                        <li><a id="logout2">Logout</a></li>
+                    </ul>
+                </span>
+            </div>
             <input type="checkbox" id="menu-bar"\>
             <label for="menu-bar">&#9776;</label>
             <ul class="list"> 
@@ -28,13 +37,14 @@
              <li>
                 <a href="#">Services &#x25BC;</a>
              <ul class="dropdown">
-                <li><a href="">Game Buddy</a></li>
-                <li><a href="game_coach.html">Game Boosting</a></li>
+                <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                <li><a href="gamerboosting.html">Game Boosting</a></li>
             </li>
              </ul>
-             <li><a href="index.html">About Us</a></li>                   
+             <li><a href="leaderboard.html">Leaderboard</a></li>  
+             <li><a href="AboutUs.html">About Us</a></li>                   
             </ul>
-            <!-- search bar from you -->
+
             <div class="right-section">
                 <div class="row">
                     <div class="search-button">
@@ -47,6 +57,7 @@
                 </div>
             </div>
             <script src="autocomplete2.js"></script>
+
         </nav>
         
         <div class="sensei-background">
@@ -168,18 +179,19 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="">About Us</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
                         <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
                         <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
                         <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                        <li><a href="game_coach.html">Join Us</a></li>
                     </ul>
 
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="">Game Buddy</a></li>
-                        <li><a href="game_coach.html">Game Boosting</a></li>
+                        <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                        <li><a href="gamerboosting.html">Game Boosting</a></li>
                     </ul>
     
                 </div>
@@ -187,7 +199,7 @@
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
                     <li><a href="live_bot_chat.html">Live Chat</a></li>
                     <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
                     </ul>

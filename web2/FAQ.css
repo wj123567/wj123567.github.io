@@ -14,8 +14,8 @@ body {
 }
   
 .master-box {
-  padding: 95px 15% 20px 15%;
-  margin:0 auto
+  padding:95px;
+  margin:0 auto;
 }
 
 @media (max-width:768px){
@@ -30,7 +30,7 @@ body {
   padding-left: 0%;
   padding-bottom: 1%;
   color: white;
-  min-width: 110%
+  min-width: 100%
 }
 
 h1.title {
@@ -62,7 +62,7 @@ h4.subtitle{
   border: none;
   outline: none;
   padding: 8px 15px 8px 0;
-  background-color: #6302ff;
+  background-color: hsl(266, 39%, 17%);
   color: #ffffffd2;
   cursor: pointer;
   font-size: 15px;
@@ -100,7 +100,7 @@ h4.subtitle{
 
 #myUL {
   list-style-type: none;
-  width: 110%;
+  width: 100%;
   padding: 0;
   background: rgba(255, 255, 255, 0.01);
 }
@@ -118,7 +118,7 @@ h4.subtitle{
 }
 
 #myUL li span:hover:not(.header) {
-    background-color: #5f5959d8;
+    background-color: rgba(247, 242, 242, 0.847);
     border: 1px solid grey;
 }
 

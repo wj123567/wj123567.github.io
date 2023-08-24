@@ -39,6 +39,78 @@
       document.getElementById('login').style.display = 'block';
     }
 })
+
+document.addEventListener('DOMContentLoaded', function(){
+  const toggleChatBtn = document.getElementById('chat');
+  const chatContainer = document.getElementById('chatContainer');
+  const userInput = document.getElementById('userInput');
+  const sendMessageBtn = document.getElementById('sendMessage');
+  const chatbox = document.getElementById('chatbox');
+  if ( toggleChatBtn ) { //if the element exists add the click event
+    toggleChatBtn.addEventListener('click', () => {
+      auth.onAuthStateChanged(user=>{
+        if(user){
+          chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+        }else{
+          window.location.assign("login.html");
+        }
+    })
+    });
+
+    sendMessageBtn.addEventListener('click', () => {
+      const userMessage = userInput.value.trim();
+      if (userMessage !== '') {
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message user-message';
+        userMessageDiv.textContent = userMessage;
+
+        const botMessageDiv = document.createElement('div');
+        botMessageDiv.className = 'message bot-message';
+        botMessageDiv.textContent = 'Got it!';
+
+        chatbox.appendChild(userMessageDiv);
+        chatbox.appendChild(botMessageDiv);
+
+        userInput.value = ''; // Clear the input field
+        chatContainer.style.display = 'block'; // Show the chatbox container
+      }
+    });
+  }
+});  
+
+document.addEventListener('DOMContentLoaded', function(){
+  const order = document.getElementById('order');
+  if ( order ) { //if the element exists add the click event
+    order.addEventListener('click', () => {
+      auth.onAuthStateChanged(user=>{
+        if(user){
+          window.location.assign("order.html");
+        }else{
+          window.location.assign("login.html");
+        }
+    })
+    });
+
+    sendMessageBtn.addEventListener('click', () => {
+      const userMessage = userInput.value.trim();
+      if (userMessage !== '') {
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message user-message';
+        userMessageDiv.textContent = userMessage;
+
+        const botMessageDiv = document.createElement('div');
+        botMessageDiv.className = 'message bot-message';
+        botMessageDiv.textContent = 'Got it!';
+
+        chatbox.appendChild(userMessageDiv);
+        chatbox.appendChild(botMessageDiv);
+
+        userInput.value = ''; // Clear the input field
+        chatContainer.style.display = 'block'; // Show the chatbox container
+      }
+    });
+  }
+});  
      
     //Sign Up  
     document.addEventListener('DOMContentLoaded', function(){
