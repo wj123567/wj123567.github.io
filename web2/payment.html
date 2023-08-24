@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
+        <title>GamerHub</title>
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="payment.css">
+    
+    </head>
+
+    <body>
+
+        
+         <nav class="navbar">
+            <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class=button id="signup"><a href="index.html">Sign Up</a></button>
+            <button class=button id="login"><a href="index.html">Login</a></button>
+            <input type="checkbox" id="menu-bar"\>
+            <label for="menu-bar">&#9776;</label>
+            <ul class="list"> 
+             <li><a href="index.html">Home</a></li>  
+             <li>
+                <a href="#">Services &#x25BC;</a>
+             <ul class="dropdown">
+                <li><a href="">Game Buddy</a></li>
+                <li><a href="">Game Boosting</a></li>
+            </li>
+             </ul>
+             <li><a href="AboutUs.html">About Us</a></li>                   
+            </ul>
+
+        </nav>
+
+        <div class="payment_section">
+        <div class="payment_container">
+            <form action="https://www.w3schools.com/action_page.php" method="post" enctype="application/x-www-form-urlencoded">
+            
+
+            <div class="row">
+
+                <div class="col">
+                    <h3 class="title">Checkout</h3>
+
+                    <div class="inputbox_left">
+                        <span>First Name :</span>
+                        <input type="text" placeholder="Eg: Kenny" >
+                    </div>
+
+                    <div class="inputbox_left">
+                        <span>Last Name :</span>
+                        <input type="text" placeholder="Eg: Tan" >
+                    </div>
+
+
+                    <div class="inputbox_left">
+                        <span>Email Address :</span>
+                        <input type="email" placeholder="Eg: example@example.com" >
+                    </div>
+
+                    <div class="inputbox_left">
+                        <span>Diamond :</span>
+                        <input type="number" placeholder="100/300/500/700/1000" min="0" max="4" >
+                    </div>
+
+                    <div class="inputbox_left">
+                        <span>Amount to pay :</span>
+                        <input type="text" placeholder="Eg: RM10" >
+                    </div>
+               
+
+                </div>
+
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputbox">
+                        <span>Accepted card :</span>
+                        <img src="./image/paymentoption1.png" alt="cardpayment_option">
+                    </div>
+
+                    <div class="inputbox_select">
+                        <span>Select payment method :</span>
+                        <label for="payment_opt">Credit card</label>
+                        <input type="radio" name="payment_opt" id="payment_opt" checked>
+                        <label for="payment_opt">Debit card</label>
+                        <input type="radio" name="payment_opt" id="payment_opt">
+                       
+                        
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Name on card :</span>
+                        <input type="text" placeholder="Eg: Mr.Kenny" >
+                    </div>
+
+
+                    <div class="inputbox">
+                        <span>Card Number :</span>
+                        <input type="number" placeholder="Eg: 0000-1111-2222-3333" min="0" max="16" />
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Card Expiration Date</span>
+                        <input type="month">
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <input type="submit" value="Proceed" class="checkout_btn">
+        </form>
+
+        </div>
+</div>
+
+        
+
+    </body>
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html"><img src="./image/logo.png" alt=""></a>
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
+                    <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
+                    <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="">Game Buddy</a></li>
+                    <li><a href="">Game Boosting</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Live Chat</a></li>
+                <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
+                </ul>
+            </div>
+
+          
+            <div class="icon">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            
+        </div>  
+        </div> 
+        <p>Copyright &copy; 2023 GamerHub</p> 
+    </footer>
+
+
+
+</html>

@@ -1,0 +1,584 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Opensans";
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+
+@font-face{
+    font-family: Josefin Sans;
+    src: url('./font/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf')format('ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;          /*scroll bar on the rhs will be invisible*/
+}
+
+html{
+    height: 100%;
+
+}
+body{
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    background-color: hsl(252, 48%, 37%);
+    padding-bottom: 210px;
+    z-index: 1;
+}
+
+.logo{
+    width: 100px;
+    float: left;
+    display: inline;
+    margin-top: 5px;
+
+}
+
+/* navbar */
+nav{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: hsl(266, 39%, 17%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
+.navbar>ul{
+    list-style-type: none;
+    background-color: hsl(266, 39%, 17%);
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.list li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.list>li>a:hover{
+    background-color: hsl(266, 20%, 10%);
+
+}
+
+.navbar>ul>li{
+    float: left;
+    
+}
+
+
+/* dropdown */
+.navbar .dropdown{
+    display: block;
+    list-style-type: none;
+    width: 150px;
+    background: hsl(266, 39%, 17%);
+    position: absolute;
+    z-index: 2;
+    display: none;
+
+}
+
+.navbar .dropdown li{
+    border-top: 1px solid rgba(169, 165, 165, 0.9);
+}
+
+.navbar .dropdown li a{
+    text-align: left;
+}
+
+.list li:hover .dropdown{
+    display:block;
+}
+
+/* login*/
+.navbar button{
+    display: block;
+    float:right;
+    background-color: hsl(332, 66%, 55%);
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px
+
+}
+.navbar button:hover{
+    background-color: hsl(332, 80%, 60%);
+}
+
+.navbar button a{
+    text-decoration: none;
+    color: hsl(266, 39%, 17%);
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#menu-bar{
+    display:none
+}
+
+.navbar label{
+    font-size: 20px;
+    color:white;
+    cursor: pointer;
+    display: none;
+    float: left;
+    padding: 17px;
+}
+
+/* footer */
+footer{
+    background-color: hsl(266, 39%, 17%);
+    position: absolute;  
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .container{
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer img{
+    width: 200px;
+    padding: 7px 30px;
+    display: inline;
+    float: left;
+}
+
+.footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+   width: 15%;
+   padding: 7px 15px;
+}
+
+.footer h4{
+color: white;
+font-size: 1.2em;
+}
+
+.footer ul{
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.footer ul li{
+    margin-top: 15px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+    font-size: 0.9em;
+    
+}
+
+.footer ul li a:hover{
+    color: hwb(6 45% 9%);
+    padding-left: 8px;
+}
+
+.footer .icon i{
+    color: white;
+    font-size: 2em;
+    margin: 7px 18px;
+    transition: all 0.4s;
+}
+
+.footer .icon i:hover{
+    color: hwb(6 45% 9%);
+}
+
+.footer p{
+    color: white;
+    font-size: 0.6em;
+    float: right;
+}
+
+/* responsive */
+@media(max-width:991px){
+
+    .navbar{
+        padding: 20;
+    }
+
+    .navbar label{
+        display: initial;
+    }
+    
+    .navbar .list{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: hsl(266, 39%, 17%);
+        border-top: 1px solid white;
+        display: none;
+    }
+
+    .navbar .list li{
+        width:100%;
+    }
+
+    .navbar .dropdown{
+        position: relative;
+        width:100%;
+    }
+
+    .navbar.dropdown li{
+        background: hsl(266, 39%, 17%);
+
+    }
+
+    #menu-bar:checked ~ .list{
+        display: initial;
+    }
+
+    .navbar button{
+        width: 65px;
+        margin-right: 2px;
+
+    }
+
+    .navbar button a{
+        font-size: 0.8em;
+    }
+
+    .register{
+        overflow: scroll; 
+    }
+    
+    .footer{
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .footer .footer-col{
+        width: 30%;
+        margin-bottom: 30px;
+        max-height: 205px;
+    }
+
+}
+
+@media(max-width: 574px){
+    .footer img{
+        display: none;
+       }
+  }
+
+.table_data {
+    position: relative;
+    left: 13%;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table_data h1{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 120px #00b3ff;
+}
+
+.lightbar{
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 5px;
+    height:55%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 120px #00b3ff;
+    animation: animatelightbar 2.5s linear infinite;
+}
+
+@keyframes animatelightbar{
+    0%,5%
+    {
+        transform: scaleY(0) translateX(0);
+    }
+    10%
+    {
+        transform: scaleY(1) translateX(0);
+    }
+    90%
+    {
+        transform: scaleY(1) translateX(calc(300px - 10px));
+    }
+    95%,100%
+    {
+        transform: scaleY(0) translateX(calc(300px - 10px));
+    }
+}
+
+.toplayer{              /*work like curtain, display and hide the "Top Up" */
+    padding-top: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(252, 48%, 37%);
+    animation: animatetoplayer 5s linear infinite;
+}
+
+@keyframes animatetoplayer{
+    0%,2.5%
+    {
+        transform: translateX(0);
+    }
+    5%
+    {
+        transform: translateX(0);
+    }
+    45%
+    {
+        transform: translateX(100%);
+    }
+    47.5%,50%
+    {
+        transform: translateX(100%);
+    }
+    50.001%,52.5%
+    {
+        transform: translateX(-100%);
+    }
+    55%
+    {
+        transform: translateX(-100%);
+    }
+    95%
+    {
+        transform: translateX(0%);
+    }
+    97.5%,100%
+    {
+        transform: translateX(0%);
+    }
+}
+
+.table_data h1{
+    padding-top: 75px;
+    text-align: center;
+}
+
+.table_data h3{
+    padding-top: 75px;
+}
+
+/*diamond num section*/
+.diamond_num{
+    padding-top: 5%;
+    position: relative;
+    left: 13%;
+}
+
+.diamond_num img{
+    width: 50px;
+    height:50px;
+}
+
+
+.diamond_num h5{
+    font-size: 20px;
+    color: #e0ab5b;
+}
+
+.table_container{
+    padding: 10% 10%;
+    margin: 0 auto;
+}
+
+.table{
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+    
+}
+
+.table thead tr th{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffe2ad;
+    background: #516091;
+    letter-spacing: 0.35px;
+    padding: 12px;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #dee2e685;
+}
+
+.table tbody tr td{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffe2ad;
+    background: #516091;
+    letter-spacing: 0.35px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #dee2e685;
+}
+
+.table thead tr th img{
+    margin-left: 15px;
+    max-width: 25px;
+    max-height:25px;
+}
+
+.table tbody tr td img{
+    margin-left: 15px;
+    max-width: 25px;
+    max-height:25px;
+}
+
+.table tbody tr td .pay_btn{
+    width: 150px;
+    color: #ffe2ad;
+    text-decoration: none;
+    line-height: 35px;
+    display: inline-block;
+    font-weight: medium;
+    text-align: center;
+    vertical-align: middle;
+    user-select:none;
+    font-size: 14px;
+    opacity:1;
+}
+
+.table tbody tr td a{
+    position: relative;
+    color: #fff;
+    background-color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.table tbody tr td a:hover{
+    background: var(--clr);
+    color: var(--clr);              /*word PROCEED also chg to color code of --clr*/
+    letter-spacing:2px;
+    box-shadow: 0 0 20px var(--clr);
+}
+
+.table tbody tr td a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background:#3e3245 ;
+
+}
+
+
+.table tbody tr td a span{
+    position: relative;
+    
+}
+
+.table tbody tr td a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+    
+}
+
+.table tbody tr td a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 15px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.table tbody tr td a:hover i::before{
+    width: 25px;
+    left: 25%;
+}
+
+.table tbody tr td a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 15px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.table tbody tr td a:hover i::after{
+    width: 25px;
+    left: 75%;
+}
+
+@media (max-width : 768px){
+    .table thead{
+        display:none;
+    }
+
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width:100%;
+    }
+
+    .table tr{
+       margin-bottom: 15px;                          
+    }
+
+    .table tbody tr td{
+        text-align: right;
+        padding-left: 50px;
+        position: relative;
+    }
+
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}

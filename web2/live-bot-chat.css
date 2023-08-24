@@ -1,0 +1,110 @@
+nav {
+    z-index: 10;
+}
+
+.open-button > img {
+    width: 100px;
+}
+.open-button {
+    width: fit-content;
+
+    color: rgb(213, 203, 221);
+    background-color: rgb(94, 32, 170);
+
+    padding: 10px 10px;
+
+    position: fixed;
+    right: 30px;
+    bottom: 220px;
+
+    border-radius:70px;
+    border: none;
+    border-top: 2px solid rgb(35, 12, 74);
+    border-right: 2px solid rgb(35, 12, 74);
+
+    transition: padding 0.5s, font-size 0.5s; 
+}
+.open-button:hover {
+    cursor: pointer;
+
+    padding: 20px 20px;
+
+    color: rgb(226, 226, 226);
+    background-color: rgb(77, 21, 146);
+}
+.open-button:active {
+    background-color: rgb(63, 17, 119);
+}
+
+.popup-chat {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 220px;
+    width: 600px;
+    height: 650px;
+
+    border-radius: 20px;
+    border: 5px solid rgb(17, 5, 41);
+    background-color: rgb(57, 11, 110);
+    padding: 10px 20px;
+
+    overflow-y: scroll;
+}
+@media (max-width: 1000px) {
+    .popup-chat {
+        width: 440px;
+    }
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+}
+.chat-container h1 {
+    color: white;
+    font-size: 40px;
+
+    margin-top: 20px;
+}
+.chat-container label {
+    color: white;
+    font-size: 25px;
+
+    margin: 20px 0;
+}
+
+.text-area{
+    background-color: rgb(227, 208, 249);
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+
+    resize: vertical;
+}
+
+.submit {
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(217, 217, 217);
+}
+.close-chat {
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+.close-chat:hover {
+    cursor: pointer;
+    background-color: rgb(187, 184, 184);
+}
+.close-chat:active, .submit:active {
+    background-color: rgb(148, 146, 151);;
+}
+
+

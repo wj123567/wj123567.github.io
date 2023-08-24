@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
         <title>GamerHub</title>
-        <link rel="stylesheet" href="design.css">
         <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="index_test.css">
+        <link rel="stylesheet" href="live-bot-chat.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script type="module" src="firebase.js"></script>
+    
     </head>
 
     <body>
 
         
-         <nav class="navbar">
+        <nav class="navbar">
             <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
             <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
             <button class=button id="login"><a href="login.html">Login</a></button>
@@ -23,7 +26,7 @@
                 <span id="userName">User
                     <ul class="dropdown">
                         <li><a href="#">Favourite</a></li>
-                        <li><a href="#">Topup</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
                         <li><a id="logout2">Logout</a></li>
                     </ul>
                 </span>
@@ -39,18 +42,328 @@
                 <li><a href="gamerboosting.html">Game Boosting</a></li>
             </ul>
             </li>
-             <li><a href="index.html">About Us</a></li>                   
+             <li><a href="AboutUs.html">About Us</a></li>                   
             </ul>
 
         </nav>
+    
 
-        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt voluptas non totam libero temporibus, culpa blanditiis soluta nesciunt ut illum quod minus praesentium qui fuga facere nulla vero voluptatibus?s
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempora perferendis quae maiores tempore sunt corporis, aliquam illum facere sed ea ut aspernatur! Ipsa voluptas id provident fuga nesciunt enim.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab dolore minima saepe quae vel nemo iusto, cum quis illum, consequuntur voluptate optio perferendis soluta! Asperiores consectetur nihil explicabo perspiciatis perferendis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequuntur maxime corporis ipsum eligendi consequatur, alias culpa vero nemo dolorem in nulla dolorum velit cumque, explicabo eos eum quasi repellat!
-        </p>
+        <div class="box">
+            <h1>
+            
+                <span>G</span>
+                <span>A</span>
+                <span>M</span>
+                <span>E</span>
+                <span>R</span>
+                <span>H</span>
+                <span>U</span>
+                <span>B</span>
+               
 
+            </h1>
+         </div>
+
+         <div class="text_rotator">
+            <h2 id="text"><i> &#x201C;
+                <span  style="display: initial;">Play</span>
+                <span>Learn</span>
+                <span>Win</span>
+                 Together, Feel the Life of Gaming &#x201D;
+                </i>
+            </h2>
+         </div>
+
+         <script type="text/javascript">
+            var text = document.getElementById('text');
+            var word = text.getElementsByTagName('span');
+
+            var i=0;
+
+            function rotator(){
+                word[i].style.display ='none';
+                i = (i+1) % word.length;
+                word[i].style.display ='initial';
+            
+            }
+            setInterval(rotator,1500);
+         </script>
+
+<div class="img_slider_container">
+    <div class="img_slider">
+        <div class="slide active">
+            <img src="./image/home_pic1_ps.jpg"  alt="">
+
+        </div>
+        <div class="slide">
+            <img src="./image/home_pic2_ps.jpg"  alt="">
+            
+        </div>
+        <div class="slide">
+            <img src="./image/home_pic3_ps.jpg"  alt="">
+            
+        </div>
+        <div class="slide">
+            <img src="./image/home_pic4_ps.jpg"   alt="">
+            
+        </div>
+        <div class="slide">
+            <img src="./image/home_pic5_ps.jpg"   alt="">
+            
+        </div>
+        <div class="img_slider_nav">
+            <div class="img_slider_btn active"></div>
+            <div class="img_slider_btn"></div>
+            <div class="img_slider_btn"></div>
+            <div class="img_slider_btn"></div>
+            <div class="img_slider_btn"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var slides =document.querySelectorAll('.slide');
+    var btns= document.querySelectorAll('.img_slider_btn');
+    let currentSlide=1;
+
+
+    //for image slider manual navigation
+    var manualNav=function(manual){
+        slides.forEach((slide)=>{
+            slide.classList.remove('active');
+
+        btns.forEach((btn)=>{
+            btn.classList.remove('active');
+        });
+        });
+
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn,i)=>{
+        btn.addEventListener("click", ()=>{
+            manualNav(i);
+            currentSlide=i;
+        });
+    });
+
+    //for image slider auto navigation
+    var repeat =function(activeClass){
+        let active=document.getElementsByClassName('active');
+        let i=1;
+
+        var repeater = () => {
+            setTimeout(function(){
+                [...active].forEach((activeSlide)=>{
+                    activeSlide.classList.remove('active');
+                });
+
+                slides[i].classList.add('active');                /*from the manual nav js*/
+                btns[i].classList.add('active');    
+                i++;
+                
+                if(slides.length ==i){
+                    i=0;
+                }
+                if(i>=slides.length){
+                    return;
+                }
+                repeater();
+            }, 4000);
+        }
+        repeater();
+    }
+    repeat();
+       
+</script>
+         
+    
+         
+
+         <div class="buddyContainer">
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/gb_m_1.png" alt="game buddy"/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Mandy</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm15/hour</h3>
+                                
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="card">
+                <div class="buddyimg ">
+                <img src="./image/gb_f_1.jpg" alt="Game buddy"/>
+        
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Wendy</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm20/hour</h3>
+                                      
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/gb_m_2.png" alt="Game buddy"/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Kevin</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm10/hour</h3>
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/gb_f_2.jpg" alt="Game buddy"/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>Kristine</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm25/hour</h3>
+                               
+                        </div>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/faker.jpg" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                               
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+  
+        <div class="buddyContainer">
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/imperialhal.png" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                               
+                        </div>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/sweetdream.jpg" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                                
+                        </div>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/shroud.png" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                                
+                        </div>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/faker.jpg" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                                
+                        </div>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="buddyimg">
+                <img src="./image/derke.png" alt=""/>
+                </div>
+                    <div class="content">
+                        <div class="buddyname">
+                            <h2>S1MPLE</h2>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="buddyprice_rating">
+                            <h3>Rm50/hour</h3>
+                               
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+    <button class="open-button" onclick="openform()">
+        <img src="image/logo.png" alt="">
+    </button>
+
+    <div class="popup-chat" id="popup-chat">
+        <form action="" class="chat-container">
+            
+            <h1>Chat</h1>
+            <label for="msg">Message</label>
+            <textarea class="text-area" name="msg" id="msg" cols="30" rows="10" placeholder="Hi, welcome to GamerChat! Go ahead and send me a message. 😄"></textarea>
+            <button class="submit" type="submit">Send</button>
+            <button type="button" class="close-chat" onclick="closeform()">Close</button>
+        
+        </form>
+    </div>
+    <script src="live_chat_bot.js"></script>
+
+
+
+        
+            
+    
+        </body>
         <footer class="footer">
             <div class="container">
                 <a href="index.html"><img src="./image/logo.png" alt=""></a>
@@ -63,26 +376,26 @@
                         <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
                         <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
                     </ul>
-
+    
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="gamerbuddy.html">Game Buddy</a></li>
-                        <li><a href="gamerboosting.html">Game Boosting</a></li>
+                        <li><a href="">Game Buddy</a></li>
+                        <li><a href="">Game Boosting</a></li>
                     </ul>
     
                 </div>
-
+    
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
                     <li><a href="">Live Chat</a></li>
                     <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
                     </ul>
                 </div>
-
+    
               
                 <div class="icon">
                 <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -94,7 +407,7 @@
             </div> 
             <p>Copyright &copy; 2023 GamerHub</p> 
         </footer>
-        
 
-    </body>
+
+ 
 </html>
