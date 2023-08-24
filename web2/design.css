@@ -316,6 +316,10 @@ font-size: 1.2em;
         max-height: 205px;
     }
 
+    .buddyContainer a:last-child{
+        margin-bottom: 50px;
+    }
+
     .productContainer .productCard{
         display: flex;
         flex-flow: row wrap;
@@ -394,6 +398,17 @@ font-size: 1.2em;
     .footer img{
         display: none;
        }
+    
+    .footer .icon i{
+    font-size:1.2em;
+    margin-left: 5px;
+    }
+
+    .footer .icon{
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 40px;
+    }
 
     .productContainer .productCard{
         padding-bottom: 20px;
@@ -402,7 +417,7 @@ font-size: 1.2em;
 
     .buddyRecommend{
         margin: 0 auto;
-        padding: 0 0 20px 0;
+        padding: 0 0 120px 0;
     }
 
     .filter{

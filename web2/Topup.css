@@ -286,7 +286,7 @@ font-size: 1.2em;
 @media(max-width: 574px){
     .footer img{
         display: none;
-       }
+       }    
   }
 
 .table_data {

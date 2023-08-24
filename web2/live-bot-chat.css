@@ -9,7 +9,7 @@ nav {
     width: fit-content;
 
     color: rgb(213, 203, 221);
-    background-color: rgb(94, 32, 170);
+    background-color: hsl(266, 39%, 17%);
 
     padding: 10px 10px;
 
@@ -23,6 +23,8 @@ nav {
     border-right: 2px solid rgb(35, 12, 74);
 
     transition: padding 0.5s, font-size 0.5s; 
+
+    z-index: 2;
 }
 .open-button:hover {
     cursor: pointer;

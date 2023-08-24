@@ -136,6 +136,48 @@ nav{
     padding: 17px;
 }
 
+.navbar .userLogin{
+    display: none;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    color: white;
+}
+
+
+.navbar .userLogin .dropdown{
+    display: none;
+    list-style-type: none;
+    width: 110px;
+    background: hsl(266, 39%, 17%);
+    position: absolute;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.navbar .userLogin .dropdown li{
+    border-top: 1px solid rgba(169, 165, 165, 0.9);
+    height: 40px;
+    text-align: left;
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar .userLogin .dropdown li a{
+    text-align: left;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    margin: 2px 5px;
+}
+
+.navbar .userLogin:hover .dropdown{
+    display:block;
+}
+
 /* footer */
 footer{
     background-color: hsl(266, 39%, 17%);
@@ -285,6 +327,17 @@ font-size: 1.2em;
     .footer img{
         display: none;
        }
+    .footer .icon i{
+        font-size:1.2em;
+        margin-left: 5px;
+        }
+    
+    .footer .icon{
+        margin-left: 10px;
+        margin-top: 40px;
+        height: 40px;
+        }
+    
     
   }
 /*leaderboard css*/
