@@ -15,13 +15,17 @@ body {
   
 .master-box {
   padding:95px;
-  margin:0 auto 50px auto;
+  margin:0 auto 70px auto;
 }
 
 @media (max-width:768px){
   .master-box {
     padding: 100px 0!important;
-  }
+  }  
+    .footer .icon{
+    margin-left: 10px;
+    margin-top: 70px;
+    }
 }
 
 .faq-header {
