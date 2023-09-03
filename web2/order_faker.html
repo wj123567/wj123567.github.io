@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
+        <title>GamerHub</title>
+        <link rel="stylesheet" href="design.css">
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script type="module" src="firebase.js"></script>
+        <link rel="stylesheet" href="searchbar.css">
+    </head>
+
+    <body>
+
+        
+        <nav class="navbar">
+            <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
+            <button class=button id="login"><a href="login.html">Login</a></button>
+            <div class="userLogin" id="logout">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="userName">User
+                    <ul class="dropdown">
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
+                        <li><a id="logout2">Logout</a></li>
+                    </ul>
+                </span>
+            </div>
+            <input type="checkbox" id="menu-bar"\>
+            <label for="menu-bar">&#9776;</label>
+            <ul class="list"> 
+             <li><a href="index.html">Home</a></li>  
+             <li>
+                <a href="#">Services &#x25BC;</a>
+             <ul class="dropdown">
+                <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                <li><a href="gamerboosting.html">Game Boosting</a></li>
+            </li>
+             </ul>
+             <li><a href="leaderboard.html">Leaderboard</a></li>  
+             <li><a href="AboutUs.html">About Us</a></li>                   
+            </ul>
+
+            <div class="right-section">
+                <div class="row">
+                    <div class="search-button">
+                        <input id="search-bar" class="search-bar" type="text" placeholder="Search" autocomplete="on">
+                        
+                        <a id=""><button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                </div>
+            </div>
+            <script src="autocomplete2.js"></script>
+
+        </nav>
+
+        <div class="popupOrder" id="popupOrder">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="closePopup"  id="closePopup""><i class="fa-solid fa-circle-xmark"></i></div>
+                <h1>Thank For Purchases</h1>
+                <p>Our buddy will contact you in a while</p>
+            </div>
+
+        </div>
+
+        <div class="orderContainer">
+            <h1>Order</h1>
+            <div class="orderBuddy">
+                <ul class="orderTitle">
+                    <li>Buddy</li>
+                    <li>Name</li>
+                    <li>Skill</li>
+                    <li>Price</li>
+                    <li>Quantity</li>
+                    <li>Time</li>
+                    <li>Total</li>
+                </ul>
+                <div class="orderDetail">
+                    <div class="orderDetail2">
+                        <img src="./image/buddy/faker.png" alt="">
+                    </div>
+                    <div class="orderDetail2">
+                        <P>FAKER</P>
+                    </div>
+                    <div class="orderDetail2">
+                        <P>CSGO</P>
+                    </div>
+                    <div class="orderDetail2">
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="singleprice">10/H</p></div>
+                    </div>
+                    <div class="orderDetail2">
+                        <input id="orderQuantity" type="number" min="0" max="20" value="1">
+                    </div>
+                    <div class="orderDetail2">
+                        <input type="datetime-local" id="start-date">
+                    </div>
+                    <div class="orderDetail2">
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="totalprice"></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orderBottom">
+                <div class="remark">
+                    <h3>Remark<h3>
+                    <textarea name="comment"placeholder="remark"></textarea>
+                </div>
+                <div class="confirmOrder">
+                    <div class="confirmButton">
+                    <button id="confirmOrder">Confirm Purchase</button>
+                    <button onclick="history.back()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+        
+
+        <footer class="footer">
+            <div class="container">
+                <a href="index.html"><img src="./image/logo.png" alt=""></a>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
+                        <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
+                        <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                        <li><a href="game_coach.html">Join Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                        <li><a href="gamerboosting.html">Game Boosting</a></li>
+                    </ul>
+    
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="live_bot_chat.html">Live Chat</a></li>
+                    <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+              
+                <div class="icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                
+            </div>  
+            </div> 
+            <p>Copyright &copy; 2023 GamerHub</p> 
+        </footer>
+
+        <script>
+           const orderQuantity = document.getElementById('orderQuantity');
+            const singlePrice = document.getElementById('singleprice');
+            const totalPrice = document.getElementById('totalprice');
+            const singlePriceText = parseFloat(singlePrice.textContent);
+
+             function updateTotalPrice() {
+              const quantity = orderQuantity.value;
+              const totalAmount = singlePriceText * quantity;
+
+              totalPrice.textContent = totalAmount;
+             }
+            totalPrice.innerHTML = singlePriceText;
+            orderQuantity.addEventListener('input', updateTotalPrice);
+
+            let dateInput = document.getElementById("start-date");
+            dateInput.min = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"));
+
+
+            const confirmOrder=document.getElementById("confirmOrder");
+            const popupOrder=document.getElementById("popupOrder")
+            const closePopup=document.getElementById("closePopup");
+            
+            confirmOrder.addEventListener("click", function(){
+                popupOrder.classList.add("active");
+            })
+            closePopup.addEventListener("click",function(){
+                popupOrder.classList.remove("active");
+
+            })
+            
+
+         </script>
+
+        
+
+    </body>
+</html>

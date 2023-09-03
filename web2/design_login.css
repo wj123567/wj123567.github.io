@@ -426,6 +426,12 @@ font-size: 1.2em;
     margin-right: auto;
 }
 
+.register .errormsg{
+    text-align: center; 
+    font-size: 1.1em; 
+    margin-top: 5px;
+}
+
 .register .button-field button{
     background-color:rgb(41, 26, 61);
     width: 100%;
@@ -435,7 +441,7 @@ font-size: 1.2em;
     border: 0;
     cursor: pointer;
 }
-.register .button-field button a{
+.register .button-field button{
     color:hwb(6 45% 9%);
     text-decoration: none;
 }

@@ -365,19 +365,24 @@ font-size: 1.2em;
     }
 
     .orderContainer .orderDetail{
-        height: 500px;
+        height: 560px;
     }
 
     .orderContainer .orderDetail .orderDetail2{
         clear: both;
         float: none;
-        max-height: 75px;
+        max-height: 80px;
+        min-width: 189px;
         margin: 0 0 0 20px;
     }
 
     .orderContainer .orderDetail .orderDetail2 img{
         margin-left: 20px;
         max-width: 50px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2 p{
+        padding-bottom: 20px;
     }
 
     .orderContainer .orderDetail .orderDetail2 .price i{
@@ -452,7 +457,9 @@ font-size: 1.2em;
         max-width: 210px;
         margin-right: 6px;
     }
-
+    .orderContainer{
+        padding-bottom: 50px;
+    }
     .orderContainer .confirmOrder{
         margin-top: 0px;
     }
@@ -462,13 +469,14 @@ font-size: 1.2em;
         margin-top: 5px;
     }
     
-.popupOrder .content{
+    .popupOrder .content{
     max-width: 300px;
     height: 220px;
-}
-.popupOrder .content h1{
+    }
+
+    .popupOrder .content h1{
     font-size: 1.3em;
-}
+    }
   }
 
   @media(max-width:460px){
@@ -514,7 +522,6 @@ font-size: 1.2em;
     left: 50%;
     transform: translateX(-50%);
     background-color:hsl(266, 39%, 17%) ;
-    
 }
 
 .register .input-field{
@@ -527,6 +534,7 @@ font-size: 1.2em;
     transition: max-height 0.5s;
     overflow: hidden;
 }
+
 .register input{
     width: 100%;
     background-color: transparent;
@@ -582,7 +590,7 @@ font-size: 1.2em;
     border: 0;
     cursor: pointer;
 }
-.register .button-field button a{
+.register .button-field button{
     color:hwb(6 45% 9%);
     text-decoration: none;
 }
@@ -637,8 +645,30 @@ font-size: 1.2em;
 
 /* gamebuddy */
 
+.Pagetitle{
+    text-align: center;
+    padding: 20px 0 0 0; 
+    max-width: 90%;
+    margin: auto;
+    color: rgb(233, 233, 233);
+    position: relative;
+}
+
+h1.Pagetitle::after{
+    content: '';
+    width: 100px;
+    height: 4px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(233, 233, 233);
+    
+}
+
 .buddyContainer{
-    padding: 80px 20px;
+    padding: 70px 20px;
     max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1181,7 +1211,7 @@ font-size: 1.2em;
 }
 
 .orderContainer .orderDetail .orderDetail2 input[type=datetime-local]{
-    width: 150px;
+    min-width: 120px;
     border-radius: 5px;
     padding: 5px;
 }

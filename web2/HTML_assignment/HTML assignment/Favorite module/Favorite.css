@@ -1,0 +1,165 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Opensans";
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+
+/*FAQ css starts here*/
+
+body {
+    background: #2a1b3d;
+    margin-left: 13%;
+}
+
+.top {
+    margin-left: 9%;
+    margin-right: 16%;
+}
+
+.favhead {
+    padding-bottom: 1%;
+    color: white;
+}
+
+h1.biggesttext {
+    font-size: 550%;
+    padding-top: 1%;
+    margin-bottom: -2.0%;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 650px) {
+    h1.biggesttext {
+        font-size: 460%;
+    }
+}
+
+@media (max-width: 540px) {
+    h1.biggesttext {
+        font-size: 220%;
+    }
+}
+
+h2.custfav{
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: -0.01%;
+    color: rgb(250, 209, 248);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin-right: 10%;
+}
+
+#usersearch {
+    width: 22%;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 5px, 5px, 5px, 5px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 67%;
+    max-width: 30%;
+    background-color:rgb(59, 57, 57);
+}
+
+#buttonbox {
+    display: flex;
+    text-align: center;
+}
+
+#buttonbox > * {
+    flex: 1;
+    white-space: nowrap;
+    max-width: 13%; 
+}
+
+@media (max-width: 650px) {
+    #buttonbox {
+        flex-direction: column;
+        width: 500%;
+    }
+}
+
+.button {
+    border: none;
+    padding: 8px 15px 8px 8px;
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 60%;
+    min-width: 18%;
+    min-height: 18%;
+}
+
+@media (max-width: 710px) {
+    .button {
+        font-size: 50%;
+    }
+}
+
+
+.button:hover {
+    background-color: #ae03b4;
+    color: black;
+}
+
+.button.active {
+    background: #00bb1f;
+    color: white;
+}
+
+#FAVS {
+    width: 100%;
+    padding: 0;
+    background: rgba(5, 5, 5, 0.01);
+}
+
+#FAVS li span {
+    margin-left: 8%;
+    margin-right: 23%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-top: 3%;
+    font-size: 40%; 
+    color: rgb(255, 255, 255);
+    display: block;
+    opacity: 100%;
+}
+
+@media (max-width: 360px) {
+    #FAVS li span {
+        font-size: 20%;
+    }
+}
+
+#FAVS li span:hover:not(.header) {
+    opacity: 60%;
+}
+
+.section {
+    display: none; 
+    margin-bottom: 0.5%;
+}
+
+.show {
+    display: block;
+    font-size: 100px;
+}
+
+.favname {
+    font-weight: bold;
+    background: rgb(63, 58, 58);
+}
+
+.icon {
+    width: 53%;
+    height: 23%;
+    margin-right: 15%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

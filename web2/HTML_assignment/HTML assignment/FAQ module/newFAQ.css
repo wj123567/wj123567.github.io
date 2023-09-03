@@ -1,0 +1,146 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Opensans";
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+
+/*FAQ css starts here*/
+
+
+
+body {
+    background: #44318D;
+}
+
+.top {
+    margin-right: 9%;
+}
+
+.bottom {
+    padding-left: 10%;
+    padding-right: 16%;
+}
+
+
+.faqhead {
+    padding-left: 0%;
+    padding-bottom: 1%;
+    background: #ce3b80;
+    color: white;
+    min-width: 110%;
+}
+
+h1.biggesttext {
+    letter-spacing: 5px;
+    font-size: 500%;
+    text-align: center;
+    padding-top: 1%;
+    margin-bottom: -2.0%;
+    color: rgb(255, 255, 255);
+}
+
+h2.mtopic{
+    font-variant: small-caps;
+    font-size: 200%;
+    font-weight: bold;
+    padding-left: 10%;
+    margin-bottom: -0.2%;
+    color: rgb(255, 255, 255);
+}
+
+#usersearch {
+    width: 70%;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 5px, 5px, 5px, 5px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 60%;
+    max-width: 30%;
+}
+
+#buttonbox {
+    flex-direction: row;
+    text-align: center;
+}
+  
+
+#buttonbox > * {
+    flex: 1;
+    white-space: nowrap;
+    min-width: 80%;
+}
+  
+@media (max-width : 600px){
+    #buttonbox > * {
+      font-size: 0.8em;
+    }
+}
+
+
+.button {
+    border: none;
+    padding: 8px 15px 8px 0;
+    color: #ffffff;
+    background-color: #230e46;
+    cursor: pointer;
+    font-size: 15px;
+    font-variant: small-caps;
+    min-width: 18%;
+    min-height: 18%;
+}
+
+.button:hover {
+    background-color: #fa93fd;
+    color: black;
+}
+
+.button.active {
+    background: #fc1919;
+    color: white;
+}
+
+#QNA {
+    width: 110%;
+    padding: 0;
+    background: rgba(5, 5, 5, 0.01);
+}
+
+#QNA li span {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    padding-left: 5%;
+    font-size: 16px; 
+    color: black;
+    display: block;
+    opacity: 60%;
+}
+
+#QNA li span:hover:not(.header) {
+    opacity: 100%;
+}
+
+.topic {
+    display: none; 
+    margin-bottom: 0.5%;
+}
+
+.show {
+    display: block;
+}
+
+.question {
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+
+.answer {  
+    display: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 10px;
+    padding-left: 5%;
+}

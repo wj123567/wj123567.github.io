@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
+        <title>GamerHub</title>
+        <link rel="stylesheet" href="design.css">
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script type="module" src="firebase.js"></script>
+        <link rel="stylesheet" href="searchbar.css">
+        <link rel="stylesheet" href="chatbox.css">
+    </head>
+
+    <body>
+
+        
+        <nav class="navbar">
+            <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
+            <button class=button id="login"><a href="login.html">Login</a></button>
+            <div class="userLogin" id="logout">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="userName">User
+                    <ul class="dropdown">
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
+                        <li><a id="logout2">Logout</a></li>
+                    </ul>
+                </span>
+            </div>
+            <input type="checkbox" id="menu-bar"\>
+            <label for="menu-bar">&#9776;</label>
+            <ul class="list"> 
+             <li><a href="index.html">Home</a></li>  
+             <li>
+                <a href="#">Services &#x25BC;</a>
+             <ul class="dropdown">
+                <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                <li><a href="gamerboosting.html">Game Boosting</a></li>
+            </li>
+             </ul>
+             <li><a href="leaderboard.html">Leaderboard</a></li>  
+             <li><a href="AboutUs.html">About Us</a></li>                   
+            </ul>
+
+            <div class="right-section">
+                <div class="row">
+                    <div class="search-button">
+                        <input id="search-bar" class="search-bar" type="text" placeholder="Search" autocomplete="on">
+                        
+                        <a id=""><button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                </div>
+            </div>
+            <script src="autocomplete2.js"></script>
+
+        </nav>
+
+        <div class="productContainer">
+            <div class="productCard">
+                <!-- left -->
+                <div class="allProductimg">
+                    <div class="imagePreview">
+                        <div class="productImg">
+                            <img src="./image/buddy/ninja.png" alt=""/>
+                            <img src="./image/buddy/ninja2.png" alt=""/>
+                            <img src="./image/buddy/ninja3.png" alt=""/>
+                            <img src="./image/buddy/valorant.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="imageSelect">
+                        <div class="imageItem">
+                            <a href="#" data-id = "1">
+                                <img src="./image/buddy/ninja.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "2">
+                                <img src="./image/buddy/ninja2.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "3">
+                                <img src="./image/buddy/ninja3.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="imageItem">
+                            <a href="#" data-id = "4">
+                                <img src="./image/buddy/valorant.png" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- right -->
+                <div class="productDetail">
+                    <h2 class="productName">Ninja<button id="favouriteButton" class="favouriteButton">+ Favourite</button></h2>
+                    <div class="productRating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>5(20)</span>
+                    </div>
+
+                    <div class="productPrice">
+                        <p><i class="fa-regular fa-gem"></i>20/hour</p>
+                    </div>
+
+                    <div class="productDec">
+                        <div class="decButton">
+                        <div class="decButton2">
+                        <button id="aboutbuddy" class="buddydec active">About Buddy <i class="fa-solid fa-circle-info"></i></button>
+                        <button id="comment" class="buddydec">Comment<i class="fa-solid fa-comments"></i></button>
+                        <button id="skill" class="buddydec">Skill<i class="fa-solid fa-gamepad"></i></button>
+                        <button id="gift" class="buddydec">Gift<i class="fa-solid fa-gift"></i></button>
+                        </div>
+                        <button id="chat" class="buddydec buddychat">Chat<i class="fa-solid fa-comment"></i></button>
+                        </div>
+                        <div class="about" id="aboutdiv">
+                        <h3>About Buddy: </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque nulla quis et, cupiditate sequi ratione delectus suscipit ipsa animi ullam expedita, mollitia facere voluptatibus beatae distinctio veniam quae consequuntur?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reprehenderit similique illo labore aliquam illum enim harum eum deserunt minima omnis ex explicabo, voluptatem necessitatibus, culpa ad nemo cupiditate praesentium.</p>
+                        <audio controls>
+                            <source src="./audio/Bully.mp3" type="audio/mpeg">
+                        </audio>
+                        </div>
+                        <div class="comment" id="commentdiv">
+                        <h3>Comment: </h3>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>PS5</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Hamburger</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
+                        <div class="usercomment">
+                            <i class="fa-solid fa-user"></i>
+                            <span>XxSuperMarketxX</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo animi sunt quam doloribus nostrum dicta, non repudiandae optio incidunt, beatae ea. Perferendis saepe dolorem fugiat repellat at incidunt dignissimos.</p>
+                        </div>
+                        </div>                       
+                        <div class="skill" id="skilldiv">
+                        <h3>Skill: </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque nulla quis et, cupiditate sequi ratione delectus suscipit ipsa animi ullam expedita, mollitia facere voluptatibus beatae distinctio veniam quae consequuntur?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reprehenderit similique illo labore aliquam illum enim harum eum deserunt minima omnis ex explicabo, voluptatem necessitatibus, culpa ad nemo cupiditate praesentium.</p>
+                        </div>
+                        <div class="gift" id="giftdiv">
+                            <div class="giftImg">
+                                <div class="giftRow1">
+                                    <div class="present">
+                                        <img src="./image/buddy/rocket.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>20x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/balloon.png" alt="">
+                                        <div class="presentText">
+                                        <p>Balloon</p>
+                                        <p>10x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/giftbox.png" alt="">
+                                        <div class="presentText">
+                                        <p>GiftBox</p>
+                                        <p>3x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow2">
+                                    <div class="present">
+                                        <img src="./image/buddy/helicopter.png" alt="">
+                                        <div class="presentText">
+                                        <p>Helicopter</p>
+                                        <p>18x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/lolipop.png" alt="">
+                                        <div class="presentText">
+                                        <p>Lolipop</p>
+                                        <p>8x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/thumbup.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rocket</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow3">
+                                    <div class="present">
+                                        <img src="./image/buddy/yatch.png" alt="">
+                                        <div class="presentText">
+                                        <p>Yatch</p>
+                                        <p>15x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/stick.png" alt="">
+                                        <div class="presentText">
+                                        <p>Light Bar</p>
+                                        <p>6x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/rose.png" alt="">
+                                        <div class="presentText">
+                                        <p>Rose</p>
+                                        <p>2x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>
+                                <div class="giftRow4">
+                                    <div class="present">
+                                        <img src="./image/buddy/car.png" alt="">
+                                        <div class="presentText">
+                                        <p>SuperCar</p>
+                                        <p>12x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/watergun.png" alt="">
+                                        <div class="presentText">
+                                        <p>WaterGun</p>
+                                        <p>5x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                    <div class="present">
+                                        <img src="./image/buddy/love.png" alt="">
+                                        <div class="presentText">
+                                        <p>Love</p>
+                                        <p>1x<i class="fa-regular fa-gem"></i></p>
+                                        </div>
+                                        <button class="purchasePresent">Buy</button>     
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="productPurchase">
+                        <button type="button" class="book" id="order">Order</button>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="buddyRecommend">
+            <h2>Recommend</h2>
+
+            <div class="buddyContainer">
+                <a href="productpage.html" class="link" data-item="fortnite"><div class="card fortnite" data-item="fortnite">
+                    <div class="buddyimg">
+                    <img src="./image/buddy/s1mple.png" alt=""/>
+                    </div>
+                        <div class="content">
+                            <div class="buddyname">
+                                <h2>S1MPLE</h2>
+                            </div>
+                            <div class="buddyprice_rating">
+                                <div class="price">
+                                    <h3>Rm15/hour</h3>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                            </div>
+                        </div>
+                </div></a>
+    
+                <a href="" class="link" data-item="valorant" ><div class="card valorant" >
+                    <div class="buddyimg ">
+                    <img src="./image/buddy/ninja.png" alt=""/>
+    
+                    </div>
+                        <div class="content">
+                            <div class="buddyname">
+                                <h2>Ninja</h2>
+                            </div>
+                            <div class="buddyprice_rating">
+                                <div class="price">
+                                    <h3>Rm20/hour</h3>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>        
+                            </div>
+                        </div>
+                </div></a>
+
+                <a href="" class="link"  data-item="csgo"><div class="card csgo">
+                    <div class="buddyimg">
+                    <img src="./image/buddy/pokimane.png" alt=""/>
+                    </div>
+                        <div class="content">
+                            <div class="buddyname">
+                                <h2>Pokimane</h2>
+                            </div>
+                            <div class="buddyprice_rating">
+                                <div class="price">
+                                    <h3>Rm15/hour</h3>
+                                </div>
+                                <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star gray"></i>
+                            </div>
+                            </div>
+                        </div>
+                </div></a>
+    
+                <a href="" class="link" data-item="csgo"><div class="card csgo">
+                    <div class="buddyimg">
+                    <img src="./image/buddy/pokimane.png" alt=""/>
+                    </div>
+                        <div class="content">
+                            <div class="buddyname">
+                                <h2>Pokimane</h2>
+                            </div>
+                            <div class="buddyprice_rating">
+                                <div class="price">
+                                    <h3>Rm10/hour</h3>
+                                </div>
+                                <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star gray"></i>
+                            </div>
+                            </div>
+                        </div>
+                </div></a>
+    
+                <a href="" class="link"  data-item="fortnite"><div class="card fortnite">
+                    <div class="buddyimg">
+                    <img src="./image/buddy/s1mple.png" alt=""/>
+                    </div>
+                        <div class="content">
+                            <div class="buddyname">
+                                <h2>S1MPLE</h2>
+                            </div>
+                            <div class="buddyprice_rating">
+                                <div class="price">
+                                    <h3>Rm25/hour</h3>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                            </div>
+                        </div>
+                </div></a>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-label">
+              <div class="thumbnail"><img src="image/buddy/ninja.png" alt=""></div>
+
+              Ninja
+            </div>
+            <div class="chatbox" id="chatbox">
+              <div class="message bot-message">You up for a few rounds?</div>
+              <div class="message user-message">Sure thing, let's do it!</div>
+              <div class="message bot-message">Awesome! I'll send you an invite.</div>
+              <div class="message bot-message">By the way, have you checked out the new update?</div>
+              <div class="message user-message">Yes, it looks fantastic!</div>
+              <div class="message user-message">Can't wait to try it out.</div>
+            </div>
+            <div style="display: flex;">
+              <input type="text" id="userInput" placeholder="Message">
+              <button id="sendMessage">Send</button>
+            </div>
+          </div>
+
+    
+        <footer class="footer">
+            <div class="container">
+                <a href="index.html"><img src="./image/logo.png" alt=""></a>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
+                        <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
+                        <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                        <li><a href="game_coach.html">Join Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                        <li><a href="gamerboosting.html">Game Boosting</a></li>
+                    </ul>
+    
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="live_bot_chat.html">Live Chat</a></li>
+                    <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+              
+                <div class="icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                
+            </div>  
+            </div> 
+            <p>Copyright &copy; 2023 GamerHub</p> 
+        </footer>
+        
+        <script>
+            //follow button
+            let favouriteButton = document.getElementById("favouriteButton");
+            let added = false;
+
+            favouriteButton.addEventListener('click', ()=>{
+                added = !added;
+
+                if(added){
+                    favouriteButton.textContent="Added";
+                    favouriteButton.style.background="hsl(332, 66%, 55%)"
+                }else{
+                    favouriteButton.textContent="+ Favourite"
+                    favouriteButton.style.background="hsl(266, 39%, 17%)"
+                }
+            })
+
+            //slide image
+            const imgs = document.querySelectorAll(".imageSelect a");// select all photo in a tag
+            const imgBtns = [...imgs];// put all the photo into array
+            let imgId = 1;// initialize the value
+
+
+            imgBtns.forEach((imgItem)=>{
+                imgItem.addEventListener('click',(event)=>{   // add click event listeners to imgItem
+                    event.preventDefault(); // prevent going to the image location
+                    imgId = imgItem.dataset.id;  // update the selected image from the data-id attribute
+                    slideImage(); // slide to the selected image
+                });
+
+            });
+
+            function slideImage(){ // function for slideImage
+                    // calculate the display width of a single image
+                const displayWidth = document.querySelector('.productImg img:first-child').clientWidth;
+                   // apply css transform to slide the image
+                document.querySelector('.productImg').style.transform =`translateX(${- (imgId - 1) * displayWidth}px)`;
+            }
+
+            // adjust image position base on the windwos size
+            window.addEventListener('resize', slideImage);
+
+            //switch between div
+
+            let aboutbuddy=document.getElementById("aboutbuddy");
+            let comment=document.getElementById("comment");
+            let skill=document.getElementById("skill");
+            let gift=document.getElementById("gift");
+            let aboutdiv=document.getElementById("aboutdiv");
+            let commentdiv=document.getElementById("commentdiv");
+            let skilldiv=document.getElementById("skilldiv");
+            let giftdiv=document.getElementById("giftdiv");
+
+            aboutbuddy.onclick=function(){
+                aboutdiv.style.display=("block");
+                commentdiv.style.display=("none");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.add('active');
+                comment.classList.remove('active');
+                skill.classList.remove('active');
+                gift.classList.remove('active');
+            }
+
+            comment.onclick=function(){
+                aboutdiv.style.display=("none");
+                commentdiv.style.display=("block");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.remove('active');
+                comment.classList.add('active');
+                skill.classList.remove('active');
+                gift.classList.remove('active');
+            }
+
+            skill.onclick=function(){
+                aboutdiv.style.display=("none");
+                commentdiv.style.display=("none");
+                skilldiv.style.display=("block");
+                giftdiv.style.display=("none");
+                aboutbuddy.classList.remove('active');
+                comment.classList.remove('active');
+                skill.classList.add('active');
+                gift.classList.remove('active');
+            }
+
+            gift.onclick=function(){
+                aboutdiv.style.display=("none");
+                commentdiv.style.display=("none");
+                skilldiv.style.display=("none");
+                giftdiv.style.display=("grid");
+                aboutbuddy.classList.remove('active');
+                comment.classList.remove('active');
+                skill.classList.remove('active');
+                gift.classList.add('active');
+            }
+
+
+        </script>
+    </body>
+</html>

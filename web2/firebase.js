@@ -79,35 +79,14 @@ document.addEventListener('DOMContentLoaded', function(){
 });  
 
 document.addEventListener('DOMContentLoaded', function(){
-  const order = document.getElementById('order');
-  if ( order ) { //if the element exists add the click event
-    order.addEventListener('click', () => {
+  const order2 = document.getElementById('order2');
+  if ( order2 ) { //if the element exists add the click event
+    order2.addEventListener('click', () => {
       auth.onAuthStateChanged(user=>{
-        if(user){
-          window.location.assign("order.html");
-        }else{
-          window.location.assign("login.html");
+        if(user===null){
+          order2.href='login.html'
         }
     })
-    });
-
-    sendMessageBtn.addEventListener('click', () => {
-      const userMessage = userInput.value.trim();
-      if (userMessage !== '') {
-        const userMessageDiv = document.createElement('div');
-        userMessageDiv.className = 'message user-message';
-        userMessageDiv.textContent = userMessage;
-
-        const botMessageDiv = document.createElement('div');
-        botMessageDiv.className = 'message bot-message';
-        botMessageDiv.textContent = 'Got it!';
-
-        chatbox.appendChild(userMessageDiv);
-        chatbox.appendChild(botMessageDiv);
-
-        userInput.value = ''; // Clear the input field
-        chatContainer.style.display = 'block'; // Show the chatbox container
-      }
     });
   }
 });  
@@ -121,19 +100,27 @@ document.addEventListener('DOMContentLoaded', function(){
           var emailplaceholder =  document.getElementById("emailplaceholder").value;
           var passplaceholder = document.getElementById("passplaceholder").value;
           var errormsg = document.querySelector(".errormsg");
+          
+          if(userplaceholder.length<=0){
+            errormsg.innerHTML = "Please enter Username";
+            return;
+          }
+
           //For new registration
           createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
           .then((userCredential) => {
+
+            
             // Signed up 
             const user = userCredential.user;
-
             set(ref(database, 'users/' + user.uid),{
               username: userplaceholder,
               email: emailplaceholder
 
-            })
+            })  
             console.log(user);
             errormsg.innerHTML = "Registration successfully";
+            history.back();
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -159,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function(){
             const user = userCredential.user;
             console.log(user);
             errormsg.innerHTML = "Login successfully";
-            window.location.assign("index.html");
+            history.back();
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -181,6 +168,8 @@ document.addEventListener('DOMContentLoaded', function(){
           signInWithRedirect(auth,googleProvider)
           .then(() => {
             window.location.assign("./profile");
+          }).then(() => {
+            window.location.assign("index.html");
           })
           .catch((error) => {
             const errorCode = error.code;
