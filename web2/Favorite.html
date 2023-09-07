@@ -28,7 +28,7 @@
       <i class="fa-solid fa-circle-user"></i>
       <span id="userName">User
           <ul class="dropdown">
-              <li><a href="#">Favourite</a></li>
+              <li><a href="Favorite.html">Favourite</a></li>
               <li><a href="Topup.html">Topup</a></li>
               <li><a id="logout2">Logout</a></li>
           </ul>
@@ -76,12 +76,12 @@
                   
           <div id="buttonbox">
 
-            <button class="button" onclick="filterSelection('fav1')">FAV 1</button>
-            <button class="button" onclick="filterSelection('fav2')">FAV 2</button>
-            <button class="button" onclick="filterSelection('fav3')">FAV 3</button>
-            <button class="button" onclick="filterSelection('fav4')">FAV 4</button>
+            <button class="buttonfav" onclick="filterSelection('fav1')">FAV 1</button>
+            <button class="buttonfav" onclick="filterSelection('fav2')">FAV 2</button>
+            <button class="buttonfav" onclick="filterSelection('fav3')">FAV 3</button>
+            <button class="buttonfav" onclick="filterSelection('fav4')">FAV 4</button>
 
-            <button class="button active" onclick="filterSelection('all')">ALL</button>
+            <button class="buttonfav active" onclick="filterSelection('all')">ALL</button>
 
           </div>
 
@@ -97,21 +97,29 @@
 
     <ul id="FAVS">
 
-      <li class="section fav1">
-        <span class="favname"><img src="ninja.jpg" alt="fav Icon" class="icon"><a href="https://wddy1s1.ddnsfree.com/web2/productpage.html" alt="">Ninja</a></span>
-      </li>
+      <a href="boost_ninja.html">
+        <li class="section fav1">
+            <span class="favname"><img src="./image/buddy/ninja.png" alt="fav Icon" class="iconfav">NINJA</span>
+          </li>
+      </a>
 
-      <li class="section fav2">
-        <span class="favname"><img src="s1mple.jpg" alt="fav Icon" class="icon"><a href="" alt="">S1mple</a></span>
-      </li>
+      <a href="boost_s1mple.html"><li class="section fav2">
+        <span class="favname"><img src="./image/buddy/s1mple.png" alt="fav Icon" class="iconfav">S1MPLE</span>
+      </li></a>
+      
 
-      <li class="section fav3">
-         <span class="favname"><img src="pokimone.jpg" alt="fav Icon" class="icon"><a href="" alt="">Pokimane</a></span>
-      </li>
+      <a href="boost_faker.html">
+        <li class="section fav3">
+            <span class="favname"><img src="./image/buddy/faker.png" alt="fav Icon" class="iconfav">FAKER</span>
+         </li>
+      </a>
 
-      <li class="section fav4">
-        <span class="favname"><img src="gigachad.jpg" alt="fav Icon" class="icon"><a href="" alt="">Who?</a></span>
-      </li>
+      <a href="boost_spicy.html">
+        <li class="section fav4">
+            <span class="favname"><img src="./image/buddy/spicy.png" alt="fav Icon" class="iconfav">SPICYUUU</span>
+          </li>
+      </a>
+      
 
     </ul>
           

@@ -1,0 +1,198 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Opensans";
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+
+/*FAVORITE css starts here*/
+
+body {
+    background: hsl(252, 48%, 37%);
+}
+
+.top {
+    padding-top: 8%;
+    margin-left: 11%;
+}
+
+@media (max-width: 540px) {
+    .top {
+        padding-top: 20%;
+    }
+}
+
+.favhead {
+    padding-bottom: 1%;
+    color: white;
+}
+
+h1.biggesttext {
+    font-size: 550%;
+    padding-top: 1%;
+    margin-bottom: 5.0%;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 650px) {
+    h1.biggesttext {
+        font-size: 400%;
+    }
+}
+
+@media (max-width: 540px) {
+    h1.biggesttext {
+        font-size: 230%;
+    }
+}
+
+@media (max-width: 370px) {
+    h1.biggesttext {
+        padding-top: 100px;
+    }
+}
+
+h2.custfav{
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: -0.01%;
+    color: rgb(250, 209, 248);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-left: 1%;
+    margin-right: 10%;
+}
+
+#usersearch {
+    width: 22%;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 5px, 5px, 5px, 5px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 67%;
+    max-width: 30%;
+    background-color:rgb(255, 255, 255);
+}
+
+@media (max-width: 350px) {
+    #usersearch {
+        font-size: 80%;
+    }
+}
+
+#buttonbox {
+    display: flex;
+    text-align: center;
+}
+
+#buttonbox > * {
+    flex: 1;
+    white-space: nowrap;
+    max-width: 13%; 
+}
+
+.bottom{
+    overflow-y: auto;
+}
+
+.buttonfav {
+    border: none;
+    padding: 8px 15px 8px 8px;
+    color: #ffffff;
+    background-color: hsl(266, 39%, 17%);
+    cursor: pointer;
+    font-size: 100%;
+    min-width: 18%;
+    min-height: 18%;
+}
+
+@media (max-width: 710px) {
+    .buttonfav {
+        font-size: 50%;
+    }
+}
+
+
+.buttonfav:hover {
+    background-color: hsl(332, 75%, 65%);
+    color: rgb(255, 255, 255);
+}
+
+.buttonfav.active {
+    background: hsl(332, 66%, 55%);
+    color: rgb(255, 255, 255);
+}
+
+#FAVS {
+    width: 100%;
+    padding-left: 10%;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 1000px) {
+    #FAVS {
+        padding-bottom: 20%;
+    }
+}
+
+@media (max-width: 809px) {
+    #FAVS {
+        padding-bottom: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    #FAVS {
+        padding-bottom: 40%;
+    }
+}
+
+#FAVS li span {
+    margin-left: 1.5%;
+    margin-right: 10%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-size: 20%; 
+    color: rgb(255, 255, 255);
+    display: block;
+    opacity: 100%;
+}
+
+@media (max-width: 360px) {
+    #FAVS li span {
+        font-size: 20%;
+    }
+}
+
+#FAVS li span:hover:not(.header) {
+    opacity: 90%;
+}
+
+.section {
+    display: none; 
+    margin-bottom: 0.5%;
+}
+
+.show {
+    display: block;
+    font-size: 100px;
+}
+
+.favname {
+    font-weight: bold;
+    background: hsl(332, 66%, 55%);
+}
+
+.iconfav {
+    width: 23%;
+    height: 23%;
+    margin-right: 15%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

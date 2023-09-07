@@ -83,16 +83,16 @@
                 </ul>
                 <div class="orderDetail">
                     <div class="orderDetail2">
-                        <img src="./image/buddy/ninja.png" alt="">
+                        <img src="./image/buddy/aspas.png" alt="">
                     </div>
                     <div class="orderDetail2">
-                        <P>Ninja</P>
+                        <P>ASPAS</P>
                     </div>
                     <div class="orderDetail2">
                         <P>Fortnite</P>
                     </div>
                     <div class="orderDetail2">
-                        <div class="price"><i class="fa-regular fa-gem"></i><p id="singleprice">20/hour</p></div>
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="singleprice">30/H</p></div>
                     </div>
                     <div class="orderDetail2">
                         <input id="orderQuantity" type="number" min="0" max="20" value="1">
@@ -101,7 +101,7 @@
                         <input type="datetime-local" id="start-date">
                     </div>
                     <div class="orderDetail2">
-                        <div class="price"><i class="fa-regular fa-gem"></i><p id="totalprice">20</p></div>
+                        <div class="price"><i class="fa-regular fa-gem"></i><p id="totalprice"></p></div>
                     </div>
                 </div>
             </div>
@@ -172,17 +172,18 @@
         </footer>
 
         <script>
-            const orderQuantity = document.getElementById('orderQuantity');
+           const orderQuantity = document.getElementById('orderQuantity');
             const singlePrice = document.getElementById('singleprice');
             const totalPrice = document.getElementById('totalprice');
+            const singlePriceText = parseFloat(singlePrice.textContent);
 
              function updateTotalPrice() {
-              const singlePriceText = parseFloat(singlePrice.textContent);
               const quantity = orderQuantity.value;
               const totalAmount = singlePriceText * quantity;
 
               totalPrice.textContent = totalAmount;
              }
+            totalPrice.innerHTML = singlePriceText;
             orderQuantity.addEventListener('input', updateTotalPrice);
 
             let dateInput = document.getElementById("start-date");

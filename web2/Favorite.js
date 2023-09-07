@@ -62,7 +62,7 @@ function faqRemoveClass (element,name)
 
 
 var btnContainer = document.getElementById("buttonbox");
-var btns = btnContainer .getElementsByClassName("button");
+var btns = btnContainer .getElementsByClassName("buttonfav");
 
 for (var i = 0; i < btns.length; i++) 
 {
