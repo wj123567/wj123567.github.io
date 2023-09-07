@@ -1,352 +1,9 @@
-@charset "utf-8";
-@font-face {
-    font-family: "Opensans";
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
-::-webkit-scrollbar{
-    display: none;          /*scroll bar on the rhs will be invisible*/
-}
 
-html{
-    height: 100%;
-
-}
-body{
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    background-color: hsl(252, 48%, 37%);
-    padding-bottom: 210px;
-    z-index: 1;
-}
-
-.logo{
-    width: 100px;
-    float: left;
-    display: inline;
-    margin-top: 5px;
-
-}
-
-/* navbar */
-nav{
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    background-color: hsl(266, 39%, 17%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
-
-.navbar>ul{
-    list-style-type: none;
-    background-color: hsl(266, 39%, 17%);
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-
-.list li a{
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: left;
-    font-size: 0.9em;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-}
-
-.list>li>a:hover{
-    background-color: hsl(266, 20%, 10%);
-
-}
-
-.navbar>ul>li{
-    float: left;
-    
-}
-
-
-/* dropdown */
-.navbar .dropdown{
-    display: block;
-    list-style-type: none;
-    width: 150px;
-    background: hsl(266, 39%, 17%);
-    position: absolute;
-    z-index: 2;
-    display: none;
-
-}
-
-.navbar .dropdown li{
-    border-top: 1px solid rgba(169, 165, 165, 0.9);
-}
-
-.navbar .dropdown li a{
-    text-align: left;
-}
-
-.list li:hover .dropdown{
-    display:block;
-}
-
-/* login*/
-.navbar button{
-    display: block;
-    float:right;
-    background-color: hsl(332, 66%, 55%);
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 90px
-
-}
-.navbar button:hover{
-    background-color: hsl(332, 80%, 60%);
-}
-
-.navbar button a{
-    text-decoration: none;
-    color: hsl(266, 39%, 17%);
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#menu-bar{
-    display:none
-}
-
-.navbar label{
-    font-size: 20px;
-    color:white;
-    cursor: pointer;
-    display: none;
-    float: left;
-    padding: 17px;
-}
-
-.navbar .userLogin{
-    display: none;
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1.3em;
-    color: white;
-}
-
-
-.navbar .userLogin .dropdown{
-    display: none;
-    list-style-type: none;
-    width: 110px;
-    background: hsl(266, 39%, 17%);
-    position: absolute;
-    z-index: 2;
-    margin-top: 10px;
-}
-
-.navbar .userLogin .dropdown li{
-    border-top: 1px solid rgba(169, 165, 165, 0.9);
-    height: 40px;
-    text-align: left;
-    margin: 0;
-    cursor: pointer;
-}
-
-.navbar .userLogin .dropdown li a{
-    text-align: left;
-    color: white;
-    font-size: 0.8em;
-    text-decoration: none;
-    margin: 2px 5px;
-}
-
-.navbar .userLogin:hover .dropdown{
-    display:block;
-}
-
-/* footer */
-footer{
-    background-color: hsl(266, 39%, 17%);
-    position: absolute;  
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-footer .container{
-    margin-left: auto;
-    margin-right: auto;
-}
-.footer img{
-    width: 200px;
-    padding: 7px 30px;
-    display: inline;
-    float: left;
-}
-
-.footer .row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-col{
-   width: 15%;
-   padding: 7px 15px;
-}
-
-.footer h4{
-color: white;
-font-size: 1.2em;
-}
-
-.footer ul{
-    list-style-type: none;
-    margin-top: 5px;
-}
-
-.footer ul li{
-    margin-top: 15px;
-}
-
-.footer ul li a{
-    text-decoration: none;
-    color: white;
-    transition: all 0.4s ease;
-    font-size: 0.9em;
-    
-}
-
-.footer ul li a:hover{
-    color: hwb(6 45% 9%);
-    padding-left: 8px;
-}
-
-.footer .icon i{
-    color: white;
-    font-size: 2em;
-    margin: 7px 18px;
-    transition: all 0.4s;
-}
-
-.footer .icon i:hover{
-    color: hwb(6 45% 9%);
-}
-
-.footer p{
-    color: white;
-    font-size: 0.6em;
-    float: right;
-}
-
-/* responsive */
-@media(max-width:991px){
-
-    .navbar{
-        padding: 20;
-    }
-
-    .navbar label{
-        display: initial;
-    }
-    
-    .navbar .list{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: hsl(266, 39%, 17%);
-        border-top: 1px solid white;
-        display: none;
-    }
-
-    .navbar .list li{
-        width:100%;
-    }
-
-    .navbar .dropdown{
-        position: relative;
-        width:100%;
-    }
-
-    .navbar.dropdown li{
-        background: hsl(266, 39%, 17%);
-
-    }
-
-    #menu-bar:checked ~ .list{
-        display: initial;
-    }
-
-    .navbar button{
-        width: 65px;
-        margin-right: 2px;
-
-    }
-
-    .navbar button a{
-        font-size: 0.8em;
-    }
-
-    .register{
-        overflow: scroll; 
-    }
-    
-    .wrapper{
-        width: 100%;
-        padding-bottom: 15%;
-    }
-    .footer{
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .footer .footer-col{
-        width: 30%;
-        margin-bottom: 30px;
-        max-height: 205px;
-    }
-
-}
-
-@media(max-width: 574px){
-    .footer img{
-        display: none;
-       }
-    .footer .icon i{
-        font-size:1.2em;
-        margin-left: 5px;
-        }
-    
-    .footer .icon{
-        margin-left: 10px;
-        margin-top: 40px;
-        height: 40px;
-        }
-    
-    
-  }
 /*leaderboard css*/
 
-
-
 .wrapper{
-    padding-top: 10%;
-    padding-bottom: 17%;
+    padding-top: 150px;
+    padding-bottom: 200px;
 }
 
 .wrapper li {
@@ -355,7 +12,7 @@ font-size: 1.2em;
 
 .lboard_section{
     width:900px;
-    height: 500px;
+    height: 550px;
     margin: 0px auto;
     background: #f94f62;
     border-radius: 5px;
@@ -413,21 +70,34 @@ font-size: 1.2em;
 }
 
 .lboard_wrap .lboard_mem .img{
-    width: 110px; 
+    width: 140px; 
+    height: 70px;
 }
 
 .lboard_wrap .lboard_mem .img img{
     display: block;
     width: 100%;
+    height: 100%;
 }
 
 .lboard_wrap .lboard_item .name_bar{
-    margin: 0 20px;
+    margin: 0px 20px;
     width: calc(100% - 200px);
 }
 
 .lboard_wrap .lboard_item .name_bar p{
-    color: #3a3d51;
+    font-size: 20px;
+    color: #DCDCDC;
+    text-shadow: 1px 1px 1px #696969,
+                 1px 2px 1px #696969,
+                 1px 3px 1px #696969,
+                 1px 4px 1px #696969,   
+         
+                 1px 2px 6px rgba(16, 16, 16, 0.5),
+                 1px 4px 10px rgba(16, 16, 16, 0.2),
+                 1px 6px 35px rgba(16, 16, 16, 0.2),
+                 1px 10px 60px rgba(16, 16, 16, 0.5);
+
 }
 
 .lboard_wrap .lboard_item .name_bar p span{
@@ -435,8 +105,20 @@ font-size: 1.2em;
 }
 
 .lboard_wrap .lboard_item .points{
+    font-size: 18px;
     width: 100px;
-    color: #3a3d51;                        /*point color*/
+    color: #4169E1;                                        /*point color*/
+    text-shadow: 1px 1px 1px #6F8FAF,
+                 1px 2px 1px #B6D0E2,
+                 1px 3px 1px #6F8FAF,
+                 1px 4px 1px #B6D0E2;                    
+}
+
+.lboard_wrap .lboard_item .points i{
+    color: #0047AB  ; 
+    font-weight: bold;  
+    text-shadow: none;
+                        
 }
 
 .lboard_wrap .lboard_item .bar_wrap{
@@ -467,13 +149,12 @@ font-size: 1.2em;
 
     
     .wrapper{
-    padding-top: 15%;
-    padding-bottom: 30%;
+    padding-top: 200px;
+    padding-bottom: 400px;
     }
 
     .lboard_section{
-        width:60%;
-        height: 500px;
+        width:80%;
        
     }
 
@@ -492,7 +173,7 @@ font-size: 1.2em;
 
     .lboard_wrap{                    
         position: absolute;
-        top:100px;
+        top:110px;
         left: 0%; 
         
     }
@@ -502,13 +183,12 @@ font-size: 1.2em;
    
 
     .wrapper{
-        padding-top: 20%;
-        padding-bottom: 40%;
+        padding-top: 200px;
+        padding-bottom: 400px;
         }
 
         .lboard_section{
             width:90%;
-             height:500px;
         }
  
 }
@@ -516,21 +196,30 @@ font-size: 1.2em;
 @media only screen and (max-width:457px)
 {
     .wrapper{
-        padding-top: 25%;
-        padding-bottom: 80%;
+        padding-top: 200px;
+        padding-bottom: 400px;
         }
     
     .lboard_section{
-        width:90%;
-         height:480px;
-    }
+   
+        height: 450px;
+        }
           
     .lboard_section ul{
             display: flex;
             flex-flow: column wrap;
         }
+
+    .lboard_wrap .lboard_mem .img{
+            width: 100px; 
+            height: 55px;
+        }
+
+    .lboard_wrap .lboard_item .name_bar p{
+        font-size: 16px;
+    }
     .lboard_wrap{                    
-            top:220px;
+            top:170px;
         }
     
     .lboard_wrap .lboard_item .bar_wrap{
@@ -542,14 +231,14 @@ font-size: 1.2em;
 
 }
 
-@media only screen and (max-width:379px){
+@media only screen and (max-width:400px){
     .wrapper{
-        padding-top: 35%;
-        padding-bottom: 90%;
+        padding-top: 200px;
+        padding-bottom: 450px;
         }
 
     .lboard_section{
-         height:340px;
+         height: 450px;
     }
 
     .lboard_section ul li{
@@ -557,19 +246,24 @@ font-size: 1.2em;
     }
 
     .lboard_wrap{                    
-        top:140px;
+        top:150px;
     }
 
     .lboard_wrap .lboard_mem .img{
-        display: none;
+        width: 90px;
     }
     .lboard_wrap .lboard_item .name_bar {
         margin: 0 0px;
-        text-align: left;
-        width: 55%;
+        margin-left: 5px;
+        width: 30%;
     }
+    .lboard_wrap .lboard_item .name_bar p{
+        font-size: 14px;
+        
+    }
+  
     .lboard_wrap .lboard_item .points{
-       font-size: 10px;
+      font-size: 12px;
        text-align: right;
     }
 }

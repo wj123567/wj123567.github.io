@@ -1,342 +1,5 @@
-@charset "utf-8";
-@font-face {
-    font-family: "Opensans";
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
-::-webkit-scrollbar{
-    display: none;          /*scroll bar on the rhs will be invisible*/
-}
-
-html{
-    height: 100%;
-
-}
-body{
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    background-color: hsl(252, 48%, 37%);
-    padding-bottom: 210px;
-    z-index: 1;
-}
-
-.logo{
-    width: 100px;
-    float: left;
-    display: inline;
-    margin-top: 5px;
-
-}
-
-/* navbar */
-nav{
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    background-color: hsl(266, 39%, 17%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
 
 
-.navbar>ul{
-    list-style-type: none;
-    background-color: hsl(266, 39%, 17%);
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-
-.list li a{
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: left;
-    font-size: 0.9em;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-}
-
-.list>li>a:hover{
-    background-color: hsl(266, 20%, 10%);
-
-}
-
-.navbar>ul>li{
-    float: left;
-    
-}
-
-
-/* dropdown */
-.navbar .dropdown{
-    display: block;
-    list-style-type: none;
-    width: 150px;
-    background: hsl(266, 39%, 17%);
-    position: absolute;
-    z-index: 2;
-    display: none;
-
-}
-
-.navbar .dropdown li{
-    border-top: 1px solid rgba(169, 165, 165, 0.9);
-}
-
-.navbar .dropdown li a{
-    text-align: left;
-}
-
-.list li:hover .dropdown{
-    display:block;
-}
-
-/* login*/
-.navbar button{
-    display: block;
-    float:right;
-    background-color: hsl(332, 66%, 55%);
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 90px
-
-}
-.navbar button:hover{
-    background-color: hsl(332, 80%, 60%);
-}
-
-.navbar button a{
-    text-decoration: none;
-    color: hsl(266, 39%, 17%);
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#menu-bar{
-    display:none
-}
-
-.navbar label{
-    font-size: 20px;
-    color:white;
-    cursor: pointer;
-    display: none;
-    float: left;
-    padding: 17px;
-}
-
-.navbar .userLogin{
-    display: none;
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1.3em;
-    color: white;
-}
-
-
-.navbar .userLogin .dropdown{
-    display: none;
-    list-style-type: none;
-    width: 110px;
-    background: hsl(266, 39%, 17%);
-    position: absolute;
-    z-index: 2;
-    margin-top: 10px;
-}
-
-.navbar .userLogin .dropdown li{
-    border-top: 1px solid rgba(169, 165, 165, 0.9);
-    height: 40px;
-    text-align: left;
-    margin: 0;
-    cursor: pointer;
-}
-
-.navbar .userLogin .dropdown li a{
-    text-align: left;
-    color: white;
-    font-size: 0.8em;
-    text-decoration: none;
-    margin: 2px 5px;
-}
-
-.navbar .userLogin:hover .dropdown{
-    display:block;
-}
-
-/* footer */
-footer{
-    position: fixed;
-    background-color: hsl(266, 39%, 17%);
-    position: absolute;  
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-footer .container{
-   
-    margin-left: auto;
-    margin-right: auto;
-}
-.footer img{
-    width: 200px;
-    padding: 7px 30px;
-    display: inline;
-    float: left;
-}
-
-.footer .row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-col{
-   width: 15%;
-   padding: 7px 15px;
-}
-
-.footer h4{
-color: white;
-font-size: 1.2em;
-}
-
-.footer ul{
-    list-style-type: none;
-    margin-top: 5px;
-}
-
-.footer ul li{
-    margin-top: 15px;
-}
-
-.footer ul li a{
-    text-decoration: none;
-    color: white;
-    transition: all 0.4s ease;
-    font-size: 0.9em;
-    
-}
-
-.footer ul li a:hover{
-    color: hwb(6 45% 9%);
-    padding-left: 8px;
-}
-
-.footer .icon i{
-    color: white;
-    font-size: 2em;
-    margin: 7px 18px;
-    transition: all 0.4s;
-}
-
-.footer .icon i:hover{
-    color: hwb(6 45% 9%);
-}
-
-.footer p{
-    color: white;
-    font-size: 0.6em;
-    float: right;
-}
-
-/* responsive */
-@media(max-width:991px){
-
-    .navbar{
-        padding: 20;
-    }
-
-    .navbar label{
-        display: initial;
-    }
-    
-    .navbar .list{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: hsl(266, 39%, 17%);
-        border-top: 1px solid white;
-        display: none;
-    }
-
-    .navbar .list li{
-        width:100%;
-    }
-
-    .navbar .dropdown{
-        position: relative;
-        width:100%;
-    }
-
-    .navbar.dropdown li{
-        background: hsl(266, 39%, 17%);
-
-    }
-
-    #menu-bar:checked ~ .list{
-        display: initial;
-    }
-
-    .navbar button{
-        width: 65px;
-        margin-right: 2px;
-
-    }
-
-    .navbar button a{
-        font-size: 0.8em;
-    }
-
-    .register{
-        overflow: scroll; 
-    }
-    
-    .footer{
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .footer .footer-col{
-        width: 30%;
-        margin-bottom: 30px;
-        max-height: 205px;
-    }
-
-}
-
-@media(max-width: 574px){
-    .footer img{
-        display: none;
-       }
-    .footer .icon i{
-        font-size:1.2em;
-        margin-left: 5px;
-        }
-    
-    .footer .icon{
-        margin-left: 10px;
-        margin-top: 40px;
-        height: 40px;
-        }
-    
-  }
 .about_us{
     margin: 0px;
     padding: 0px;
@@ -357,8 +20,9 @@ font-size: 1.2em;
 }
 
 .heading h1{
-    font-size: 50px;
+    font-size: 60px;
     color:#c9ffc7;
+    padding-top: 30px;
     margin-bottom: 60px;
     position: relative;
 }
@@ -374,7 +38,7 @@ font-size: 1.2em;
 }
 
 .heading blockquote{
-    color: #d4ceb0;
+    color: rgba(212, 206, 176,0.8);
     font-size: 20px;
     width: 95%;
     margin-bottom: 35px;
@@ -425,7 +89,7 @@ font-size: 1.2em;
 .about_content p{
     font-size: 18px;
     line-height: 1.5;
-    color: #d4ceb0;
+    color: rgba(212, 206, 176,0.8);
 }
 
 .about_content .view_more{
@@ -462,6 +126,7 @@ font-size: 1.2em;
     }
     .heading h1{
         font-size: 36px;
+        padding-top: 60px;
     }
     .heading p{
         font-size: 17px;
