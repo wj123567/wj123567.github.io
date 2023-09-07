@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="gamerbuddy, gameboosting, gamerhub" />
+        <title>GamerHub</title>
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="index_test.css">
+        <link rel="stylesheet" href="live-bot-chat.css">
+        <link rel="stylesheet" href="Topup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script type="module" src="firebase.js"></script>
+        <link rel="stylesheet" href="searchbar.css">
+    
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div><a href="index.html"><img src="./wz_image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
+            <button class=button id="login"><a href="login.html">Login</a></button>
+            <div class="userLogin" id="logout">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="userName">User
+                    <ul class="dropdown">
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="Topup.html">Topup</a></li>
+                        <li><a id="logout2">Logout</a></li>
+                    </ul>
+                </span>
+            </div>
+            <input type="checkbox" id="menu-bar"\>
+            <label for="menu-bar">&#9776;</label>
+            <ul class="list"> 
+             <li><a href="index.html">Home</a></li>  
+             <li>
+                <a href="#">Services &#x25BC;</a>
+             <ul class="dropdown">
+                <li><a href="gamerbuddy.html">Game Buddy</a></li>
+                <li><a href="gamerboosting.html">Game Boosting</a></li>
+            </li>
+             </ul>
+             <li><a href="leaderboard.html">Leaderboard</a></li>  
+             <li><a href="AboutUs.html">About Us</a></li>                   
+            </ul>
+
+            <div class="right-section">
+                <div class="row">
+                    <div class="search-button">
+                        <input id="search-bar" class="search-bar" type="text" placeholder="Search" autocomplete="on">
+                        
+                        <a id=""><button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                </div>
+            </div>
+            <script src="autocomplete2.js"></script>
+
+        </nav>
+
+        <div class="table_data">
+            <div class="lightbar"></div>
+            <div class="toplayer"></div>
+            <h1> Top Up</h1>
+        </div>
+
+        <div class="diamond_num">
+            <h5><img src="./wz_image/diamond.png"></img>Current Diamond:______</h5>
+        </div>
+        
+       
+        <div class="table_container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Option </th>
+                        <th>Diamond<img src="./wz_image/diamond.png"></img></img></th>
+                        <th>Price(RM)</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No.">(1)</td>
+                        <td data-label="Diamond">100<img src="./wz_image/diamond.png"></img></td>
+                        <td data-label="Price">RM10.00</td>
+                        <td data-label="Payment"><a href="payment.html" alt="payment" class="pay_btn" style="--clr:#00ff00"><span>Proceed</span><i></i></a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No.">(2)</td>
+                        <td data-label="Diamond">300<img src="./wz_image/diamond.png"></img></td>
+                        <td data-label="Price">RM28.00</td>
+                        <td data-label="Payment"><a href="payment.html" alt="payment" class="pay_btn" style="--clr:#00ff00"><span>Proceed</span><i></i></a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No.">(3)</td>
+                        <td data-label="Diamond">500<img src="./wz_image/diamond.png"></img></td>
+                        <td data-label="Price">RM45.00</td>
+                        <td data-label="Payment"><a href="payment.html" alt="payment" class="pay_btn" style="--clr:#00ff00"><span>Proceed</span><i></i></a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No.">(4)</td>
+                        <td data-label="Diamond">700<img src="./wz_image/diamond.png"></img></td>
+                        <td data-label="Price">RM62.00</td>
+                        <td data-label="Payment"><a href="payment.html" alt="payment" class="pay_btn" style="--clr:#00ff00"><span>Proceed</span><i></i></a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No.">(5)</td>
+                        <td data-label="Diamond">1000<img src="./wz_image/diamond.png"></img></td>
+                        <td data-label="Price">RM90.00</td>
+                        <td data-label="Payment"><a href="payment.html" alt="payment" class="pay_btn" style="--clr:#00ff00"><span>Proceed</span><i></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+    </body>
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html"><img src="./wz_image/logo.png" alt=""></a>
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="./document/PrivacyPolicy.pdf" target="_blank" >Privacy Policy</a></li>
+                    <li><a href="./document/TermsAndConditions.pdf"target="_blank">Term and Condition</a></li>
+                    <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="">Game Buddy</a></li>
+                    <li><a href="">Game Boosting</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Live Chat</a></li>
+                <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
+                </ul>
+            </div>
+
+          
+            <div class="icon">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            
+        </div>  
+        </div> 
+        <p>Copyright &copy; 2023 GamerHub</p> 
+    </footer>
+
+
+
+</html>
