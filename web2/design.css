@@ -526,12 +526,13 @@ font-size: 1.2em;
 
 .register .input-field{
     background-color: rgba(190, 208, 211, 0.823);
+    padding-right: 20px;
     margin: 15px;
     border-radius: 3px;
     display:flex;
     align-items: center;
     max-height: 65px;
-    transition: max-height 0.5s;
+    transition: all 0.5s;
     overflow: hidden;
 }
 
@@ -541,6 +542,14 @@ font-size: 1.2em;
     border: 0;
     outline: 0;
     padding: 18px 15px;
+}
+
+.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid{
+    background: url(./image/check-solid.svg) right/20px no-repeat;
+}
+
+.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid{
+    background: url(./image/xmark-solid.svg ) right/20px no-repeat;
 }
 
 .register i{

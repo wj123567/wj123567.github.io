@@ -375,6 +375,7 @@ font-size: 1.2em;
 
 .register .input-field{
     background-color: rgba(190, 208, 211, 0.823);
+    padding-right: 20px;
     margin: 15px;
     border-radius: 3px;
     display:flex;
@@ -384,20 +385,20 @@ font-size: 1.2em;
     overflow: hidden;
 }
 
-.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid{
-    background: url(./image/check-solid.svg) 330px/20px no-repeat;
-}
-
-.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid{
-    background: url(./image/xmark-solid.svg ) 330px/20px no-repeat;
-}
-
 .register input{
     width: 100%;
     background-color: transparent;
     border: 0;
     outline: 0;
     padding: 18px 15px;
+}
+
+.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid{
+    background: url(./image/check-solid.svg) right/20px no-repeat;
+}
+
+.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid{
+    background: url(./image/xmark-solid.svg ) right/20px no-repeat;
 }
 
 .register i{

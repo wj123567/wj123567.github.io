@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function(){
           var passplaceholder = document.getElementById("passplaceholder").value;
           var errormsg = document.querySelector(".errormsg");
           
-          if(userplaceholder.length<=0){
-            errormsg.innerHTML = "Please enter Username";
+          if(userplaceholder.length<10){
+            errormsg.innerHTML = "Please enter Username with 10 character";
             return;
           }
 
