@@ -384,6 +384,14 @@ font-size: 1.2em;
     overflow: hidden;
 }
 
+.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid{
+    background: url(./image/check-solid.svg) 330px/20px no-repeat;
+}
+
+.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid{
+    background: url(./image/xmark-solid.svg ) 330px/20px no-repeat;
+}
+
 .register input{
     width: 100%;
     background-color: transparent;
