@@ -40,6 +40,7 @@
     }
 })
 
+
 document.addEventListener('DOMContentLoaded', function(){
   const toggleChatBtn = document.getElementById('chat');
   const chatContainer = document.getElementById('chatContainer');
@@ -118,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function(){
               email: emailplaceholder
 
             })  
+            
             console.log(user);
             errormsg.innerHTML = "Registration successfully";
             history.back();
