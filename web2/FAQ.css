@@ -94,17 +94,6 @@ h2.mtopic{
     color: rgb(255, 255, 255);
 }
 
-#usersearch {
-    width: 70%;
-    font-size: 100%;
-    font-weight: bold;
-    padding: 5px, 5px, 5px, 5px;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    margin-left: 60%;
-    max-width: 30%;
-}
-
 #buttonbox {
     flex-direction: row;
     text-align: center;

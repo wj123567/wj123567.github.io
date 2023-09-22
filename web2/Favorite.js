@@ -1,17 +1,3 @@
-function searchFunction() 
-{
-    var input =  document.getElementById('usersearch');
-    var filter = input.value.toUpperCase();
-    var ul = document.getElementById("FAVS");
-    var li = ul.getElementsByTagName('li');
-
-    for (var i = 0; i < li.length; i++) 
-    {
-        var txtValue = (li[i].textContent || li[i].innerText).toUpperCase();
-        li[i].style .display = txtValue.indexOf(filter) > -1 ? "" : "none";
-    }
-}
-
 function faqAddClass(element,name) 
 {
     var arr1 =  element.className.split(" ");
