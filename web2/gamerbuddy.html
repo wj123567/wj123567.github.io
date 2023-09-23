@@ -744,19 +744,19 @@
 
 const buddyContainer = document.querySelector('.buddyContainer');
 const filterCondition = document.getElementById('filterCondition');
-const cards = Array.from(document.querySelectorAll('.link'));
+const cards = document.querySelectorAll('.link');
 
 filterCondition.addEventListener('change', () => {
     const sortValue = filterCondition.value;
     let sortedCards = [...cards]; // Create a copy of the cards array
 
-    if (sortValue === 'LowtoHigh') {
+    if (sortValue == "LowtoHigh") {
         sortedCards.sort((a, b) => {
             const priceA = parseFloat(a.querySelector('.price h3').textContent);
             const priceB = parseFloat(b.querySelector('.price h3').textContent);
             return priceA - priceB;
         });
-    } else if (sortValue === 'HightoLow') {
+    } else if (sortValue == "HightoLow") {
         sortedCards.sort((a, b) => {
             const priceA = parseFloat(a.querySelector('.price h3').textContent);
             const priceB = parseFloat(b.querySelector('.price h3').textContent);
