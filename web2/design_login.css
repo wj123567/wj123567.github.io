@@ -254,89 +254,6 @@ font-size: 1.2em;
     float: right;
 }
 
-@media(max-width:991px){
-
-    .navbar{
-        padding: 20;
-    }
-
-    .navbar label{
-        display: initial;
-    }
-    
-    .navbar .list{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: hsl(266, 39%, 17%);
-        border-top: 1px solid white;
-        display: none;
-    }
-
-    .navbar .list li{
-        width:100%;
-    }
-
-    .navbar .dropdown{
-        position: relative;
-        width:100%;
-    }
-
-    .navbar.dropdown li{
-        background: hsl(266, 39%, 17%);
-
-    }
-
-    #menu-bar:checked ~ .list{
-        display: initial;
-    }
-
-    .navbar button{
-        width: 65px;
-        margin-right: 2px;
-
-    }
-
-    .navbar button a{
-        font-size: 0.8em;
-    }
-
-    .register{
-        max-width: 100%;
-    }
-
-    .footer{
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .footer .footer-col{
-        width: 30%;
-        margin-bottom: 30px;
-        max-height: 205px;
-    }
-    
-
-    
-}
-
-@media(max-width: 574px){
-    .footer img{
-        display: none;
-       }
-
-       .footer .icon i{
-        font-size:1.2em;
-        margin-left: 5px;
-        }
-    
-        .footer .icon{
-        margin-left: 10px;
-        margin-top: 40px;
-        height: 40px;
-        }
-   
-  }
-
 /* signup */
 #adjReg{
     padding-bottom: 200px;
@@ -502,6 +419,88 @@ font-size: 1.2em;
     height: 280px;
 }
 
+@media(max-width:991px){
+
+    .navbar{
+        padding: 20;
+    }
+
+    .navbar label{
+        display: initial;
+    }
+    
+    .navbar .list{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: hsl(266, 39%, 17%);
+        border-top: 1px solid white;
+        display: none;
+    }
+
+    .navbar .list li{
+        width:100%;
+    }
+
+    .navbar .dropdown{
+        position: relative;
+        width:100%;
+    }
+
+    .navbar.dropdown li{
+        background: hsl(266, 39%, 17%);
+
+    }
+
+    #menu-bar:hover .list{
+        display: block;
+    }
+
+    .navbar button{
+        width: 65px;
+        margin-right: 2px;
+
+    }
+
+    .navbar button a{
+        font-size: 0.8em;
+    }
+
+    .register{
+        max-width: 100%;
+    }
+
+    .footer{
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .footer .footer-col{
+        width: 30%;
+        margin-bottom: 30px;
+        max-height: 205px;
+    }
+    
+
+    
+}
+
+@media(max-width: 574px){
+    .footer img{
+        display: none;
+       }
+
+       .footer .icon i{
+        font-size:1.2em;
+        margin-left: 5px;
+        }
+    
+        .footer .icon{
+        margin-left: 10px;
+        margin-top: 40px;
+        height: 40px;
+        }
+   
+  }
 
 
 

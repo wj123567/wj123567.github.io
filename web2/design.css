@@ -253,242 +253,6 @@ font-size: 1.2em;
     float: right;
 }
 
-/* responsive */
-@media(max-width:991px){
-
-    .navbar{
-        padding: 20;
-    }
-
-    .navbar label{
-        display: initial;
-    }
-    
-    .navbar .list{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: hsl(266, 39%, 17%);
-        border-top: 1px solid white;
-        display: none;
-    }
-
-    .navbar .list li{
-        width:100%;
-    }
-
-    .navbar .dropdown{
-        position: relative;
-        width:100%;
-    }
-
-    .navbar.dropdown li{
-        background: hsl(266, 39%, 17%);
-
-    }
-
-    #menu-bar:checked ~ .list{
-        display: initial;
-    }
-
-    .navbar button{
-        width: 65px;
-        margin-right: 2px;
-
-    }
-
-    .navbar button a{
-        font-size: 0.8em;
-    }
-
-    .register{
-        max-width: 100%;
-    }
-
-    
-    .footer{
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .footer .footer-col{
-        width: 30%;
-        margin-bottom: 30px;
-        max-height: 205px;
-    }
-
-    .buddyContainer a:last-child{
-        margin-bottom: 50px;
-    }
-
-    .productContainer .productCard{
-        display: flex;
-        flex-flow: row wrap;
-        max-width:100%;
-        margin: 700px 0 0 0;
-    }
-
-    .productContainer .allProductimg{
-        align-content: center;
-        margin: 0 0 0 30px;
-    }
-
-    .productContainer .productDetail{
-        max-width:95%;
-        margin: 0 auto;
-    }
-
-    .buddyRecommend{
-        position: relative;
-        padding-bottom: 20px;
-        padding-top: 600px;
-        margin: 0 auto;
-    }
-
-    .filter{
-        max-width: 100%;
-        min-height: 200px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    }
-
-    .orderContainer .orderBuddy{
-        display: grid;
-        grid-template-columns: 30% 70%;  
-    }
-
-    .orderContainer .orderBuddy .orderTitle li{
-        float: none;
-        min-width: 100px;
-        height: 80px;
-        width: 90%;
-    }
-
-    .orderContainer .orderDetail{
-        height: 560px;
-    }
-
-    .orderContainer .orderDetail .orderDetail2{
-        clear: both;
-        float: none;
-        max-height: 80px;
-        min-width: 189px;
-        margin: 0 0 0 20px;
-    }
-
-    .orderContainer .orderDetail .orderDetail2 img{
-        margin-left: 20px;
-        max-width: 50px;
-    }
-
-    .orderContainer .orderDetail .orderDetail2 p{
-        padding-bottom: 20px;
-    }
-
-    .orderContainer .orderDetail .orderDetail2 .price i{
-        display: inline;       
-    }
-
-    .orderContainer .confirmOrder button{
-        max-width: 120px;
-        margin-top: 5px;
-    }
-
-
-    
-
-}
-
-@media(max-width: 574px){
-    .footer img{
-        display: none;
-       }
-    
-    .footer .icon i{
-    font-size:1.2em;
-    margin-left: 5px;
-    }
-
-    .footer .icon{
-    margin-left: 10px;
-    margin-top: 40px;
-    height: 40px;
-    }
-
-    .productContainer .productCard{
-        padding-bottom: 20px;
-        margin: 10px 0 0 0;
-    }
-
-    .buddyRecommend{
-        margin: 0 auto;
-        padding: 0 0 120px 0;
-    }
-
-    .filter{
-        display: flex;
-        flex-flow: row wrap;
-        max-width: 100%;
-        min-height: 300px;
-    }
-
-    .filter .filterContent{
-        display: grid;
-        grid-template-columns:100px 100px;
-    }
-
-    .filter .filterCondition{
-        margin: 0 20px;
-    }
-
-    .filter .filterCondition span{
-        font-size: 0.8em;
-
-    }
-
-    .productDetail .productDec .buddydec{
-        max-width: 100px;
-    }
-
-    .productDetail .productDec .decButton2{
-        display: grid;
-        grid-template-columns: 100px 100px;
-        grid-gap:10px;
-        max-width: 210px;
-        margin-right: 6px;
-    }
-    .orderContainer{
-        padding-bottom: 50px;
-    }
-    .orderContainer .confirmOrder{
-        margin-top: 0px;
-    }
-
-    .orderContainer .confirmOrder button{
-        max-width: 70px;
-        margin-top: 5px;
-    }
-    
-    .popupOrder .content{
-    max-width: 300px;
-    height: 220px;
-    }
-
-    .popupOrder .content h1{
-    font-size: 1.3em;
-    }
-  }
-
-  @media(max-width:460px){
-    .filter{
-        min-height: 360px;
-    }
-
-    .filter .filterContent{
-        padding-top: 100px;
-    }
-  }
-
 /* signup */
 #adjReg{
     padding-bottom: 200px;
@@ -1325,3 +1089,239 @@ h1.Pagetitle::after{
     transform: translate(-50%,-50%)scale(1);
     transition: all ease-in-out 0.3s;
 }
+
+/* responsive */
+@media(max-width:991px){
+
+    .navbar{
+        padding: 20;
+    }
+
+    .navbar label{
+        display: initial;
+    }
+    
+    .navbar .list{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: hsl(266, 39%, 17%);
+        border-top: 1px solid white;
+        display: none;
+    }
+
+    .navbar .list li{
+        width:100%;
+    }
+
+    .navbar .dropdown{
+        position: relative;
+        width:100%;
+    }
+
+    .navbar.dropdown li{
+        background: hsl(266, 39%, 17%);
+
+    }
+
+    #menu-bar:hover .list{
+        display: block;
+    }
+
+    .navbar button{
+        width: 65px;
+        margin-right: 2px;
+
+    }
+
+    .navbar button a{
+        font-size: 0.8em;
+    }
+
+    .register{
+        max-width: 100%;
+    }
+
+    
+    .footer{
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .footer .footer-col{
+        width: 30%;
+        margin-bottom: 30px;
+        max-height: 205px;
+    }
+
+    .buddyContainer a:last-child{
+        margin-bottom: 50px;
+    }
+
+    .productContainer .productCard{
+        display: flex;
+        flex-flow: row wrap;
+        max-width:100%;
+        margin: 700px 0 0 0;
+    }
+
+    .productContainer .allProductimg{
+        align-content: center;
+        margin: 0 0 0 30px;
+    }
+
+    .productContainer .productDetail{
+        max-width:95%;
+        margin: 0 auto;
+    }
+
+    .buddyRecommend{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 600px;
+        margin: 0 auto;
+    }
+
+    .filter{
+        max-width: 100%;
+        min-height: 200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+    .orderContainer .orderBuddy{
+        display: grid;
+        grid-template-columns: 30% 70%;  
+    }
+
+    .orderContainer .orderBuddy .orderTitle li{
+        float: none;
+        min-width: 100px;
+        height: 80px;
+        width: 90%;
+    }
+
+    .orderContainer .orderDetail{
+        height: 560px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2{
+        clear: both;
+        float: none;
+        max-height: 80px;
+        min-width: 189px;
+        margin: 0 0 0 20px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2 img{
+        margin-left: 20px;
+        max-width: 50px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2 p{
+        padding-bottom: 20px;
+    }
+
+    .orderContainer .orderDetail .orderDetail2 .price i{
+        display: inline;       
+    }
+
+    .orderContainer .confirmOrder button{
+        max-width: 120px;
+        margin-top: 5px;
+    }
+
+
+    
+
+}
+
+@media(max-width: 574px){
+    .footer img{
+        display: none;
+       }
+    
+    .footer .icon i{
+    font-size:1.2em;
+    margin-left: 5px;
+    }
+
+    .footer .icon{
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 40px;
+    }
+
+    .productContainer .productCard{
+        padding-bottom: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .buddyRecommend{
+        margin: 0 auto;
+        padding: 0 0 120px 0;
+    }
+
+    .filter{
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 100%;
+        min-height: 300px;
+    }
+
+    .filter .filterContent{
+        display: grid;
+        grid-template-columns:100px 100px;
+    }
+
+    .filter .filterCondition{
+        margin: 0 20px;
+    }
+
+    .filter .filterCondition span{
+        font-size: 0.8em;
+
+    }
+
+    .productDetail .productDec .buddydec{
+        max-width: 100px;
+    }
+
+    .productDetail .productDec .decButton2{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-gap:10px;
+        max-width: 210px;
+        margin-right: 6px;
+    }
+    .orderContainer{
+        padding-bottom: 50px;
+    }
+    .orderContainer .confirmOrder{
+        margin-top: 0px;
+    }
+
+    .orderContainer .confirmOrder button{
+        max-width: 70px;
+        margin-top: 5px;
+    }
+    
+    .popupOrder .content{
+    max-width: 300px;
+    height: 220px;
+    }
+
+    .popupOrder .content h1{
+    font-size: 1.3em;
+    }
+  }
+
+  @media(max-width:460px){
+    .filter{
+        min-height: 360px;
+    }
+
+    .filter .filterContent{
+        padding-top: 100px;
+    }
+  }
