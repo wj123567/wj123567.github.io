@@ -1,13 +1,13 @@
-function faqAddClass(element, name) 
+function addFAQ( element, name) 
 {
-    var arr1 = element.className.split(" ");
-    var arr2 = name.split(" ");
+    var firstarray = element.className.split(" ");  
+    var secondarray = name.split(" ");
 
-    for (i = 0; i < arr2.length; i++) 
+    for (var i = 0; i < secondarray.length; i++) 
     {
-      if (arr1.indexOf(arr2[i]) == -1) 
+      if (firstarray.indexOf(secondarray[i]) == -1)   
       {
-        element.className += " " + arr2[i];
+        element.className += " " + secondarray[i]; 
       }
     }
 }
@@ -16,84 +16,70 @@ filterSelection("all")
 
 function filterSelection(c) 
 {
-
-    var x = document.getElementsByClassName("topic");
+    var store = document .getElementsByClassName("topic"); 
     
-    if (c == "all") c = "";
+    if (c == "all") c = ""; 
     
-    for (var i = 0; i < x.length; i++) 
+    for (var i = 0; i < store.length; i++) 
     {
-      faqRemoveClass(x[i], "show");
-      if (x[i].className.indexOf(c) > -1) faqAddClass(x[i], "show");
-    }
-}
-
-
-function faqRemoveClass(element, name) 
-{
-   
-    var arr1 = element.className.split(" ");
-    var arr2 = name.split(" ");
-
-    for (i = 0; i < arr2.length; i++) 
-    {
-      while (arr1.indexOf(arr2[i]) > -1) 
+      removeFAQ(store[i], "show"); 
+      if (store[i].className.indexOf(c) > -1)
       {
-        arr1.splice(arr1.indexOf(arr2[i]), 1); 
+        addFAQ(store [i], "show");
       }
     }
-    element.className = arr1.join(" ");
 }
-  
 
 
-var btnContainer = document.getElementById("buttonbox");
-var btns = btnContainer.getElementsByClassName("buttonfaq");
-
-for (var i = 0; i < btns.length; i++) 
+function removeFAQ( element, name) 
 {
-    btns[i].addEventListener("click", function() 
+    var firstarray = element.className.split(" ");
+    var secondarray = name.split(" ");
+
+    for (var i = 0; i < secondarray.length; i++) 
     {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
+      while (firstarray .indexOf(secondarray[i]) > -1) 
+      {
+        firstarray.splice(firstarray.indexOf(secondarray[i]), 1); 
+      }
+    }
+    element.className = firstarray.join(" ");
+}
+  
+
+
+var buttonboxes = document.getElementById("buttonbox"); 
+var buttons = buttonboxes.getElementsByClassName("button"); 
+
+for (var i = 0; i < buttons.length; i++) 
+{
+    buttons[i].addEventListener("click", function(){});
 }
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    var filterDivs = document.querySelectorAll("#QNA > .topic");
+var FDIV = document.querySelectorAll("#QNA > .topic"); 
   
-    filterDivs.forEach
-    (function(filterDiv) {
+FDIV.forEach  
+(function(FDIV) {
       
-        var span = filterDiv.querySelector("span");
-        span.addEventListener
-        ("click", function() {
+  var span =  FDIV.querySelector("span"); 
+  span.addEventListener
+  ("click", function() {
 
-            var closestLi = this.closest("li");
-            var siblings = closestLi.parentElement.querySelectorAll(".topic");
-  
-            siblings.forEach(function(sibling){
-                if (sibling !== closestLi) 
-                {
-                    sibling.classList.remove("is-active");
-                    sibling.querySelector(".answer").style.display = "none";
-                }
-            });
-  
-            closestLi.classList.toggle("is-active");
-            var accordionPanel = closestLi.querySelector(".answer");
+    var collapse = this.closest("li");
 
-            if (closestLi.classList.contains("is-active")) 
-            {
-                 accordionPanel.style.display = "block";
-            } 
-            else 
-            {
-                accordionPanel.style.display = "none";
-            }
-        });
-    });
+  
+    collapse.classList.toggle("is-active");  
+    var ANS = collapse.querySelector(".answer");
+
+    if (collapse.classList.contains("is-active"))
+    {
+      ANS.style.display = "block"; 
+    } 
+    else 
+    {
+      ANS.style.display = "none";  
+    }
+  });
 });

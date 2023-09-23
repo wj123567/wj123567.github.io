@@ -68,7 +68,6 @@ body {
 }
 
 .faqhead {
-    padding-left: 0%;
     padding-bottom: 1%;
     background: #ce3b80;
     color: white;
@@ -80,17 +79,8 @@ h1.biggesttext {
     font-size: 500%;
     text-align: center;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
     margin-bottom: -2.0%;
-    color: rgb(255, 255, 255);
-}
-
-h2.mtopic{
-    font-variant: small-caps;
-    font-size: 200%;
-    font-weight: bold;
-    padding-left: 10%;
-    margin-bottom: -0.2%;
     color: rgb(255, 255, 255);
 }
 
@@ -126,14 +116,10 @@ h2.mtopic{
 }
 
 .buttonfaq:hover {
-    background-color: #fa93fd;
+    background-color: #fc1919;
     color: black;
 }
 
-.buttonfaq.active {
-    background: #fc1919;
-    color: white;
-}
 
 #QNA {
     width: 100%;
@@ -150,10 +136,6 @@ h2.mtopic{
     color: black;
     display: block;
     opacity: 60%;
-}
-
-#QNA li span:hover:not(.header) {
-    opacity: 100%;
 }
 
 .topic {

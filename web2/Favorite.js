@@ -1,13 +1,13 @@
-function faqAddClass(element,name) 
+function addFAV(element,name) 
 {
-    var arr1 =  element.className.split(" ");
-    var arr2 = name.split(" ");
+    var firstarray =  element.className.split(" ");
+    var secondarray = name.split(" ");
 
-    for (i = 0; i < arr2.length; i++) 
+    for (var i = 0; i < secondarray.length; i++) 
     {
-      if (arr1.indexOf(arr2[i]) == -1) 
+      if (firstarray.indexOf(secondarray[i]) == -1) 
       {
-        element.className += " " + arr2[i];
+        element.className += " " + secondarray[i];
       }
     }
 }
@@ -17,47 +17,33 @@ filterSelection("all")
 function filterSelection(c) 
 {
 
-    var x = document.getElementsByClassName("section");
+    var store = document.getElementsByClassName("section");
     
     if (c == "all") c = "";
     
-    for (var i = 0; i < x.length; i++) 
+    for (var i = 0; i < store.length; i++) 
     {
-      faqRemoveClass(x[i],"show");
-      if (x[i].className.indexOf(c) > -1) faqAddClass(x[i], "show");
+      removeFAV(store[i],"show");
+      if (store[i].className.indexOf(c) > -1) addFAV(store[i], "show");
     }
 }
 
 
-function faqRemoveClass (element,name) 
+function removeFAV (element,name) 
 {
    
-    var arr1 = element.className.split(" ");
-    var arr2 = name.split(" ");
+    var firstarray = element.className.split(" ");
+    var secondarray = name.split(" ");
 
-    for (i = 0; i < arr2.length; i++) 
+    for (var i = 0; i < secondarray.length; i++) 
     {
-      while (arr1.indexOf(arr2[i]) > -1) 
+      while (firstarray.indexOf(secondarray[i]) > -1) 
       {
-        arr1 .splice(arr1.indexOf(arr2[i]), 1); 
+        firstarray .splice(firstarray.indexOf(secondarray[i]), 1); 
       }
     }
-    element.className = arr1.join(" ");
+    element.className = firstarray.join(" ");
 }
-  
 
-
-var btnContainer = document.getElementById("buttonbox");
-var btns = btnContainer .getElementsByClassName("buttonfav");
-
-for (var i = 0; i < btns.length; i++) 
-{
-    btns[i] .addEventListener("click", function() 
-    {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active","");
-      this.className += " active";
-    });
-}
 
 
