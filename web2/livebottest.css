@@ -152,15 +152,33 @@ div.usertext {
 div.userform {
     display: flex;
     justify-content: right;
+    flex-direction: column;
 }
 div.userinput {
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.userinput {
+input.userinput {
+    padding-left: 5px;
+    font-size: 22px;
+    width: 90%;
     height: 40px;
 }
-.userinput::placeholder {
-    font-size: 20px;
-}   
+input.userinput::placeholder {
+    font-size: 22px;
+    color: gray;
+}
+
+button.usersubmit {
+    background-color: rgb(34, 151, 21);
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    border-style: none;
+    border-radius: 4px;
+}
+button.usersubmit:hover {
+    cursor: pointer;
+    background-color: rgb(29, 126, 18);
+}
