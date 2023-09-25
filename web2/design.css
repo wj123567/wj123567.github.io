@@ -492,7 +492,7 @@ h1.Pagetitle::after{
 
 .buddyContainer .card .content .buddyname{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     margin: 5px 3px;
 }
@@ -500,6 +500,12 @@ h1.Pagetitle::after{
     font-size: 1.3em;
     color: hsl(266, 39%, 17%);
     margin: 5px 3px;
+}
+
+.buddyContainer .card .content .buddyname img{
+    width: 15%;
+    box-shadow: 1px 1px 8px 1px rgba(60, 0, 255, 0.593);
+    border-radius: 8px;
 }
 
 .buddyContainer .buddyname i{
