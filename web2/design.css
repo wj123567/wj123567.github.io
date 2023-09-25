@@ -1163,12 +1163,12 @@ h1.Pagetitle::after{
         display: flex;
         flex-flow: row wrap;
         max-width:100%;
-        margin: 700px 0 0 0;
+        margin: 600px 0 0 0;
     }
 
     .productContainer .allProductimg{
         align-content: center;
-        margin: 0 0 0 30px;
+        margin: 0 30px 0 30px;
     }
 
     .productContainer .productDetail{
@@ -1256,7 +1256,7 @@ h1.Pagetitle::after{
 
     .productContainer .productCard{
         padding-bottom: 20px;
-        margin: 10px 0 0 0;
+        margin: 60px 0 0 0;
     }
 
     .buddyRecommend{
@@ -1319,6 +1319,15 @@ h1.Pagetitle::after{
   }
 
   @media(max-width:460px){
+
+    .productContainer .allProductimg{
+        margin: 130px 30px 0 30px;
+    }
+
+    .productContainer .productDetail{
+        margin: 30px auto;
+    }
+
     .register{
         margin-top: 100px;
         padding: 30px 10px 40px;
