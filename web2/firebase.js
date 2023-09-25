@@ -2,7 +2,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
   import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-  import { getAuth,signInWithRedirect,GoogleAuthProvider,sendPasswordResetEmail, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getAuth,signInWithRedirect,GoogleAuthProvider,sendPasswordResetEmail, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function(){
           //For new registration
           createUserWithEmailAndPassword(auth, emailplaceholder, passplaceholder)
           .then((userCredential) => {
-
+            
             
             // Signed up 
             const user = userCredential.user;
@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             })  
             
+
             console.log(user);
             errormsg.innerHTML = "Registration successfully";
             history.back();

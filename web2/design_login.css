@@ -267,6 +267,8 @@ font-size: 1.2em;
     background-color: hsl(332, 66%, 55%);
     padding: 70px 60px 70px;
     text-align: center;
+    border-radius: 15px;
+    box-shadow: 8px 5px 10px 3px hsla(0, 0%, 0%, 0.71);
 }
 
 .register h1{
@@ -310,11 +312,11 @@ font-size: 1.2em;
     padding: 18px 15px;
 }
 
-.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid{
+.register input#emailplaceholder:focus:valid, .register input#userplaceholder:focus:valid, .register input#passplaceholder:focus:valid{
     background: url(./image/check-solid.svg) right/20px no-repeat;
 }
 
-.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid{
+.register input#emailplaceholder:focus:invalid, .register input#userplaceholder:focus:invalid, .register input#passplaceholder:focus:invalid{
     background: url(./image/xmark-solid.svg ) right/20px no-repeat;
 }
 
