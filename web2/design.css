@@ -526,7 +526,12 @@ h1.Pagetitle::after{
 
 .buddyContainer .card .content .buddyprice_rating h3{
     font-size: 1.1em;
+    color: hsl(266, 39%, 17%);
     display: inline;
+}
+
+.buddyContainer .card .content .buddyprice_rating i{
+    color: hsl(266, 39%, 17%);
 }
 
 .buddyContainer .card .content .buddyprice_rating .rating i{
@@ -1161,8 +1166,8 @@ h1.Pagetitle::after{
         max-height: 205px;
     }
 
-    .buddyContainer a:last-child{
-        margin-bottom: 50px;
+    .buddyContainer{
+        margin-bottom: 100px;
     }
 
     .productContainer .productCard{
