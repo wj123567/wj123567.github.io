@@ -1319,6 +1319,11 @@ h1.Pagetitle::after{
   }
 
   @media(max-width:460px){
+    .register{
+        margin-top: 100px;
+        padding: 30px 10px 40px;
+    }
+    
     .filter{
         min-height: 360px;
     }
