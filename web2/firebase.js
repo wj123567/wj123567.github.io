@@ -123,7 +123,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
             console.log(user);
             errormsg.innerHTML = "Registration successfully";
-            history.back();
+            signOut(auth);
+            window.setTimeout(function(){
+              window.location.href = "login.html";}, 3000);
           })
           .catch((error) => {
             const errorCode = error.code;

@@ -1125,9 +1125,9 @@ h1.Pagetitle::after{
 
     }
 
-    #menu-bar:hover .list{
+    #menu-bar:checked ~ .list{
         display: block;
-    }
+    } 
 
     .navbar button{
         width: 65px;
