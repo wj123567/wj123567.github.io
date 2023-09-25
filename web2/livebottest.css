@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+body {
+    height: 2000px;
+}
+
+div.first {
+    display: flex;
+    justify-content: center;
+    
+    height: max-content;
+
+    /* width: 480px; */
+    margin: 0px auto;
+    background-color: lightblue;
+
+    position: relative;
+    top: 200px;
+}
+
+div.second {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 30px 50px;
+    width: 900px;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    
+    background-color: rgb(252, 251, 255);
+}
+@media only screen and (max-width: 485px) {
+    div.second {
+        min-height: 400px;
+    }
+}
+
+div.title {
+    width: 100%;
+}
+@media only screen and (max-width: 485px) {
+    div.title {
+        display: flex;
+    }
+}
+div.title > img {
+    width: 30px;
+    margin: 10px 5px;
+    margin-left: 10px;
+    display: inline;
+}
+div.title h1 {
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 12px;
+    vertical-align: top;
+}
+div.title > .fa-solid {
+    display: flex;
+    float: right;
+    margin: 14px 10px;
+    font-size: 22px;   
+    display: inline;
+}
+
+div.main-chat {
+    display: flex;
+    flex-direction: column;
+}
+div.left-chat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    margin: 15px auto;
+}
+div.botimg > img {
+    margin: 10px;
+    margin-top: 50px;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+}
+div.botmsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid lightblue;
+    border-radius: 15px;
+    padding: 15px;
+}
+@media only screen and (max-width: 750px) {
+    div.botmsg {
+        margin-right: auto;
+    }
+}
+div.botinfo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+div.bottext {
+    font-size: 18px;
+}
+
+/* seperate */
+div.right-chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+div.userimg > img {
+    margin: 10px;
+    margin-top: 50px;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+}
+div.usermsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid lightblue;
+    border-radius: 15px;
+    padding: 15px;
+}
+@media only screen and (max-width: 750px) {
+    div.usermsg {
+        margin-left: auto;
+    }
+}
+div.userinfo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+div.usertext {
+    display: flex;
+    font-size: 18px;
+}
+
+div.userform {
+    display: flex;
+    justify-content: right;
+}
+div.userinput {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.userinput {
+    height: 40px;
+}
+.userinput::placeholder {
+    font-size: 20px;
+}   
