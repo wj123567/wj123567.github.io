@@ -1,293 +1,9 @@
-@charset "utf-8";
-@font-face {
-    font-family: "Opensans";
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
-::-webkit-scrollbar{
-    display: none;          /*scroll bar on the rhs will be invisible*/
-}
-
-html{
-    height: 100%;
-
-}
-body{
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    background-color: hsl(252, 48%, 37%);
-    padding-bottom: 210px;
-    z-index: 1;
-}
-
-.logo{
-    width: 100px;
-    float: left;
-    display: inline;
-    margin-top: 5px;
-
-}
-
-/* navbar */
-nav{
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    background-color: hsl(266, 39%, 17%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
-
-.navbar>ul{
-    list-style-type: none;
-    background-color: hsl(266, 39%, 17%);
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-
-.list li a{
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: left;
-    font-size: 0.9em;
-    font-family: Opensans, Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-}
-
-.list>li>a:hover{
-    background-color: hsl(266, 20%, 10%);
-
-}
-
-.navbar>ul>li{
-    float: left;
-    
-}
-
-
-/* dropdown */
-.navbar .dropdown{
-    display: block;
-    list-style-type: none;
-    width: 150px;
-    background: hsl(266, 39%, 17%);
-    position: absolute;
-    z-index: 2;
-    display: none;
-
-}
-
-.navbar .dropdown li{
-    border-top: 1px solid rgba(169, 165, 165, 0.9);
-}
-
-.navbar .dropdown li a{
-    text-align: left;
-}
-
-.list li:hover .dropdown{
-    display:block;
-}
-
-/* login*/
-.navbar button{
-    display: block;
-    float:right;
-    background-color: hsl(332, 66%, 55%);
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 90px
-
-}
-.navbar button:hover{
-    background-color: hsl(332, 80%, 60%);
-}
-
-.navbar button a{
-    text-decoration: none;
-    color: hsl(266, 39%, 17%);
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#menu-bar{
-    display:none
-}
-
-.navbar label{
-    font-size: 20px;
-    color:white;
-    cursor: pointer;
-    display: none;
-    float: left;
-    padding: 17px;
-}
-
-/* footer */
-footer{
-    background-color: hsl(266, 39%, 17%);
-    position: absolute;  
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-footer .container{
-    margin-left: auto;
-    margin-right: auto;
-}
-.footer img{
-    width: 200px;
-    padding: 7px 30px;
-    display: inline;
-    float: left;
-}
-
-.footer .row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-col{
-   width: 15%;
-   padding: 7px 15px;
-}
-
-.footer h4{
-color: white;
-font-size: 1.2em;
-}
-
-.footer ul{
-    list-style-type: none;
-    margin-top: 5px;
-}
-
-.footer ul li{
-    margin-top: 15px;
-}
-
-.footer ul li a{
-    text-decoration: none;
-    color: white;
-    transition: all 0.4s ease;
-    font-size: 0.9em;
-    
-}
-
-.footer ul li a:hover{
-    color: hwb(6 45% 9%);
-    padding-left: 8px;
-}
-
-.footer .icon i{
-    color: white;
-    font-size: 2em;
-    margin: 7px 18px;
-    transition: all 0.4s;
-}
-
-.footer .icon i:hover{
-    color: hwb(6 45% 9%);
-}
-
-.footer p{
-    color: white;
-    font-size: 0.6em;
-    float: right;
-}
-
-/* responsive */
-@media(max-width:991px){
-
-    .navbar{
-        padding: 20;
-    }
-
-    .navbar label{
-        display: initial;
-    }
-    
-    .navbar .list{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: hsl(266, 39%, 17%);
-        border-top: 1px solid white;
-        display: none;
-    }
-
-    .navbar .list li{
-        width:100%;
-    }
-
-    .navbar .dropdown{
-        position: relative;
-        width:100%;
-    }
-
-    .navbar.dropdown li{
-        background: hsl(266, 39%, 17%);
-
-    }
-
-    #menu-bar:checked ~ .list{
-        display: initial;
-    }
-
-    .navbar button{
-        width: 65px;
-        margin-right: 2px;
-
-    }
-
-    .navbar button a{
-        font-size: 0.8em;
-    }
-
-    .register{
-        overflow: scroll; 
-    }
-    
-    .footer{
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .footer .footer-col{
-        width: 30%;
-        margin-bottom: 30px;
-        max-height: 205px;
-    }
-
-}
-
-@media(max-width: 574px){
-    .footer img{
-        display: none;
-       }
-  }
 
 /*for payment css*/
 .payment_section {
     margin: 0;
-    padding-top: 5%;
-    padding-bottom:10%;
+    padding-top: 150px;
+    padding-bottom:150px;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -297,7 +13,7 @@ font-size: 1.2em;
 
 .payment_container img{
     width:450px;
-    height:121px;
+    height:120px;
     margin-top: 5px;
     filter: drop-shadow(0 0 5px #000);
 }
@@ -396,10 +112,9 @@ font-size: 1.2em;
 
 
 .payment_container form .row .col .inputbox_select input{
-    width: 10%;
+    
     border: 1px solid #ccc;
-    margin-right: 50px;
-    font-size: 15px;
+    margin-right: 40px;
     text-transform: none;
 }
 
@@ -419,17 +134,112 @@ font-size: 1.2em;
     width: 50%;
 }
 
+
+.payment_container form .formprocess{
+    width:100%;
+}
 .payment_container form .checkout_btn{
-    width: 100%;
-    padding: 12px;
+    
+    width: 43%;
+    padding: 10px;
     font-size: 17px;
+    color:rgb(1, 134, 81);
+    font-variant: small-caps;
     background: #8fb1e9;
-    color: #000;
-    margin-top: 20px;
+    box-shadow: 9px 7px 5px rgb(73, 66, 66);
+    margin: 30px;
     justify-content: center;
     cursor: pointer;
 }
+.payment_container form .reset_btn{
+    width: 43%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    color:red;
+    font-variant: small-caps;
+    margin: 30px;
+    background: rgb(48, 51, 86);
+    box-shadow: 9px 7px 5px rgb(73, 66, 66);
+}
 
 .payment_container form .checkout_btn:hover{
-    background: #857ebb;
+    background-color: #857ebb;
 }
+.payment_container form .reset_btn:hover{
+    background-color:rgba(48, 51, 86,0.7);
+}
+
+input:focus{
+    background-color: rgb(255, 255, 180);
+}
+
+input:focus:valid,input#diamondInput:focus,input#paymentInput:focus{
+    background: rgb(220, 255, 220) url(wz_image/tick.png) right/contain no-repeat;
+}
+
+input:focus:invalid{
+    background: rgb(255, 230, 230) url(wz_image/warning.png) right/contain no-repeat;
+}
+input#paynum:focus:valid,input#expirydate:focus:valid,input#diamond:focus:valid{
+    background: rgb(220, 255, 220) url(wz_image/tick.png) 370px/contain no-repeat;
+}
+input#paynum:focus:invalid,input#expirydate:focus:invalid,input#diamond:focus:invalid{
+    background: rgb(255, 230, 230) url(wz_image/warning.png) 370px/contain no-repeat;
+}
+input#submit:focus,input#submit:focus:valid,input#submit:focus:invalid{
+    background-image: none;
+}
+@media only screen and (max-width:1000px)
+{
+    .payment_container img{
+        width: 100%;
+       
+    }
+}
+@media only screen and (max-width:705px)
+{
+    .payment_container form .row .col .inputbox_select input{
+        margin-right: 0px;
+    }
+}
+@media only screen and (max-width:545px)
+{
+    .payment_section {
+        margin: 0;
+        padding-top: 200px;
+        padding-bottom:200px;
+    }
+    .payment_container img{
+        width:390px;
+        justify-content: center;
+    }
+
+    .payment_container form .row .col .inputbox_select input{
+        margin-right: 80px;
+    }
+}
+
+@media only screen and (max-width:450px)
+{
+    
+    .payment_container img{
+        width:310px;
+        justify-content: center;
+    }
+    .payment_container form .row .col .inputbox_select input{
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width:350px)
+{
+    .payment_container img{
+        width:260px;
+        justify-content: center;
+    }
+    .payment_container form .row .col .inputbox_select input{
+        margin-right: 20px;
+    }
+}
+
