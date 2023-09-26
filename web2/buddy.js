@@ -22,7 +22,7 @@
 
  imgBtns.forEach((imgItem)=>{
      imgItem.addEventListener('click',(event)=>{   // add click event listeners to imgItem
-         event.preventDefault(); // prevent going to the image location
+         event.preventDefault(); // prevent a tag behaviour
          imgId = imgItem.dataset.id;  // update the selected image from the data-id attribute
          slideImage(); // slide to the selected image
      });

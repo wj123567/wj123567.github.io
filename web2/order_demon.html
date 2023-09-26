@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="./image/favicon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script type="module" src="firebase.js"></script>
+        <script type="module" src="order.js"></script>
         <link rel="stylesheet" href="searchbar.css">
     </head>
 
@@ -170,55 +171,5 @@
             </div> 
             <p>Copyright &copy; 2023 GamerHub</p> 
         </footer>
-
-        <script>
-           const orderQuantity = document.getElementById('orderQuantity');
-            const singlePrice = document.getElementById('singleprice');
-            const totalPrice = document.getElementById('totalprice');
-            const singlePriceText = parseFloat(singlePrice.textContent);
-
-             function updateTotalPrice() {
-              const quantity = orderQuantity.value;
-              const totalAmount = singlePriceText * quantity;
-
-              totalPrice.textContent = totalAmount;
-             }
-            totalPrice.innerHTML = singlePriceText;
-            orderQuantity.addEventListener('input', updateTotalPrice);
-
-            let dateInput = document.getElementById("start-date");
-            dateInput.min = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"));
-
-
-            const confirmOrder=document.getElementById("confirmOrder");
-            const popupOrder=document.getElementById("popupOrder")
-            const closePopup=document.getElementById("closePopup");
-            const popupTextTitle =document.getElementById("popupTextTitle");
-            const popupText =document.getElementById("popupText");
-            
-            confirmOrder.addEventListener("click", function(){
-                popupOrder.classList.add("active");
-                if(orderQuantity.value>0&&orderQuantity.value<=20){
-                    popupTextTitle.innerHTML=("Thank For Purchases")
-                    popupText.innerHTML=("Our buddy will contact you in a while")
-                }else if(orderQuantity.value<=0){
-                    popupTextTitle.innerHTML=("Invalid Quantity")
-                    popupText.innerHTML=("Quantity must be at least one")
-                }else if(orderQuantity.value> 20){
-                    popupTextTitle.innerHTML=("Order Quantity out of limit")
-                    popupText.innerHTML=("Maximum 20 per order")
-                }
-
-            })
-            closePopup.addEventListener("click",function(){
-                popupOrder.classList.remove("active");
-
-            })
-            
-
-         </script>
-
-        
-
     </body>
 </html>
