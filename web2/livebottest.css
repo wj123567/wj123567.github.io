@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 body {
-    height: 2000px;
+    min-height: 1100px;
+    background: rgb(31, 6, 69);
+    
 }
 
 div.first {
@@ -12,34 +14,51 @@ div.first {
 
     /* width: 480px; */
     margin: 0px auto;
-    background-color: lightblue;
+    margin-bottom: 400px;
+    background-color: rgb(79, 22, 171);
 
     position: relative;
     top: 200px;
+
+}
+div.first::before {
+    background: no-repeat;
+    background-image: url(gamesenseiimage/8691997.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.8;
+}
+
+div.first * {
+    isolation: isolate;
 }
 
 div.second {
     /* display: flex;
     flex-direction: column; */
-    margin: 30px 50px;
+    margin: 100px 50px;
     width: 900px;
     padding: 15px;
 
     border-radius: 10px;
 
     
-    background-color: rgb(252, 251, 255);
+    background-color: #ffffff;
 }
 @media only screen and (max-width: 485px) {
     div.second {
         min-height: 400px;
+        min-width: 250px;
     }
 }
 
 div.title {
     width: 100%;
 }
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 530px) {
     div.title {
         display: flex;
     }
@@ -50,8 +69,13 @@ div.title > img {
     margin-left: 10px;
     display: inline;
 }
+@media only screen and (max-width: 530px) {
+    div.title > img {
+        height: fit-content;
+    }
+}
 div.title h1 {
-    font-size: 18px;
+    font-size: 24px;
     display: inline-block;
     padding-top: 12px;
     vertical-align: top;
@@ -86,7 +110,7 @@ div.botmsg {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid lightblue;
+    border: 2px solid rgb(187, 217, 255);
     border-radius: 15px;
     padding: 15px;
 }
@@ -104,13 +128,13 @@ div.botinfo {
     justify-content: space-between;
 }
 div.bottext {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* seperate */
 div.right-chat {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: right;
     width: 100%;
     margin-top: 15px;
@@ -127,15 +151,15 @@ div.usermsg {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid lightblue;
+    border: 2px solid rgb(187, 217, 255);
     border-radius: 15px;
     padding: 15px;
 }
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
     div.usermsg {
-        margin-left: auto;
+        
     }
-}
+} */
 div.userinfo {
     display: flex;
     width: 100%;
@@ -146,7 +170,7 @@ div.userinfo {
 }
 div.usertext {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 div.userform {
@@ -160,6 +184,7 @@ div.userinput {
 }
 
 input.userinput {
+    border-radius: 8px;
     padding-left: 5px;
     font-size: 22px;
     width: 90%;
