@@ -1,12 +1,16 @@
-
+@font-face{
+    font-family: Exo;
+    src: url('./font/Exo/Exo-VariableFont_wght.ttf') format('truetype');
+   
+}
 
 
  .table_data {
-   
+    border:1px solid blue;
     position: relative;
     padding-top: 20px;
-    top: 50px;
-    left: 13%;
+   margin-left: auto;
+   margin-right: auto;
     width: 320px;
     height: 200px;
     display: flex;
@@ -15,9 +19,9 @@
 }
 
 .table_data h1{
-
-  
-    font-size: 50px;
+    font-size: 70px;
+    padding-top: 75px;
+    text-align: center;
     color: #fff;
     font-weight: 600;
     text-shadow: 0 0 10px #00b3ff,
@@ -27,12 +31,12 @@
 }
 
 .lightbar{
-   
+
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 0;
-    width: 5px;
-    height:50%;
+    width: 2px;
+    height: 120px;
     border-radius: 10px;
     background: #fff;
     z-index: 1;
@@ -52,7 +56,7 @@
     {
         transform: scaleY(1) translateX(0);
     }
-    90%
+    88%
     {
         transform: scaleY(1) translateX(calc(320px - 10px));
     }
@@ -61,13 +65,15 @@
         transform: scaleY(0) translateX(calc(320px - 10px));
     }
 }
+/*invisible horizontal line at the left (0% to 5% of the animation), expand vertically while staying at the same horizontal position (10% of the animation), move horizontally to the right (88% of the animation), and then disappear by shrinking vertically while still maintaining its position (95% to 100% of the animation). */
 
 .toplayer{                       /*work like curtain, display and hide the "Top Up"*/ 
+   
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 0;
     width: 100%;
-    height: 110px;
+    height: 120px;
     background: hsl(252, 48%, 37%);
     animation: animatetoplayer 5s linear infinite;
 } 
@@ -107,10 +113,7 @@
     }
 }
 
-.table_data h1{
-    padding-top: 75px;
-    text-align: center;
-} 
+
 
 
 
@@ -144,37 +147,37 @@
     margin: 0 auto;
     width: 80%;
     border-collapse: collapse;
-    
+    border: 3px dashed #eef679d0;
 }
 
 .table thead tr th{
-    font-family: Josefin Sans,sans-serif;
-    font-size: 20px;
+    font-family: Exo ,sans-serif;
+    font-size: 30px;
     font-weight: 800;
     color: #ffe2ad;
-    background: #516091;
+    background: #3c466b;
     letter-spacing: 1.5px;
     padding: 20px;
     justify-content: center;
     align-content: center;
-    border: 5px solid #dee2e685;
+    border: 3px solid  #f7fe9dd0;
 }
 
 .table tbody tr td{
   
-    font-family: Josefin Sans,sans-serif;
-    font-size: 16px;
+    font-family: Exo, sans-serif;
+    font-size: 20px;
     font-weight: 600;
     color: #ffe2ad;
-    background: #516091;
+    background: #596587;
     letter-spacing: 0.5px;
     padding: 16px;
     text-align: center;
-    border: 4px solid #dee2e685;
+    border-bottom: 1px solid  #dfe584d0;
+    border-right:1px solid  #dfe584d0 ;
 }
 
 .table thead tr th img{
-    
     margin-left: 25px;
     width: 25px;
     height:25px;
@@ -205,17 +208,17 @@
     color: #fff;
     background-color: #fff;
     text-transform: uppercase;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .table tbody tr td a:hover{
-    background: var(--clr); 
-     color: var(--clr);              /*word PROCEED also chg to color code of --clr */
+    background: #00ff00; 
+     color: #00ff00;              /*word PROCEED also chg to color code of --clr */
      letter-spacing:2px;
-    box-shadow: 0 0 20px var(--clr);
+    box-shadow: 0 0 20px #00ff00;
 }
 
-.table tbody tr td a::before{
+.table tbody tr td a::before{       /*Proceed box color*/
     content: '';
     position: absolute;
     inset: 2px;
@@ -236,7 +239,7 @@
     
 }
 
-.table tbody tr td a i::before{
+.table tbody tr td a i::before{         /*top part of the proceed*/
     content: '';
     position: absolute;
     top: 0;
@@ -244,16 +247,15 @@
     width: 15px;
     height: 4px;
     background: #27282c;
-    transform: translateX(-50%) skewX(325deg);
-    transition: 0.5s;
+    transition: 1s;
 }
 
-.table tbody tr td a:hover i::before{
-    width: 25px;
+.table tbody tr td a:hover i::before{  /*top part of the proceed (hover)*/
+    width: 20px;
     left: 25%;
 }
 
-.table tbody tr td a i::after{
+.table tbody tr td a i::after{          /*bottom part of the proceed */
     content: '';
     position: absolute;
     bottom: 0;
@@ -261,12 +263,11 @@
     width: 15px;
     height: 4px;
     background: #27282c;
-    transform: translateX(-50%) skewX(325deg);
-    transition: 0.5s;
+    transition: 1s;
 }
 
-.table tbody tr td a:hover i::after{
-    width: 25px;
+.table tbody tr td a:hover i::after{     /*bottom part of the proceed (hover)*/
+    width: 20px;
     left: 75%;
 }
 
@@ -276,6 +277,9 @@
       
         width: 220px;
         height: 200px;
+    }
+    .table_data h1{
+        font-size: 50px;
     }
 
     .diamond_num{
@@ -358,7 +362,7 @@
 @media only screen and (max-width:499px)
 {
     .table_data {
-      
+        top:70px;
         width: 140px;
         height: 200px;
     }
