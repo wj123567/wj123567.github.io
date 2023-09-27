@@ -1195,7 +1195,7 @@ h1.Pagetitle::after{
 
     .productContainer .productDetail{
         max-width:95%;
-        margin: 0 auto;
+        margin: 20px auto 0px auto;
     }
 
     .buddyRecommend{
@@ -1307,6 +1307,11 @@ h1.Pagetitle::after{
 
     }
 
+
+    .productDetail img.gameTag{
+        width: 6%;
+    }
+
     .productDetail .productDec .buddydec{
         max-width: 100px;
     }
@@ -1348,6 +1353,10 @@ h1.Pagetitle::after{
 
     .productContainer .productDetail{
         margin: 30px auto;
+    }
+
+    .productDetail img.gameTag{
+        width: 8%;
     }
 
     .register{
