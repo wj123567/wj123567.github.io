@@ -1,9 +1,17 @@
 @charset "utf-8";
 
 body {
-    min-height: 1100px;
-    background: rgb(31, 6, 69);
-    
+    /* background: rgb(31, 6, 69); */
+    background-image: url(gamesenseiimage/8691997.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+@media only screen and (max-width: 485px) {
+    body {
+        min-height: 765px;
+    }
 }
 
 div.first {
@@ -15,18 +23,18 @@ div.first {
     /* width: 480px; */
     margin: 0px auto;
     margin-bottom: 400px;
-    background-color: rgb(79, 22, 171);
-
+    box-shadow: rgba(255, 255, 255, 0.8) 0 0 90px 33px;
     position: relative;
-    top: 200px;
+    top: 180px;
 
 }
 div.first::before {
-    background: no-repeat;
+    content: '';
     background-image: url(gamesenseiimage/8691997.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    content: '';
     position: absolute;
     inset: 0;
     opacity: 0.8;
@@ -42,16 +50,14 @@ div.second {
     margin: 100px 50px;
     width: 900px;
     padding: 15px;
-
     border-radius: 10px;
-
-    
+    box-shadow: 0 0 50px 15px #e2f9ff;
     background-color: #ffffff;
 }
 @media only screen and (max-width: 485px) {
     div.second {
         min-height: 400px;
-        min-width: 250px;
+        min-width: 260px;
     }
 }
 
@@ -91,6 +97,9 @@ div.title > .fa-solid {
 div.main-chat {
     display: flex;
     flex-direction: column;
+    max-height: 256px;
+
+    overflow: scroll;
 }
 div.left-chat {
     display: flex;

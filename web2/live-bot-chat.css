@@ -1,6 +1,4 @@
-nav {
-    z-index: 10;
-}
+@charset "utf-8";
 
 .open-button > img {
     width: 100px;
@@ -13,9 +11,9 @@ nav {
 
     padding: 10px 10px;
 
-    position: fixed;
+    position: absolute;
     right: 30px;
-    bottom: 220px;
+    bottom: 230px;
 
     border-radius:70px;
     border: none;
@@ -24,7 +22,6 @@ nav {
 
     transition: padding 0.5s, font-size 0.5s; 
 
-    z-index: 2;
 }
 .open-button:hover {
     cursor: pointer;
@@ -32,81 +29,243 @@ nav {
     padding: 20px 20px;
 
     color: rgb(226, 226, 226);
-    background-color: rgb(77, 21, 146);
+    background-color: rgb(42, 14, 76);
 }
 .open-button:active {
     background-color: rgb(63, 17, 119);
 }
-
-.popup-chat {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 220px;
-    width: 600px;
-    height: 650px;
-
-    border-radius: 20px;
-    border: 5px solid rgb(17, 5, 41);
-    background-color: rgb(57, 11, 110);
-    padding: 10px 20px;
-
-    overflow-y: scroll;
-}
-@media (max-width: 1000px) {
-    .popup-chat {
-        width: 440px;
+@media only screen and (max-width: 996px){
+    .open-button {
+        bottom: 300px;
     }
 }
-.chat-container {
+@media only screen and (max-width: 650px){
+    .open-button {
+        bottom: 330px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .open-button {
+        bottom: 340px;
+    }
+}
+/* livebottest */
+
+
+body {
+    /* background: rgb(31, 6, 69); */
+    background-image: url(gamesenseiimage/8691997.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+@media only screen and (max-width: 485px) {
+    body {
+        min-height: 765px;
+    }
+}
+
+div.first {
+    display: flex;
+    justify-content: center;
+    
+    height: max-content;
+
+    /* width: 480px; */
+    margin: 0px auto;
+    margin-bottom: 400px;
+    box-shadow: rgba(255, 255, 255, 0.8) 0 0 90px 33px;
+    position: relative;
+    top: 180px;
+
+}
+div.first::before {
+    content: '';
+    background-image: url(gamesenseiimage/8691997.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    inset: 0;
+    opacity: 0.8;
+}
+
+div.first * {
+    isolation: isolate;
+}
+
+div.second {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 100px 50px;
+    width: 900px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 15px #e2f9ff;  /* glowing effect */
+    background-color: #ffffff;
+}
+@media only screen and (max-width: 485px) {
+    div.second {
+        min-height: 400px;
+        min-width: 260px;
+    }
+}
+
+div.title {
+    width: 100%;
+}
+@media only screen and (max-width: 530px) {
+    div.title {
+        display: flex;
+    }
+}
+div.title > img {
+    width: 30px;
+    margin: 10px 5px;
+    margin-left: 10px;
+    display: inline;
+}
+@media only screen and (max-width: 530px) {
+    div.title > img {
+        height: fit-content;
+    }
+}
+div.title h1 {
+    font-size: 24px;
+    display: inline-block;
+    padding-top: 12px;
+    vertical-align: top;
+}
+
+div.title > .fa-solid {
+    display: flex;
+    float: right;
+    margin: 14px 10px;
+    font-size: 22px;   
+    display: inline;
+}
+
+div.main-chat {
     display: flex;
     flex-direction: column;
+    max-height: 256px;
+
+    overflow: scroll;
 }
-.chat-container h1 {
+div.left-chat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    margin: 15px auto;
+}
+div.botimg > img {
+    margin: 10px;
+    margin-top: 50px;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+}
+div.botmsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid rgb(187, 217, 255);
+    border-radius: 15px;
+    padding: 15px;
+}
+@media only screen and (max-width: 750px) {
+    div.botmsg {
+        margin-right: auto;
+    }
+}
+div.botinfo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+div.bottext {
+    font-size: 20px;
+}
+
+/* seperate */
+div.right-chat {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+div.userimg > img {
+    margin: 10px;
+    margin-top: 50px;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+}
+div.usermsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid rgb(187, 217, 255);
+    border-radius: 15px;
+    padding: 15px;
+}
+/* @media only screen and (max-width: 750px) {
+    div.usermsg {
+        
+    }
+} */
+div.userinfo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+div.usertext {
+    display: flex;
+    font-size: 20px;
+}
+
+div.userform {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
+div.userinput {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+input.userinput {
+    border-radius: 8px;
+    padding-left: 5px;
+    font-size: 22px;
+    width: 90%;
+    height: 40px;
+}
+input.userinput::placeholder {
+    font-size: 22px;
+    color: gray;
+}
+
+button.usersubmit {
+    background-color: rgb(34, 151, 21);
     color: white;
-    font-size: 40px;
-
-    margin-top: 20px;
+    font-size: 18px;
+    padding: 8px;
+    border-style: none;
+    border-radius: 4px;
 }
-.chat-container label {
-    color: white;
-    font-size: 25px;
-
-    margin: 20px 0;
-}
-
-.text-area{
-    background-color: rgb(227, 208, 249);
-    font-size: 25px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 3px solid rgb(0, 0, 0);
-
-    resize: vertical;
-}
-
-.submit {
-    padding: 5px;
-    border-radius: 20px;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-.submit:hover {
+button.usersubmit:hover {
     cursor: pointer;
-    background-color: rgb(217, 217, 217);
+    background-color: rgb(29, 126, 18);
 }
-.close-chat {
-    padding: 5px;
-    border-radius: 20px;
-    font-size: 30px;
-}
-.close-chat:hover {
-    cursor: pointer;
-    background-color: rgb(187, 184, 184);
-}
-.close-chat:active, .submit:active {
-    background-color: rgb(148, 146, 151);;
-}
-
-

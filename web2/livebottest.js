@@ -59,7 +59,6 @@ function appendMessage(name, img, side, text) {
 
     msgChat.insertAdjacentHTML("beforeend", msgHTML);
     msgChat.scrollTop += 500;
-    window.scrollBy(0, 120);
 }
 
 function botResponse() {
