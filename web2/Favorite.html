@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -16,9 +17,13 @@
     </head>
 
 
+
+
 <body>
 
+
 <script src="FAQ.js"></script>
+
 
 <nav class="navbar">
   <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
@@ -36,7 +41,7 @@
   </div>
   <input type="checkbox" id="menu-bar"\>
   <label for="menu-bar">&#9776;</label>
-  <ul class="list"> 
+  <ul class="list">
    <li><a href="index.html">Home</a></li>  
    <li>
       <a href="#">Services &#x25BC;</a>
@@ -46,14 +51,15 @@
   </li>
    </ul>
    <li><a href="leaderboard.html">Leaderboard</a></li>  
-   <li><a href="AboutUs.html">About Us</a></li>                   
+   <li><a href="AboutUs.html">About Us</a></li>                  
   </ul>
+
 
   <div class="right-section">
       <div class="row">
           <div class="search-button">
               <input id="search-bar" class="search-bar" type="text" placeholder="Search" autocomplete="on">
-              
+             
               <a id=""><button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button></a>
           </div>
           <div class="search-result">
@@ -62,13 +68,18 @@
   </div>
   <script src="autocomplete2.js"></script>
 
+
 </nav>
+
 
 <div class="top">
 
+
     <div class="favhead">
 
+
       <h1 class="biggesttext">FAVORITES</h1>
+
 
       <div class="listcustomize">
         <button class="listbtn">List customization</button>
@@ -80,6 +91,7 @@
         </div>
       </div>
 
+
       <div class="filtersearch">
         <button class="filterbtn">Filter search</button>
         <div class="filtersearch-content">
@@ -90,56 +102,186 @@
         </div>
       </div>
 
+
         <div class="searchbar">
-                  
+                 
           <div id="buttonbox">
+
 
             <button class="buttonfav" onclick="filterSelection('fav1')">FAV 1</button>
             <button class="buttonfav" onclick="filterSelection('fav2')">FAV 2</button>
             <button class="buttonfav" onclick="filterSelection('fav3')">FAV 3</button>
             <button class="buttonfav" onclick="filterSelection('fav4')">FAV 4</button>
 
+
             <button class="buttonfav" onclick="filterSelection('all')">ALL</button>
+
 
           </div>
 
+
         </div>  
 
+
     </div>
-          
+         
 </div>  
-      
+     
+
 <div class="bottom">
 
     <ul id="FAVS">
-
-      <a href="boost_ninja.html">
-        <li class="section fav1">
-            <span class="favname"><img src="./image/buddy/ninja.png" alt="fav Icon" class="iconfav">NINJA</span>
-          </li>
-      </a>
-
-      <a href="boost_s1mple.html"><li class="section fav2">
-        <span class="favname"><img src="./image/buddy/s1mple.png" alt="fav Icon" class="iconfav">S1MPLE</span>
-      </li></a>
-      
-
-      <a href="boost_faker.html">
+        <li class="section fav1"> <!--appears when screen is big disappears when screen is small-->
+            <div class="favbig">
+                <a href="boost_ninja.html">
+                    <table>
+                    <tr>
+                        <td rowspan="6"><img src="./image/buddy/ninja.png" alt="Ninja"></td>
+                        <td class="buddyname">NINJA</td>
+                        <td class="online" colspan="3">ONLINE</td>
+                        <td></td>
+                        <td></td>
+                        <td class="ranking">PREMIUM</td>
+                    </tr>
+                    <tr>
+                        <td class="ordercount">5 ORDERS</td>
+                        <td class="ordertime">Ordered 5 days ago</td>
+                        <td class="rating">4.7/5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
+        <li class="section fav1">   <!--appears when screen is small disappears when screen is big-->
+            <div class="favsmall">
+                <a href="boost_ninja.html">
+                    <table>
+                        <tr>
+                            <td><img src="./image/buddy/ninja.png" alt="Ninja"></td>
+                            <td class="buddyname" colspan="6">NINJA</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
+        <li class="section fav2">
+            <div class="favbig">
+                <a href="boost_s1mple.html">
+                    <table>
+                        <tr>
+                            <td rowspan="6"><img src="./image/buddy/s1mple.png" alt="S1mple"></td>
+                            <td class="buddyname">S1MPLE</td>
+                            <td class="offline" colspan="3">OFFLINE</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ordercount">15 ORDERS</td>
+                            <td class="ordertime">Ordered 2 days ago</td>
+                            <td class="rating">4.9/5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
+        <li class="section fav2">
+            <div class="favsmall">
+                <a href="boost_s1mple.html">
+                    <table>
+                        <tr>
+                            <td><img src="./image/buddy/s1mple.png" alt="S1mple"></td>
+                            <td class="buddyname" colspan="6">S1MPLE</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
         <li class="section fav3">
-            <span class="favname"><img src="./image/buddy/faker.png" alt="fav Icon" class="iconfav">FAKER</span>
-         </li>
-      </a>
-
-      <a href="boost_spicy.html">
+            <div class="favbig">
+                <a href="boost_spicy.html">
+                    <table>
+                        <tr>
+                            <td rowspan="6"><img src="./image/buddy/spicy.png" alt="spicy"></td>
+                            <td class="buddyname">SPICYUUUUU</td>
+                            <td class="offline" colspan="3">OFFLINE</td>
+                            <td></td>
+                            <td></td>
+                            <td class="ranking">TOP 100</td>
+                        </tr>
+                        <tr>
+                            <td class="ordercount">8 ORDERS</td>
+                            <td class="ordertime">Ordered 10 days ago</td>
+                            <td class="rating">4.8/5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
+        <li class="section fav3">
+            <div class="favsmall">
+                <a href="boost_spicy.html">
+                    <table>
+                        <tr>
+                            <td><img src="./image/buddy/spicy.png" alt="spicy"></td>
+                            <td class="buddyname" colspan="6">SPICYUUUUU</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
         <li class="section fav4">
-            <span class="favname"><img src="./image/buddy/spicy.png" alt="fav Icon" class="iconfav">SPICYUUU</span>
-          </li>
-      </a>
-      
-
+            <div class="favbig">
+                <a href="boost_faker.html">
+                    <table>
+                        <tr>
+                            <td rowspan="6"><img src="./image/buddy/faker.png" alt="faker"></td>
+                            <td class="buddyname">FAKER</td>
+                            <td class="online" colspan="3">ONLINE</td>
+                            <td></td>
+                            <td></td>
+                            <td class="ranking">TOP 100</td>
+                        </tr>
+                        <tr>
+                            <td class="ordercount">2 ORDERS</td>
+                            <td class="ordertime">Ordered 3 days ago</td>
+                            <td class="rating">5/5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
+        <li class="section fav4">
+            <div class="favsmall">
+                <a href="boost_faker.html">
+                    <table>
+                        <tr>
+                            <td><img src="./image/buddy/faker.png" alt="faker"></td>
+                            <td class="buddyname" colspan="6">FAKER</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </li>
     </ul>
-          
 </div>
+
 
 <footer class="footer">
     <div class="container">
@@ -154,7 +296,7 @@
                 <li><a href="./document/TermsOfUse.pdf" target="_blank">Term of Use</a></li>
                 <li><a href="game_coach.html">Join Us</a></li>
             </ul>
-  
+ 
         </div>
         <div class="footer-col">
             <h4>Services</h4>
@@ -162,9 +304,9 @@
                 <li><a href="gamerbuddy.html">Game Buddy</a></li>
                 <li><a href="gamerboosting.html">Game Boosting</a></li>
             </ul>
-  
+ 
         </div>
-  
+ 
         <div class="footer-col">
             <h4>Support</h4>
             <ul>
@@ -173,24 +315,25 @@
             <li><a href="mailto: gamerhub@support.com">Contact Us</a></li>
             </ul>
         </div>
-  
-      
+ 
+     
         <div class="icon">
         <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/"target="_blank" ><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        
+       
     </div>  
-    </div> 
-    <p>Copyright &copy; 2023 GamerHub</p> 
-    
+    </div>
+    <p>Copyright &copy; 2023 GamerHub</p>
+   
 </footer>
+
 
 <script src="Favorite.js" defer></script> <!--defer is mandatory-->
 
-</body>
 
+</body>
 
 
 </html>

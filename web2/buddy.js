@@ -1,19 +1,3 @@
- //follow button
- let favouriteButton = document.getElementById("favouriteButton");
- let added = false;
-
- favouriteButton.addEventListener('click', ()=>{
-     added = !added;
-
-     if(added){
-         favouriteButton.textContent="Added";
-         favouriteButton.style.background="hsl(332, 66%, 55%)"
-     }else{
-         favouriteButton.textContent="+ Favourite"
-         favouriteButton.style.background="hsl(266, 39%, 17%)"
-     }
- })
-
  //slide image
  const imgs = document.querySelectorAll(".imageSelect a");// select all photo in a tag
  const imgBtns = [...imgs];// put all the photo into array
