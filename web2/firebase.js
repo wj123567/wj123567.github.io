@@ -58,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     });
-
-    // change chat in buddy page bahaviour
     sendMessageBtn.addEventListener('click', () => {
       const userMessage = userInput.value.trim();
       if (userMessage !== '') {
@@ -95,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });  
 
-//change favourite button behaviour
+//change favourite button behaviour in product page
 document.addEventListener('DOMContentLoaded', function(){
  const favouriteButton = document.getElementById("favouriteButton");
  let added = false;
@@ -114,12 +112,32 @@ document.addEventListener('DOMContentLoaded', function(){
          favouriteButton.textContent="+ Favourite"
          favouriteButton.style.background="hsl(266, 39%, 17%)"
      }
-
       }
     })
   })
  }
 })
+
+//change buy gift button behaviour in product page
+document.addEventListener('DOMContentLoaded', function(){
+  let purchasePresent = document.getElementsByClassName("purchasePresent");
+  let i=0;
+  if(purchasePresent){
+    for(i=0;i<purchasePresent.length;i++){
+      purchasePresent[i].addEventListener('click',function(){
+        auth.onAuthStateChanged(user=>{
+          if(user == null){
+            window.location.assign("login.html");
+          }else{
+            alert("Thank for buying gift for our buddy")
+          }
+        })
+      })
+    }
+  }
+
+})
+
 
 
     //Sign Up  
