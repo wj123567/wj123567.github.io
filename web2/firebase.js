@@ -26,6 +26,7 @@
   const auth = getAuth();
   const database =getDatabase(app);
   
+  //chang navbar item
   auth.onAuthStateChanged(user=>{
     if(user){
       console.log('user logged in: ', user)
@@ -40,7 +41,7 @@
     }
 })
 
-
+//change chat button behaviour in product page
 document.addEventListener('DOMContentLoaded', function(){
   const toggleChatBtn = document.getElementById('chat');
   const chatContainer = document.getElementById('chatContainer');
@@ -57,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     });
-
     sendMessageBtn.addEventListener('click', () => {
       const userMessage = userInput.value.trim();
       if (userMessage !== '') {
@@ -79,19 +79,67 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });  
 
+// change order button in buddy page bahaviour
 document.addEventListener('DOMContentLoaded', function(){
   const order2 = document.getElementById('order2');
   if ( order2 ) { //if the element exists add the click event
     order2.addEventListener('click', () => {
       auth.onAuthStateChanged(user=>{
-        if(user===null){
+        if(user==null){
           order2.href='login.html'
         }
     })
     });
   }
 });  
-     
+
+//change favourite button behaviour in product page
+document.addEventListener('DOMContentLoaded', function(){
+ const favouriteButton = document.getElementById("favouriteButton");
+ let added = false;
+ if(favouriteButton){
+  favouriteButton.addEventListener('click',() =>{
+    auth.onAuthStateChanged(user=>{
+      if(user == null){
+        window.location.assign("login.html");
+      }else{
+        added = !added;
+
+     if(added == true){
+         favouriteButton.textContent="Added";
+         favouriteButton.style.background="hsl(332, 66%, 55%)"
+     }else{
+         favouriteButton.textContent="+ Favourite"
+         favouriteButton.style.background="hsl(266, 39%, 17%)"
+     }
+      }
+    })
+  })
+ }
+})
+
+//change buy gift button behaviour in product page
+document.addEventListener('DOMContentLoaded', function(){
+  let purchasePresent = document.getElementsByClassName("purchasePresent");
+  let i=0;
+  if(purchasePresent){
+    for(i=0;i<purchasePresent.length;i++){
+      purchasePresent[i].addEventListener('click',function(){
+        auth.onAuthStateChanged(user=>{
+          if(user == null){
+            window.location.assign("login.html");
+          }else{
+            alert("Thank for buying gift for our buddy")
+          }
+        })
+      })
+    }
+  }
+
+})
+
+
+
     //Sign Up  
     document.addEventListener('DOMContentLoaded', function(){
       var signup2 = document.getElementById('signup2');

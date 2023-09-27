@@ -1,19 +1,3 @@
- //follow button
- let favouriteButton = document.getElementById("favouriteButton");
- let added = false;
-
- favouriteButton.addEventListener('click', ()=>{
-     added = !added;
-
-     if(added){
-         favouriteButton.textContent="Added";
-         favouriteButton.style.background="hsl(332, 66%, 55%)"
-     }else{
-         favouriteButton.textContent="+ Favourite"
-         favouriteButton.style.background="hsl(266, 39%, 17%)"
-     }
- })
-
  //slide image
  const imgs = document.querySelectorAll(".imageSelect a");// select all photo in a tag
  const imgBtns = [...imgs];// put all the photo into array
@@ -22,7 +6,7 @@
 
  imgBtns.forEach((imgItem)=>{
      imgItem.addEventListener('click',(event)=>{   // add click event listeners to imgItem
-         event.preventDefault(); // prevent going to the image location
+         event.preventDefault(); // prevent a tag behaviour
          imgId = imgItem.dataset.id;  // update the selected image from the data-id attribute
          slideImage(); // slide to the selected image
      });

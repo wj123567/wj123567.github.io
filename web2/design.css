@@ -335,7 +335,7 @@ font-size: 1.2em;
 
 #forgetpass{
     text-decoration: none;
-    visibility:hidden;
+    display:none;
 }
 
 .register #forgetpass:hover{
@@ -684,28 +684,17 @@ h1.Pagetitle::after{
     position: relative;
     color: white;
     margin: 10px 0;
+    display: inline;
 
 }
-
-.productDetail .favouriteButton {
-    color: white;
-    font-size: 9pt;
-    background: transparent;
-    border: 1px solid;
-    border-color: hsl(266, 39%, 17%);
-    background: hsl(266, 39%, 17%);
-    border-radius: 15px;
-    width: 85px;
-    height: 30px;
-    position: absolute;	 
-    cursor: pointer;
-    margin-left: 5px;	
-    transition: all ease-in-out 0.3s;	    
-  }
-
-.productDetail .favouriteButton:hover{
-    opacity: 0.9;
-  }
+  .productDetail img.gameTag{
+    width: 4%;
+    margin-left: 8px;
+    border-radius: 10px;
+    vertical-align: bottom;
+    display: inline;
+    box-shadow: 0px 0px 5px 2px hsl(332, 72%, 63%);
+}
 
 .productDetail .productRating{
     margin: 3px 0;
@@ -727,20 +716,42 @@ h1.Pagetitle::after{
 
 .productDetail .productPrice{
     margin: 5px 0;
-    font-size: 1.1em;
-    color: white;
 }
 
 .productDetail .productPrice i{
     margin-right: 3px;
 }
 
+.productDetail .productPrice p{
+    font-size: 1.1em;
+    color: white;
+    display: inline;
+}
+
+.productDetail .favouriteButton {
+    color: white;
+    font-size: 9pt;
+    background: transparent;
+    border: 1px solid;
+    border-color: hsl(266, 39%, 17%);
+    background: hsl(266, 39%, 17%);
+    border-radius: 15px;
+    width: 85px;
+    height: 30px;	 
+    cursor: pointer;
+    margin-left: 2px;	
+    transition: all ease-in-out 0.3s;   
+  }
+
+.productDetail .favouriteButton:hover{
+    opacity: 0.9;
+  }
+
 .productDetail .productDec h3{
     text-transform: capitalize;
     color: white;
     margin: 5px 0;
 }
-
 
 .productDetail .productDec p{
     font-size: 1em;

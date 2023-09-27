@@ -336,7 +336,7 @@ font-size: 1.2em;
 
 .register #forgetpass{
     text-decoration: none;
-    visibility:visible;
+    display:block;
 }
 
 .register #forgetpass:hover{
