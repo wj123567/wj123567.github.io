@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="live-bot-chat.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script type="module" src="firebase.js"></script>
+        <script type="module" src="slider.js"></script>
         <link rel="stylesheet" href="searchbar.css">
+        <link rel="stylesheet" href="slider.css">
     
     </head>
 
@@ -61,7 +63,7 @@
             <script src="autocomplete2.js"></script>
 
         </nav>
-    
+
 
         <div class="box">
             <h1>
@@ -93,12 +95,12 @@
             var text = document.getElementById('text');
             var word = text.getElementsByTagName('span');
 
-            var i=0;
+            var x=0;
 
             function rotator(){
-                word[i].style.display ='none';
-                i = (i+1) % word.length;
-                word[i].style.display ='initial';
+                word[x].style.display ='none';
+                x = (x+1) % word.length;
+                word[x].style.display ='initial';
             
             }
             setInterval(rotator,1500);
@@ -135,6 +137,13 @@
         </div>
     </div>
 </div>
+
+    <div class="wrapper">
+    <div class="testimonial_container" id="testimonial_container">
+    </div>
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+    </div>
 
 <script type="text/javascript">
     var slides =document.querySelectorAll('.slide');
