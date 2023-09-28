@@ -1254,16 +1254,13 @@ h1.Pagetitle::after{
 
     .orderContainer .orderDetail .orderDetail2 p,
     .orderContainer .orderDetail .orderDetail2 .price,
-    .orderContainer .orderDetail .orderDetail2 .price img
-    {
-        margin: 0;
-    }
-
+    .orderContainer .orderDetail .orderDetail2 .price img,
     .orderContainer .orderDetail .orderDetail2 #orderQuantity, 
     .orderContainer .orderDetail .orderDetail2 #start-date
     {
         margin: 0;
     }
+
     .orderContainer .confirmOrder .confirmButton {
         padding: 10px 0;
     }
@@ -1271,9 +1268,6 @@ h1.Pagetitle::after{
         max-width: 120px;
         margin-top: 5px;
     }
-
-
-    
 
 }
 
@@ -1387,5 +1381,9 @@ h1.Pagetitle::after{
 
     .filter .filterContent{
         padding-top: 100px;
+    }
+
+    .orderContainer{
+        padding-top: 180px;
     }
   }
