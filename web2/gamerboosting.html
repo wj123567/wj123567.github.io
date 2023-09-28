@@ -745,9 +745,9 @@
             for(let i = 0; i<filterlist.length; i++){
                 filterlist[i].addEventListener('click',function(){
                     for(let j=0; j<filterlist.length; j++){
-                        filterlist[j].classList.remove('active');
+                        filterlist[j].classList.remove('active'); //remove all active class 
                     }
-                    this.classList.add('active');
+                    this.classList.add('active');//add active the the one whicch being click (filterlist[i]); this =filterlist[i]
 
                     let dataFilter= this.getAttribute('dataFilter');
 
@@ -774,7 +774,12 @@ filterCondition.addEventListener('change', () => {
     let sortedCards = [...cards]; // Create a copy of the cards array
 
     if (sortValue == "LowtoHigh") {
-        sortedCards.sort((a, b) => {
+        //compare a and b from sortedCards with sort function in javascript
+        /*return
+        <0 a first
+        =0 nothing change
+        >0 b first*/
+        sortedCards.sort((a, b) => { 
             const priceA = parseFloat(a.querySelector('.price h3').textContent);
             const priceB = parseFloat(b.querySelector('.price h3').textContent);
             return priceA - priceB;
@@ -791,8 +796,8 @@ filterCondition.addEventListener('change', () => {
     buddyContainer.innerHTML = '';
 
     //  put the sorted cards back to the container
-    sortedCards.forEach(card => {
-        buddyContainer.appendChild(card);
+    sortedCards.forEach(cards => {
+        buddyContainer.appendChild(cards);
     });
 });
 
