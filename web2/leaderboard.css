@@ -48,7 +48,7 @@
     margin: 0px auto;
     background: hsl(332, 66%, 55%);       /*rgb(249, 79, 98);*/
     box-shadow: 35px -15px 15px  rgb(240, 87, 87);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px 30px;
 
 }
