@@ -157,6 +157,13 @@
     }
 }
 
+@media only screen and (max-width:460px){
+    .about_us{
+        padding-top: 50px;
+    }
+
+}
+
 
 /* h1{ */
     /* color: #edbb91;    1 */
