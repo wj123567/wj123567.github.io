@@ -496,10 +496,12 @@ h1.Pagetitle::after{
     align-items: center;
     margin: 5px 3px;
 }
+
 .buddyContainer .card .content .buddyname h2{
     font-size: 1.3em;
     color: hsl(266, 39%, 17%);
     margin: 5px 3px;
+    text-transform: uppercase;
 }
 
 .buddyContainer .card .content .buddyname img{
@@ -679,7 +681,7 @@ h1.Pagetitle::after{
 
 .productDetail .productName{
     font-size: 1.8em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 800;
     position: relative;
     color: white;
@@ -877,6 +879,14 @@ h1.Pagetitle::after{
 
 .productDetail .productDec .gift .giftImg .present:hover .presentText{
     display: none;
+}
+
+
+.productDetail .productDec .gift .giftImg .present .presentText img{
+    width: 10%;
+    display: inline;
+    vertical-align: text-top;
+    margin-left: 1px;
 }
 
 .productDetail .productDec .gift .giftImg .present .purchasePresent{

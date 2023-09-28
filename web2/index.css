@@ -185,7 +185,7 @@ body .img_slider_container{      /*whole section of the website allocated for sl
 }
 
 .img_slider .img_slider_nav .img_slider_btn.active{
-    background-color: rgb(147, 197, 114);
+    background-color: rgb(41, 26, 60);
     box-shadow: 0 0 2px rgb(245, 222, 179);
 }
 
