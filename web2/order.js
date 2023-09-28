@@ -35,16 +35,24 @@ confirmOrder.addEventListener("click", function(){
     }else if(orderQuantity.value<=0){
         popupTextTitle.innerHTML=("Invalid Quantity")
         popupText.innerHTML=("Quantity must be at least one")
+        closePopup.addEventListener("click",function(){
+            popupOrder.classList.remove("active");
+            orderQuantity.focus();
+        })
     }else if(orderQuantity.value> 20){
         popupTextTitle.innerHTML=("Order Quantity out of limit")
         popupText.innerHTML=("Maximum 20 per order")
+        closePopup.addEventListener("click",function(){
+            popupOrder.classList.remove("active");
+            orderQuantity.focus();
+        })
     }else if(dateInput.value == ''){
         popupTextTitle.innerHTML=("Invalid Time")
         popupText.innerHTML=("Please fill in the appointment time")
+        closePopup.addEventListener("click",function(){
+            popupOrder.classList.remove("active");
+            dateInput.focus();
+        })
     }
-
-})
-closePopup.addEventListener("click",function(){
-    popupOrder.classList.remove("active");
 
 })
