@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="index_test.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script type="module" src="firebase.js"></script>
+        <script type="module" src="index.js"></script>
         <link rel="stylesheet" href="searchbar.css">
+        
     
     </head>
 
@@ -60,7 +62,7 @@
             <script src="autocomplete2.js"></script>
 
         </nav>
-    
+
 
         <div class="box">
             <h1>
@@ -88,41 +90,41 @@
             </h2>
          </div>
 
-         <script type="text/javascript">
-            var text = document.getElementById('text');
-            var word = text.getElementsByTagName('span');
+       <script>
+        var text = document.getElementById('text');
+        var word = text.getElementsByTagName('span');
 
-            var i=0;
+        var i=0;
 
-            function rotator(){
-                word[i].style.display ='none';
-                i = (i+1) % word.length;
-                word[i].style.display ='initial';
-            
-            }
-            setInterval(rotator,1500);
-         </script>
+        function rotator(){
+        word[i].style.display ='none';
+        i = (i+1) % word.length;
+        word[i].style.display ='initial';
+
+        }
+        setInterval(rotator,1500);
+       </script>
 
 <div class="img_slider_container">
     <div class="img_slider">
         <div class="slide active">
-            <img src="./wz_image/home_pic1_ps.jpg"  alt="">
+            <img src="./wz_image/homepic1_ps.jpg"  alt="">
 
         </div>
         <div class="slide">
-            <img src="./wz_image/home_pic2_ps.jpg"  alt="">
+            <img src="./wz_image/homepic2_ps.jpg"  alt="">
             
         </div>
         <div class="slide">
-            <img src="./wz_image/home_pic3_ps.jpg"  alt="">
+            <img src="./wz_image/homepic3_ps.jpg"  alt="">
             
         </div>
         <div class="slide">
-            <img src="./wz_image/home_pic4_ps.jpg"   alt="">
+            <img src="./wz_image/homepic4_ps.jpg"   alt="">
             
         </div>
         <div class="slide">
-            <img src="./wz_image/home_pic5_ps.jpg"   alt="">
+            <img src="./wz_image/homepic5_ps.jpg"   alt="">
             
         </div>
         <div class="img_slider_nav">
@@ -134,63 +136,14 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    var slides =document.querySelectorAll('.slide');
-    var btns= document.querySelectorAll('.img_slider_btn');
-    let currentSlide=1;
-
-
-    //for image slider manual navigation
-    var manualNav=function(manual){
-        slides.forEach((slide)=>{
-            slide.classList.remove('active');
-
-        btns.forEach((btn)=>{
-            btn.classList.remove('active');
-        });
-        });
-
-        slides[manual].classList.add('active');
-        btns[manual].classList.add('active');
-    }
-
-    btns.forEach((btn,i)=>{
-        btn.addEventListener("click", ()=>{
-            manualNav(i);
-            currentSlide=i;
-        });
-    });
-
-    //for image slider auto navigation
-    var repeat =function(activeClass){
-        let active=document.getElementsByClassName('active');
-        let i=1;
-
-        var repeater = () => {
-            setTimeout(function(){
-                [...active].forEach((activeSlide)=>{
-                    activeSlide.classList.remove('active');
-                });
-
-                slides[i].classList.add('active');                /*from the manual nav js*/
-                btns[i].classList.add('active');    
-                i++;
-                
-                if(slides.length ==i){
-                    i=0;
-                }
-                if(i>=slides.length){
-                    return;
-                }
-                repeater();
-            }, 4000);
-        }
-        repeater();
-    }
-    repeat();
-       
-</script>
+<div class="video_bg_1">
+    <div class="video-player-1">
+       <video controls poster="./wz_image/homevid_tnail.png">
+        <source src="./wz_vid/home_vid.mp4" type="video/mp4">
+       </video>
+    </div>
+</div>
+   
          
     <div class="buddylist_tag">
         <h2>Game Buddy<a href="gamerbuddy.html">View more</a></h2>             <!--link to game buddy page-->
@@ -203,7 +156,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>ASPAS</h2>
+                            <h2>Aspas</h2>
                         </div>
                         <div class="buddyprice_rating">
                             <div class="buddy_btn_actstatus">
@@ -222,7 +175,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>POKIMANE</h2>
+                            <h2>Pokimane</h2>
                             
                         </div>
                         <div class="buddyprice_rating">
@@ -243,7 +196,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>SHROUD</h2>
+                            <h2>Shroud</h2>
                             
                         </div>
                         <div class="buddyprice_rating">
@@ -261,7 +214,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>DEMON1</h2>
+                            <h2>Demon1</h2>
                            
                         </div>
                         <div class="buddyprice_rating">
@@ -279,7 +232,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>XQc</h2>
+                            <h2>xQc</h2>
                            
                         </div>
                         <div class="buddyprice_rating">
@@ -304,7 +257,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>S1MPLE</h2>
+                            <h2>S1mple</h2>
                            
                         </div>
                         <div class="buddyprice_rating">
@@ -322,7 +275,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>FAKER</h2>
+                            <h2>Faker</h2>
                             
                         </div>
                         <div class="buddyprice_rating">
@@ -340,7 +293,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>NINJA</h2>
+                            <h2>N1nja</h2>
                            
                         </div>
                         <div class="buddyprice_rating">
@@ -358,7 +311,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>SPICYUUU</h2>
+                            <h2>Spicyuuu</h2>
                            
                         </div>
                         <div class="buddyprice_rating">
@@ -376,7 +329,7 @@
                 </div>
                     <div class="content">
                         <div class="buddyname">
-                            <h2>THE DOC</h2>
+                            <h2>The DOC</h2>
 
                         </div>
                         <div class="buddyprice_rating">
@@ -390,7 +343,20 @@
             </div>
     </div>
 
+    <div class="video_bg_2">
+        <div class="video-container">
+            <div class="video-player-2">
+                <iframe src="https://www.youtube.com/embed/XB7Lzt_stNY?si=vfyLKc5Rw5GAUWKV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
+    <div class="wrapper">
+        <div class="testimonial_container" id="testimonial_container">
+        </div>
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+       </div>
 
         </body>
         <footer class="footer">
