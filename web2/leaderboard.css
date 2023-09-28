@@ -1,9 +1,34 @@
-
+@font-face{
+    font-family: Skranji ;
+    src: url('./font/Skranji/Skranji-Regular.ttf') format('truetype');
+}
 /*leaderboard css*/
 
 .wrapper{
-    padding-top: 150px;
-    padding-bottom: 200px;
+    position: relative;
+    top:200px;
+    width: 1200px;
+    height: 1000px;
+    background-color: rgb(68, 49, 49);
+    box-shadow: 0px 0px 10px 10px white;
+    margin: 0px auto 250px auto;
+
+}
+
+.wrapper h2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #6be2c4;
+    font-family: Skranji ,sans-serif;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 0px auto;
+}
+.wrapper i#award{
+    color: yellow;
+    padding: 0 40px 0 40px;
 }
 
 .wrapper li {
@@ -11,13 +36,17 @@
 }
 
 .lboard_section{
-    width:900px;
+    position: absolute;
+    width: 900px;
     height: 550px;
+    top:20%;
+    left: 10%;
     margin: 0px auto;
-    background: #f94f62;
-    border-radius: 5px;
+    background: hsl(332, 66%, 55%);       /*rgb(249, 79, 98);*/
+    box-shadow: 35px -15px 15px  rgb(240, 87, 87);
+    border-radius: 10px;
     padding: 20px 30px;
-    position: relative;
+
 }
 
 .lboard_section ul{
@@ -41,12 +70,12 @@
 .lboard_wrap{                    
     position: absolute;
     top:20%;
-    left: 3%; 
-    background: #ffd300;
+    left:3%; 
+    background: rgb(245, 186, 25);
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    
+    box-shadow: 15px 15px 15px  rgb(255, 235, 87);
+    border-radius: 10px;  
 }
 
 .lboard_wrap .lboard_item{
@@ -71,7 +100,7 @@
 
 .lboard_wrap .lboard_mem .img{
     width: 140px; 
-    height: 70px;
+    height: 75px;
 }
 
 .lboard_wrap .lboard_mem .img img{
@@ -105,19 +134,20 @@
 }
 
 .lboard_wrap .lboard_item .points{
+
     font-size: 18px;
+    font-weight: bold;
     width: 100px;
     color: #4169E1;                                        /*point color*/
-    text-shadow: 1px 1px 1px #6F8FAF,
-                 1px 2px 1px #B6D0E2,
-                 1px 3px 1px #6F8FAF,
-                 1px 4px 1px #B6D0E2;                    
+
+                                   
 }
 
 .lboard_wrap .lboard_item .points i{
     color: #0047AB  ; 
     font-weight: bold;  
     text-shadow: none;
+
                         
 }
 
@@ -142,15 +172,30 @@
     border-bottom-right-radius: 0px;
 }
 
-
+@media only screen and (max-width:1200px){
+    .wrapper{
+        width: 968px;
+        margin: 0px auto 300px auto;
+    }
+    .lboard_section{
+        width:80%;
+       
+    }
+}
 
 @media only screen and (max-width:968px)
 {
-
-    
     .wrapper{
-    padding-top: 200px;
-    padding-bottom: 400px;
+        width: 690px;
+        margin-bottom: 350px;
+    }
+
+    .wrapper h2{
+    top:20px;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 0px auto;
     }
 
     .lboard_section{
@@ -174,7 +219,6 @@
     .lboard_wrap{                    
         position: absolute;
         top:110px;
-        left: 0%; 
         
     }
 }
@@ -183,26 +227,69 @@
    
 
     .wrapper{
-        padding-top: 200px;
-        padding-bottom: 400px;
-        }
+        width:457px;
+        height: 900px;
+        margin: 0px auto 450px auto;
+    }
 
-        .lboard_section{
-            width:90%;
-        }
- 
+    .wrapper h2{
+        font-size: 40px;
+        letter-spacing: 0px;
+    }
+
+    .wrapper i#award{
+        padding: 0 20px 0 20px;
+    }
+    .lboard_section{
+            top: 100px;
+            width:80%;
+            box-shadow: none;
+    }
+    .lboard_wrap .lboard_mem .img{
+        width: 120px; 
+        height: 65px;
+    }
+
+    .lboard_wrap .lboard_item .name_bar p{
+        font-size: 14px;
+    }
+    .lboard_wrap{                    
+        top:170px;
+        height: 490px;
+        left: 0%;
+        box-shadow: none;
+    }
+
+    .lboard_wrap .lboard_item .bar_wrap{
+        display: none;
+    }
+    .lboard_wrap .lboard_item .bar_wrap .inner_bar{
+        display:none;
+    }
+    .lboard_wrap .lboard_item .points{
+        position: absolute;
+        right: 10px;
+        width: 15%;
+        font-size: 15px;
+      }
 }
 
 @media only screen and (max-width:457px)
 {
     .wrapper{
-        padding-top: 200px;
-        padding-bottom: 400px;
+        width: 95%;
         }
+
+    .wrapper h2{
+        font-size: 30px;
+    }
+
+    .wrapper i#award{
+        padding: 0 10px 0 10px;
+    }
     
     .lboard_section{
-   
-        height: 450px;
+        height: 480px;
         }
           
     .lboard_section ul{
@@ -210,61 +297,55 @@
             flex-flow: column wrap;
         }
 
-    .lboard_wrap .lboard_mem .img{
-            width: 100px; 
-            height: 55px;
-        }
-
-    .lboard_wrap .lboard_item .name_bar p{
-        font-size: 16px;
-    }
-    .lboard_wrap{                    
+        .lboard_wrap{                    
             top:170px;
         }
     
-    .lboard_wrap .lboard_item .bar_wrap{
-        display: none;
-    }
-    .lboard_wrap .lboard_item .bar_wrap .inner_bar{
-        display:none;
-    }
+        .lboard_wrap .lboard_mem .img{
+            width: 90px;
+        }
+        .lboard_wrap .lboard_item .name_bar {
+            margin: 0 0px;
+            margin-left: 5px;
+            width: 40%;
+        }
+        .lboard_wrap .lboard_item .name_bar p{
+            font-size: 14px;
+        }
+      
+        .lboard_wrap .lboard_item .points{
+          right: 10px;
+          width: 15%;
+          font-size: 12px;
+          
+        }
+
 
 }
 
 @media only screen and (max-width:400px){
-    .wrapper{
-        padding-top: 200px;
-        padding-bottom: 450px;
-        }
-
     .lboard_section{
-         height: 450px;
+        left:5%;
+        width: 90%;
+         height: 490px;
     }
 
     .lboard_section ul li{
         font-size: 12px;
     }
 
-    .lboard_wrap{                    
-        top:150px;
+    .lboard_wrap{                   
+        top:180px;
     }
 
     .lboard_wrap .lboard_mem .img{
-        width: 90px;
-    }
-    .lboard_wrap .lboard_item .name_bar {
-        margin: 0 0px;
-        margin-left: 5px;
-        width: 30%;
+        width: 75px;
     }
     .lboard_wrap .lboard_item .name_bar p{
-        font-size: 14px;
-        
+        font-size: 12px; 
     }
-  
     .lboard_wrap .lboard_item .points{
-      font-size: 12px;
-       text-align: right;
+      font-size: 10px;
     }
 }
 

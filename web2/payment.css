@@ -5,17 +5,16 @@
     padding-top: 150px;
     padding-bottom:150px;
     box-sizing: border-box;
-    outline: none;
     border: none;
     text-transform: capitalize;
     transition: all .2s linear;
 }
 
 .payment_container img{
-    width:450px;
-    height:120px;
-    margin-top: 5px;
-    filter: drop-shadow(0 0 5px #000);
+    padding: 0 80px;
+    width: 100%;
+    height:125px;
+    filter: drop-shadow(0 0 10px #fff);     /*shadow on card*/
 }
 
 .payment_container{
@@ -30,7 +29,7 @@
     padding: 20px;
     width: 950px;
     background: #639cd9;
-    box-shadow: 0 5px 10px rgba(0, 0, 0 , 1);
+    box-shadow: 0 5px 30px 20px rgb(71, 66, 66);
 }
 
 .payment_container form .row{
@@ -142,8 +141,10 @@
     
     width: 43%;
     padding: 10px;
-    font-size: 17px;
-    color:rgb(1, 134, 81);
+    font-size: 20px;
+    color:rgb(34, 100, 47); 
+    /* rgb(1, 134, 81) */
+    font-weight: 700;
     font-variant: small-caps;
     background: #8fb1e9;
     box-shadow: 9px 7px 5px rgb(73, 66, 66);
@@ -155,19 +156,22 @@
     width: 43%;
     padding: 10px;
     cursor: pointer;
-    font-size: 17px;
-    color:red;
+    font-size: 20px;
+    color:rgb(145, 10, 10);
+    font-weight: 700;
     font-variant: small-caps;
     margin: 30px;
-    background: rgb(48, 51, 86);
+    background: rgba(48, 51, 86,0.7 );
     box-shadow: 9px 7px 5px rgb(73, 66, 66);
 }
 
 .payment_container form .checkout_btn:hover{
     background-color: #857ebb;
+    color:rgb(3, 225, 48); 
 }
 .payment_container form .reset_btn:hover{
-    background-color:rgba(48, 51, 86,0.7);
+    background-color:rgb(48, 51, 86);
+    color: red;
 }
 
 input:focus{
@@ -192,6 +196,16 @@ input#submit:focus,input#submit:focus:valid,input#submit:focus:invalid{
 }
 @media only screen and (max-width:1000px)
 {
+    .payment_container form .checkout_btn{
+        padding: 10px;
+        font-size: 20px;
+        margin: 10px 20px;
+    }
+    .payment_container form .reset_btn{
+        padding: 10px;
+        margin: 10px 20px;
+    }
+    
     .payment_container img{
         width: 100%;
        
@@ -199,12 +213,28 @@ input#submit:focus,input#submit:focus:valid,input#submit:focus:invalid{
 }
 @media only screen and (max-width:705px)
 {
+    .payment_container form .checkout_btn{
+        width: 40%;
+        margin: 10px 20px;
+    }
+    .payment_container form .reset_btn{
+        width: 40%;
+        margin: 10px 20px;
+    }
     .payment_container form .row .col .inputbox_select input{
         margin-right: 0px;
     }
 }
 @media only screen and (max-width:545px)
 {
+    .payment_container form .checkout_btn{
+        width: 70%;
+        margin: 10px 50px;
+    }
+    .payment_container form .reset_btn{
+        width: 70%;
+        margin: 10px 50px;
+    }
     .payment_section {
         margin: 0;
         padding-top: 200px;
