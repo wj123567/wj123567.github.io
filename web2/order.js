@@ -32,6 +32,10 @@ confirmOrder.addEventListener("click", function(){
     if(orderQuantity.value>0&&orderQuantity.value<=20 && dateInput.value != ''){
         popupTextTitle.innerHTML=("Thank For Purchases")
         popupText.innerHTML=("Our buddy will contact you in a while")
+        closePopup.addEventListener("click",function(){
+            popupOrder.classList.remove("active");
+            
+        })
     }else if(orderQuantity.value<=0){
         popupTextTitle.innerHTML=("Invalid Quantity")
         popupText.innerHTML=("Quantity must be at least one")
