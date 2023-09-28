@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 nav{
     z-index: 10;
 }
@@ -126,6 +130,10 @@ nav{
     }
 }
 
+.benefit-content .fa-solid:visited, .benefit-content .fa-solid:active {
+    color: rgb(36, 11, 94);
+}
+
 
 .benefit-1 {
     flex: 1;
@@ -192,7 +200,7 @@ nav{
 .section3 {
     padding-top: 150px;
     padding-bottom: 40px;
-    background-color: rgb(83, 32, 158);
+    background-color: rgb(61, 18, 125);
 
     display: flex;
     flex-direction: column;
@@ -202,12 +210,13 @@ nav{
 .head_p {
     margin-top: 30px;
     margin-bottom: 120px;
-    color: rgb(215, 214, 221);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .head_p > h1 {
+    
     flex: 1;
     text-transform: uppercase;
 }
@@ -216,6 +225,7 @@ nav{
     height: 1200px;
     /* border: 2px solid white; */
     width: 100%;
+    min-width: none;
     display: flex;
 }
 .layout {
@@ -224,6 +234,7 @@ nav{
     justify-content: center;
 
     width: 700px;
+    min-width: 290px;
     margin: 0 auto;
 }
 .bg-container{
@@ -295,6 +306,12 @@ nav{
     overflow-y: scroll;
 
 }
+@media only screen and (max-width: 1160px){
+    div.submit-form {
+        margin-bottom: 100px;
+    }
+}
+
 .submit-mid {
     width: 100%;
     display: flex;
@@ -329,6 +346,22 @@ nav{
 .name-container input::placeholder {
     color: rgb(188, 157, 240);
 }
+
+div.form-container {
+    display: flex;
+}
+
+div.form-container > .form-phone,
+div.form-container > .form-gender {
+    font-size: 18px;
+    padding-left: 8px;
+    margin-top: 4px;
+    margin-left: 2px;
+    width: 280px;
+    height: 38px;
+    border-radius: 10px;
+}
+
 
 
 .submit-final {
@@ -373,7 +406,7 @@ nav{
     font-size: 20px;
     padding-left: 10px;
 }
-#row2 {
+input.row2 {
     flex: 620px;
 }
 .name-container-2 input::placeholder {
@@ -392,7 +425,7 @@ nav{
     flex: 1;
     font-size: 20px;
     margin-top: 10px;
-    padding-left: 2px;
+    
     border-radius: 15px;
 
     color: white;
@@ -437,6 +470,17 @@ nav{
     }
 }
 
+.terms:visited {
+    color: rgb(152, 114, 202);
+}
+.terms:hover {
+    color: rgb(177, 156, 204);
+}
+.terms:active {
+    color: rgb(136, 95, 191);
+}
+
+
 .submit-button-container {
     margin-top:  30px;
     height: 50px;
@@ -468,6 +512,8 @@ nav{
 .submit-button:active {
     background-color: #5414a2;
 }
+
+
 
 
 

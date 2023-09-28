@@ -93,12 +93,13 @@
 
                     <div class="inputbox_left">
                         <span>First Name :</span>
-                        <input type="text" placeholder="Eg: Kenny" required>
+                        <input type="text" placeholder="Eg: Kenny" pattern="[A-Za-z]+" minlength="2" required>
+                        <!-- [A-Za-z]+  allows only alphabets (both lowercase and uppercase) and ensures that at least one alphabet character is present. -->
                     </div>
 
                     <div class="inputbox_left">
                         <span>Last Name :</span>
-                        <input type="text" placeholder="Eg: Tan" required>
+                        <input type="text" placeholder="Eg: Tan" pattern="[A-Za-z]+" minlength="2" required>
                     </div>
 
 
@@ -139,7 +140,7 @@
 
                     <div class="inputbox">
                         <span>Name on card :</span>
-                        <input type="text" placeholder="Eg: Mr.Kenny" minlength="3" required>
+                        <input type="text" placeholder="Eg: Michael Miebach" pattern="[A-Za-z]+" minlength="3" required>
                     </div>
 
 
