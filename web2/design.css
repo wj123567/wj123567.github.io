@@ -973,13 +973,6 @@ h1.Pagetitle::after{
     padding: 20px;
 }
 
-
-.orderContainer .orderDetail .orderDetail2 img{
-    width:100px;
-    border-radius: 50%;
-    margin-top: 10px;
-}
-
 .orderContainer .orderDetail .orderDetail2{
     display: block;
     height: 150px;
@@ -987,6 +980,11 @@ h1.Pagetitle::after{
     width: 14.2857%;
 }
 
+.orderContainer .orderDetail .orderDetail2 img{
+    width:100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
 
 .orderContainer .orderDetail .orderDetail2>p{
     margin: 50px 20px;
@@ -1258,7 +1256,7 @@ h1.Pagetitle::after{
     .orderContainer .orderDetail .orderDetail2 #orderQuantity, 
     .orderContainer .orderDetail .orderDetail2 #start-date
     {
-        margin: 0;
+        margin:0 ;
     }
 
     .orderContainer .confirmOrder .confirmButton {
