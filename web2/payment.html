@@ -83,7 +83,7 @@
 
         <div class="payment_section">
             <div class="payment_container">
-                <form action="https://www.w3schools.com/action_page.php" method="post" enctype="application/x-www-form-urlencoded">
+                <form action="https://www.w3schools.com/action_page.php" method="post" enctype="application/x-www-form-urlencoded" id="paymentform">
                 
     
                 <div class="row">
@@ -110,12 +110,12 @@
     
                         <div class="inputbox_left">
                             <span>Diamond :</span>
-                            <input type="number" id="diamondInput" readonly required>
+                            <input type="number" id="diamondInput" name="diamondInput" readonly required>
                         </div>
     
                         <div class="inputbox_left">
                             <span>Amount to pay(RM):</span>
-                            <input type="text" id="paymentInput" readonly required>
+                            <input type="text" id="paymentInput" name="paymentInput" readonly required>
                         </div>
                    
     
@@ -164,7 +164,7 @@
                 </div>
                 <div class="formprocess">
                 <input type="submit" id="submit" value="Proceed" class="checkout_btn">
-                <input type="reset" value="Reset" class="reset_btn">
+                <input type="reset" value="Reset" class="reset_btn" onclick="resetForm()">
                 </div>
             </form>
     
@@ -172,6 +172,21 @@
     </div>
     
     <script>
+        function resetForm() {
+         // Prevent the default reset behavior
+        event.preventDefault();
+      
+        var diamondField = document.querySelector('input[name="diamondInput"]');
+        var oriDiamondAmt= diamondField.value;
+        var paymentField = document.querySelector('input[name="paymentInput"]');
+        var oriPaymentAmt = paymentField.value;
+        // Reset only specific fields (in this case, exclude read-only fields)
+        document.getElementById("paymentform").reset();
+    
+        // Restore the original value to the read-only field
+        diamondField.value = oriDiamondAmt;
+        paymentField.value = oriPaymentAmt;
+    }
     
         document.forms[0].onsubmit = function() {
           if (this.checkValidity()) {
