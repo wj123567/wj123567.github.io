@@ -1,3 +1,28 @@
+@font-face{
+    font-family: Playfair;
+    src: url('./font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: Skranji;
+    src: url('./font/Skranji/Skranji-Bold.ttf') format('truetype');
+         /* Skranji-Bold.ttf */
+}
+
+@font-face{
+    font-family: Exo;
+    src: url('./font/Exo/Exo-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: Young;
+    src: url('./font/Young_Serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Marker;
+    src: url('./font/Marker/PermanentMarker-Regular.ttf') format('truetype');
+}
 
 .box h1{
     
@@ -316,7 +341,7 @@ body .img_slider_container{      /*whole section of the website allocated for sl
 }
 /*video player*/
 .video_bg_1{
-    margin-top: 100px;
+
     background-image: url(./wz_image/homevid_bg1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -454,6 +479,7 @@ body .img_slider_container{      /*whole section of the website allocated for sl
     margin-right: 70px;
     padding-top: 20px;
     font-size: 45px;
+    font-family: Playfair, sans-serif;
     word-spacing: 20px;
     color: #5680e9;
     text-shadow: 10px -2px 5px rgb(0, 0, 128);
@@ -465,6 +491,7 @@ body .img_slider_container{      /*whole section of the website allocated for sl
     padding-left: 20px;
     word-spacing: 0px;
     font-size: 25px;
+    font-family: Playfair,sans-serif;
     text-decoration: none;
     padding-top: 0px;
     color: rgb(135, 206, 235);
@@ -549,7 +576,7 @@ body .img_slider_container{      /*whole section of the website allocated for sl
 .buddyContainer .card{
   
     width: 100%;
-    background-color: hsl(332, 66%, 55%);
+    background-color: hsl(241, 95%, 15%);
     border-radius: 10px;
     display: block;
 }
@@ -585,10 +612,10 @@ body .img_slider_container{      /*whole section of the website allocated for sl
     margin: 5px 3px;
 }
 .buddyContainer .card .content .buddyname h2{
+    font-family: Skranji, sans-serif;
     font-size: 1.5em;
     font-weight: 1000;
-    font-family: Josefin Sans,sans-serif;
-    color: hsl(266, 39%, 17%);
+    color: hsl(265, 23%, 68%);
     margin: 5px 0px;
     margin-left: auto;
     margin-right: auto;
@@ -619,7 +646,7 @@ cursor: pointer;
 }
 
 .buddy_btn_actstatus p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Exo;
     font-weight: bold;
     font-style: italic;
 }
@@ -634,7 +661,7 @@ cursor: pointer;
 }
 
 .buddy_btn_busystatus p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Exo,sans-serif;
     font-weight: bold;
     font-style: italic;
   
@@ -648,19 +675,25 @@ cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: Marker,sans-serif;
+    background-color:  rgba(93, 165, 223, 0.9);
+    /* rgba(93, 165, 223, 0.8) */
+    color: rgb(227, 27, 97);
+    text-shadow: 1px 2px 3px white,
+                1px 2px 5px rgb(253, 239, 47);
     padding: 10px 10px;
     cursor: pointer;
     transition: color 0.4s linear;
     position: relative;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.8);
     transition-duration: 0.3s;
     transition-property: box-shadow,transform;
  
 }
 
 .buddy_btn_detail:hover{
-    background: rgb(255, 182, 193) ;
+    background: rgb(191, 170, 215) ;
 }
 .buddy_btn_detail:active {
     color: hsla(252, 48%, 37%,0.5);
@@ -773,6 +806,9 @@ button#next{
 
 @media only screen and (max-width: 620px)
 {
+    .wrapper{
+        margin-bottom: 200px; 
+    }
     .testimonial_container img{
         width: 100px;
         height: 100px;
