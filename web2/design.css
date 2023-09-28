@@ -418,7 +418,7 @@ font-size: 1.2em;
 }
 
 
-/* gamebuddy */
+/* gamebuddy and boosting*/
 
 .Pagetitle{
     text-align: center;
@@ -523,15 +523,19 @@ h1.Pagetitle::after{
     margin: 5px 3px;
     padding-bottom: 5px;
 }
-
-.buddyContainer .card .content .buddyprice_rating h3{
+.buddyContainer .card .content .buddyprice_rating .price{
+    max-width: 130px;
+}
+.buddyContainer .card .content .buddyprice_rating .price h3{
     font-size: 1.1em;
     color: hsl(266, 39%, 17%);
     display: inline;
 }
 
-.buddyContainer .card .content .buddyprice_rating i{
-    color: hsl(266, 39%, 17%);
+.buddyContainer .card .content .buddyprice_rating .price img{
+    width: 20%;
+    vertical-align: bottom;
+    margin-right: 2px;
 }
 
 .buddyContainer .card .content .buddyprice_rating .rating i{
@@ -565,10 +569,6 @@ h1.Pagetitle::after{
     font-size: 0.9em;
     color: white;
 }
-
-/* .filter .filterContent li.active{
-    background: hsl(266, 39%, 17%);
-} */
 
 .filter .filterContent li.active a{
     color: yellow;
@@ -715,11 +715,15 @@ h1.Pagetitle::after{
 }
 
 .productDetail .productPrice{
+    width: 250px;
     margin: 5px 0;
 }
 
-.productDetail .productPrice i{
-    margin-right: 3px;
+.productDetail .productPrice img{
+    width: 15%;
+    margin-right: 2px;
+    display: inline;
+    vertical-align: bottom;
 }
 
 .productDetail .productPrice p{
@@ -927,9 +931,10 @@ h1.Pagetitle::after{
 }
 
 .buddyRecommend{
-    max-width: 1400px;
+    max-width: 90%;
     margin: 0 auto;
 }
+
 .buddyRecommend h2{
     font-size: 1.8em;
     margin: 2px 5px;
@@ -988,16 +993,22 @@ h1.Pagetitle::after{
     font-size: 1.1em;
     color: white;
 }
+
 .orderContainer .orderDetail .orderDetail2 .price{
-    margin: 50px 20px;
+    width: 150px;
+    margin: 40px 0px;
     color: white;
+}
+
+.orderContainer .orderDetail .orderDetail2 .price img{
+    width: 15%;
+    vertical-align: bottom;
 }
 
 .orderContainer .orderDetail .orderDetail2 .price p{
     display: inline;
     margin-left: 5px;
     font-size: 1.1em;
-
 }
 
 .orderContainer .orderDetail .orderDetail2 input{
@@ -1238,18 +1249,24 @@ h1.Pagetitle::after{
     }
 
     .orderContainer .orderDetail .orderDetail2 img{
-        margin-left: 20px;
         max-width: 50px;
     }
 
-    .orderContainer .orderDetail .orderDetail2 p{
-        padding-bottom: 20px;
+    .orderContainer .orderDetail .orderDetail2 p,
+    .orderContainer .orderDetail .orderDetail2 .price,
+    .orderContainer .orderDetail .orderDetail2 .price img
+    {
+        margin: 0;
     }
 
-    .orderContainer .orderDetail .orderDetail2 .price i{
-        display: inline;       
+    .orderContainer .orderDetail .orderDetail2 #orderQuantity, 
+    .orderContainer .orderDetail .orderDetail2 #start-date
+    {
+        margin: 0;
     }
-
+    .orderContainer .confirmOrder .confirmButton {
+        padding: 10px 0;
+    }
     .orderContainer .confirmOrder button{
         max-width: 120px;
         margin-top: 5px;
