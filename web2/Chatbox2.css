@@ -61,7 +61,7 @@ body{
 }
 
 #container{
-  background: #39373d;
+  background: hsl(252, 48%, 37%);
   padding-top: 4.5%;
 }
 
@@ -73,42 +73,33 @@ body{
 
 @media (max-width : 930px){
   #container{
-      padding-top: 9.5%;
+      padding-top: 60px;
   }
 }
 
-@media (max-width : 600px){
+@media (max-width : 460px){
   #container{
-      padding-top: 13.5%;
-  }
-}
-
-@media (max-width : 470px){
-  #container{
-      padding-top: 17.5%;
-  }
-}
-
-@media (max-width : 340px){
-  #container{
-      padding-top: 27.5%;
+      padding-top: 150px;
   }
 }
 
 aside{
-  background-color: #3b3e49;
+  margin-top: -3px;
+  background-color: hsl(332, 66%, 55%);
   display: inline-block;
   font-size: 15px;
   vertical-align: top;
   width: 23%;
-  height: 80%;
+  height: 100%;
 }
 
 aside input{
   line-height: 30px;
   padding-left: 15%;
   width: 100%;
-  background-color: #5e616a;
+  background-color: hsl(332, 81%, 50%);
+  border: none;
+  box-shadow: 0 2px 2px 0 black;
   border-radius: 3px;
   color: #fff;
 }
@@ -124,13 +115,10 @@ aside input::placeholder{
 }
 
 aside ul{           
-  min-height: 520px;                    
-  max-height: 520px;                  
+  min-height: 700px;                                      
   padding-left: 0;
   list-style-type: none;
   overflow-y: scroll;
-  min-height: 520px;
-  max-height: 520px;
 }
 
 aside li{
@@ -139,15 +127,17 @@ aside li{
 }
   
 aside li:hover{
-  background-color:#5e616a;
+  background-color:hsl(332, 55%, 68%);
   cursor: default;
 }
 
 h1{
+  color: white;
   margin:0;
 }
 
 aside li img{
+  width: 20%;
   margin-left: 20px;
   margin-right: 8px;
   border-radius: 50%;
@@ -172,6 +162,7 @@ aside li div{
 }
 
 main header{
+  height: 100px;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 2%
@@ -183,7 +174,8 @@ main header > *{
 }
   
 main header img:first-child{
-  border-radius:20%;
+  width: 10%;
+  border-radius: 50%;
 }
 
 main header img:last-child{
@@ -202,6 +194,10 @@ main{
 @media (max-width : 555px){
   main {
     width: 50%;
+  }
+
+  main header img:first-child{
+    width: 30%;
   }
 }
 
@@ -249,7 +245,7 @@ main header div{
 }
 
 #messageboxes .sender .messages{
-  background-color:#465661;
+  background-color:hsl(332, 66%, 55%);
 }
 
 #messageboxes .sender .messages::after{
@@ -260,7 +256,7 @@ main header div{
 }
 
 #messageboxes .gamebuddy .messages{
-  background-color:#582564;
+  background-color:hsl(266, 39%, 17%);
 }
 
 #messageboxes .gamebuddy .messages::after{
@@ -279,6 +275,15 @@ main header div{
 }
 
 .sendbutton {
-  margin-top: 0.5%;
+  cursor: pointer;
+  margin-top: 10px;
   float: right;
+  border: none;
+  background-color: hsl(332, 66%, 55%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sendbutton:hover{
+  background-color: hsl(332, 62%, 64%);
 }

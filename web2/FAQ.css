@@ -116,8 +116,7 @@ h1.biggesttext {
 }
 
 .buttonfaq:hover {
-    background-color: #fc1919;
-    color: black;
+    background-color: #44318d;
 }
 
 
@@ -156,7 +155,7 @@ h1.biggesttext {
 .answer {  
     display: none;
     color: rgb(255, 255, 255);
-    background-color: black;
+    background-color: #230e46;
     padding: 10px;
     padding-left: 5%;
 }
