@@ -1,0 +1,284 @@
+@font-face {
+  font-family: "Opensans";
+  src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+  src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+/*Chatbox css starts here*/
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background-color: #44318d;
+}
+
+@media (max-width : 1360px){
+  body{
+      padding-bottom: 20%;;
+  }
+}
+
+@media (max-width : 1162px){
+  body{
+      padding-bottom: 30%;;
+  }
+}
+
+@media (max-width : 1012px){
+  body{
+      padding-bottom: 40%;;
+  }
+}
+
+@media (max-width : 775px){
+  body{
+      padding-bottom: 50%;;
+  }
+}
+@media (max-width : 600px){
+  body{
+      padding-bottom: 60%;;
+  }
+}
+
+@media (max-width : 570px){
+  body{
+      padding-bottom: 70%;;
+  }
+}
+
+@media (max-width : 450px){
+  body{
+      padding-bottom: 80%;;
+  }
+}
+
+@media (max-width : 383px){
+  body{
+      padding-bottom: 110%;;
+  }
+}
+
+#container{
+  background: #39373d;
+  padding-top: 4.5%;
+}
+
+@media (max-width : 1350px){
+  #container{
+      padding-top: 6.5%;
+  }
+}
+
+@media (max-width : 930px){
+  #container{
+      padding-top: 9.5%;
+  }
+}
+
+@media (max-width : 600px){
+  #container{
+      padding-top: 13.5%;
+  }
+}
+
+@media (max-width : 470px){
+  #container{
+      padding-top: 17.5%;
+  }
+}
+
+@media (max-width : 340px){
+  #container{
+      padding-top: 27.5%;
+  }
+}
+
+aside{
+  background-color: #3b3e49;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: top;
+  width: 23%;
+  height: 80%;
+}
+
+aside input{
+  line-height: 30px;
+  padding-left: 15%;
+  width: 100%;
+  background-color: #5e616a;
+  border-radius: 3px;
+  color: #fff;
+}
+  
+@media (max-width : 333px){
+  aside input {
+    font-size: 70%;
+  }
+}
+
+aside input::placeholder{
+  color:#fff;
+}
+
+aside ul{           
+  min-height: 520px;                    
+  max-height: 520px;                  
+  padding-left: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+  min-height: 520px;
+  max-height: 520px;
+}
+
+aside li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+  
+aside li:hover{
+  background-color:#5e616a;
+  cursor: default;
+}
+
+h1{
+  margin:0;
+}
+
+aside li img{
+  margin-left: 20px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+aside li h1{
+  padding-top: 15%;
+  color:#fff;
+  font-size: 14px;
+}
+
+aside li div{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+@media (max-width : 315px){
+  aside li h1 {
+    font-size: 60%;
+  }
+}
+
+main header{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%
+}
+
+main header > *{
+  vertical-align: top;
+  display: inline-block;
+}
+  
+main header img:first-child{
+  border-radius:20%;
+}
+
+main header img:last-child{
+  margin-top: 8px;
+  width: 24px;
+}
+
+main{
+  width: 60%;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6%;
+}
+  
+@media (max-width : 555px){
+  main {
+    width: 50%;
+  }
+}
+
+main header h1{
+  font-size: 280%;
+}
+
+main header div{
+  margin-top: 1%;
+}
+
+#messageboxes{
+  padding-left: 0%;
+  list-style-type: none;
+  height: 370px;                      
+  border-top: 5px solid #000000;
+  border-bottom: 2px solid #000000;
+  word-wrap: normal;
+  overflow-y: scroll;
+}
+
+@media (max-width : 435px){
+  #messageboxes {
+    font-size: 60%;
+  }
+}
+  
+#messageboxes .messages{
+  padding: 10px;
+  color:#fcfcfc;
+  line-height: 20px;
+  max-width: 80%;
+  text-align: left;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#messageboxes li{
+  padding-top: 6%;
+}
+
+
+#messageboxes .sender{
+  text-align: right;
+}
+
+#messageboxes .sender .messages{
+  background-color:#465661;
+}
+
+#messageboxes .sender .messages::after{
+  content: "READ**";
+  font-size: 70%;
+  float: right;
+  padding-left: 1%;
+}
+
+#messageboxes .gamebuddy .messages{
+  background-color:#582564;
+}
+
+#messageboxes .gamebuddy .messages::after{
+  content: "READ**";
+  font-size: 70%;
+  float: right;
+  padding-left: 1%;
+}
+
+.typearea{
+  resize: none;
+  width: 430%; 
+  height: 100px;
+  max-width: 100%;
+  max-height: 70%;
+}
+
+.sendbutton {
+  margin-top: 0.5%;
+  float: right;
+}
