@@ -62,11 +62,20 @@
 
 .payment_container form .row .col .inputbox input{
     width: 100%;
-    border: 1px solid #ccc;
+    background-color: rgba(62, 0, 69, 0.7);
+    color: white;
+    box-shadow: 0px 0px 10px 5px rgb(0, 247, 255);
+    margin-top: 10px;
     padding: 10px 15px;
     font-size: 15px;
     text-transform: none;
 }
+
+.payment_container form .row .col .inputbox input::placeholder{
+    color: rgba(255, 255, 255,0.7);
+    font-style: italic;
+}
+
 
 .payment_container form .row .col .inputbox input:focus{
     border:1px solid #000;
@@ -78,7 +87,7 @@
 }
 
 .payment_container form .row .col .inputbox_left span{
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     display: block;
 }
 
@@ -86,15 +95,21 @@
 
 .payment_container form .row .col .inputbox_left input{
     width: 100%;
-    border: 1px solid #ccc;
+    background-color: rgba(62, 0, 69, 0.7);
+    color: white;   
+    box-shadow: 0px 0px 10px 5px rgb(0, 247, 255);
     padding: 10px 15px;
-    margin-bottom:2px;
     font-size: 15px;
     text-transform: none;
 }
 
+.payment_container form .row .col .inputbox_left input::placeholder{
+    color: rgba(255, 255, 255,0.7);
+    font-style: italic;
+}
+
 .payment_container form .row .col .inputbox_left input:focus{
-    border:1px solid #000;
+    border:2px solid #000;
 
 }
 
@@ -179,7 +194,7 @@ input:focus{
 }
 
 input:focus:valid,input#diamondInput:focus,input#paymentInput:focus{
-    background: rgb(220, 255, 220) url(wz_image/tick.png) right/contain no-repeat;
+    background: rgba(62, 0, 69, 0.7) url(wz_image/tick.png) right/contain no-repeat;
 }
 
 input:focus:invalid{
