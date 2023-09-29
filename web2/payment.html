@@ -95,19 +95,23 @@
     
                         <div class="inputbox_left">
                             <span>First Name :</span>
-                            <input type="text" placeholder="Eg: Kenny" pattern="[A-Za-z]+" required>
+                            <input type="text" placeholder="Eg: Kenny (Min:1 char|Max:20 chars)" pattern="[A-Za-z]{1,20}" required>
                             <!-- [A-Za-z]+  allows only alphabets (both lowercase and uppercase) and ensures that at least one alphabet character is present. -->
                         </div>
     
                         <div class="inputbox_left">
                             <span>Last Name :</span>
-                            <input type="text" placeholder="Eg: Tan" pattern="[A-Za-z]+" required>
+                            <input type="text" placeholder="Eg: Tan (Min:1 char|Max:20 chars)" pattern="[A-Za-z]{1,20}" required>
                         </div>
     
     
                         <div class="inputbox_left">
                             <span>Email Address :</span>
+<<<<<<< Updated upstream
                             <input type="email" placeholder="Eg: example@example.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+=======
+                            <input type="email" placeholder="Eg: example@example.com" pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+>>>>>>> Stashed changes
                         </div>
     
                         <div class="inputbox_left">
@@ -142,7 +146,7 @@
     
                         <div class="inputbox">
                             <span>Name on card :</span>
-                            <input type="text" placeholder="Eg: Michael Miebach" minlength="3" required>
+                            <input type="text" placeholder="Eg: Michael Miebach (Min:3 chars|Max:20 chars)" pattern="[A-Za-z]{3,20}" required>
                         </div>
     
     
