@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "Opensans";
+  src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+  src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')format('ttf');
+}
+/*Chatbox css starts here*/
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background-color: #44318d;
+}
+
+@media (max-width : 1360px){
+  body{
+      padding-bottom: 20%;;
+  }
+}
+
+@media (max-width : 1162px){
+  body{
+      padding-bottom: 30%;;
+  }
+}
+
+@media (max-width : 1012px){
+  body{
+      padding-bottom: 40%;;
+  }
+}
+
+@media (max-width : 775px){
+  body{
+      padding-bottom: 50%;;
+  }
+}
+@media (max-width : 600px){
+  body{
+      padding-bottom: 60%;;
+  }
+}
+
+@media (max-width : 570px){
+  body{
+      padding-bottom: 70%;;
+  }
+}
+
+@media (max-width : 450px){
+  body{
+      padding-bottom: 80%;;
+  }
+}
+
+@media (max-width : 383px){
+  body{
+      padding-bottom: 110%;;
+  }
+}
+
+#container{
+  background: hsl(252, 48%, 37%);
+  padding-top: 4.5%;
+}
+
+@media (max-width : 1350px){
+  #container{
+      padding-top: 6.5%;
+  }
+}
+
+@media (max-width : 930px){
+  #container{
+      padding-top: 60px;
+  }
+}
+
+@media (max-width : 460px){
+  #container{
+      padding-top: 150px;
+  }
+}
+
+aside{
+  margin-top: -3px;
+  background-color: hsl(332, 66%, 55%);
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: top;
+  width: 23%;
+  height: 100%;
+}
+
+aside input{
+  line-height: 30px;
+  padding-left: 15%;
+  width: 100%;
+  background-color: hsl(332, 81%, 50%);
+  border: none;
+  box-shadow: 0 2px 2px 0 black;
+  border-radius: 3px;
+  color: #fff;
+}
+  
+@media (max-width : 333px){
+  aside input {
+    font-size: 70%;
+  }
+}
+
+aside input::placeholder{
+  color:#fff;
+}
+
+aside ul{           
+  min-height: 700px;                                      
+  padding-left: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+}
+
+aside li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+  
+aside li:hover{
+  background-color:hsl(332, 55%, 68%);
+  cursor: default;
+}
+
+h1{
+  color: white;
+  margin:0;
+}
+
+aside li img{
+  width: 20%;
+  margin-left: 20px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+aside li h1{
+  padding-top: 15%;
+  color:#fff;
+  font-size: 14px;
+}
+
+aside li div{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+@media (max-width : 315px){
+  aside li h1 {
+    font-size: 60%;
+  }
+}
+
+main header{
+  height: 100px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%
+}
+
+main header > *{
+  vertical-align: top;
+  display: inline-block;
+}
+  
+main header img:first-child{
+  width: 10%;
+  border-radius: 50%;
+}
+
+main header img:last-child{
+  margin-top: 8px;
+  width: 24px;
+}
+
+main{
+  width: 60%;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6%;
+}
+  
+@media (max-width : 555px){
+  main {
+    width: 50%;
+  }
+
+  main header img:first-child{
+    width: 30%;
+  }
+}
+
+main header h1{
+  font-size: 280%;
+}
+
+main header div{
+  margin-top: 1%;
+}
+
+#messageboxes{
+  padding-left: 0%;
+  list-style-type: none;
+  height: 370px;                      
+  border-top: 5px solid #000000;
+  border-bottom: 2px solid #000000;
+  word-wrap: normal;
+  overflow-y: scroll;
+}
+
+@media (max-width : 435px){
+  #messageboxes {
+    font-size: 60%;
+  }
+}
+  
+#messageboxes .messages{
+  padding: 10px;
+  color:#fcfcfc;
+  line-height: 20px;
+  max-width: 80%;
+  text-align: left;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#messageboxes li{
+  padding-top: 6%;
+}
+
+
+#messageboxes .sender{
+  text-align: right;
+}
+
+#messageboxes .sender .messages{
+  background-color:hsl(332, 66%, 55%);
+}
+
+#messageboxes .sender .messages::after{
+  content: "READ**";
+  font-size: 70%;
+  float: right;
+  padding-left: 1%;
+}
+
+#messageboxes .gamebuddy .messages{
+  background-color:hsl(266, 39%, 17%);
+}
+
+#messageboxes .gamebuddy .messages::after{
+  content: "READ**";
+  font-size: 70%;
+  float: right;
+  padding-left: 1%;
+}
+
+.typearea{
+  resize: none;
+  width: 430%; 
+  height: 100px;
+  max-width: 100%;
+  max-height: 70%;
+}
+
+.sendbutton {
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+  border: none;
+  background-color: hsl(332, 66%, 55%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sendbutton:hover{
+  background-color: hsl(332, 62%, 64%);
+}

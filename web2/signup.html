@@ -24,6 +24,7 @@
                 <span id="userName">User
                     <ul class="dropdown">
                         <li><a href="Favorite.html">Favourite</a></li>
+                        <li><a href="Favorite.html">Chat</a></li>
                         <li><a href="Topup.html">Topup</a></li>
                         <li><a id="logout2">Logout</a></li>
                     </ul>
@@ -69,9 +70,9 @@
                         <label for="userplaceholder"><i class="fa-solid fa-user"></i></label>
                         <input type="text" placeholder="Username" id="userplaceholder" minlength="10" required> 
                     </div>
-                    <div class="input-field" id="emial">
+                    <div class="input-field" id="email">
                         <label for="emailplaceholder"><i class="fa-solid fa-envelope"></i></label>
-                        <input type="email" placeholder="Email" id="emailplaceholder" required>
+                        <input type="email" placeholder="Email" id="emailplaceholder" required pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                     </div>
 
                     <div class="input-field" id="password">

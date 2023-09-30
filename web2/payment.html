@@ -39,14 +39,14 @@
     <body>
 
         <nav class="navbar">
-            <div><a href="index.html"><img src="./wz_image/logo.png" alt="LOGO" class="logo"/></a></div>
-            <button class=button id="signup"><a href="signup.html">Sign Up</a></button>
-            <button class=button id="login"><a href="login.html">Login</a></button>
+            <div><a href="index.html"><img src="./image/logo.png" alt="LOGO" class="logo"/></a></div>
+            <button class="button" id="signup"><a href="signup.html">Sign Up</a></button>
+            <button class="button" id="login"><a href="login.html">Login</a></button>
             <div class="userLogin" id="logout">
                 <i class="fa-solid fa-circle-user"></i>
                 <span id="userName">User
                     <ul class="dropdown">
-                        <li><a href="#">Favourite</a></li>
+                          <li><a href="Favorite.html">Favourite</a></li>
                         <li><a href="Topup.html">Topup</a></li>
                         <li><a id="logout2">Logout</a></li>
                     </ul>
@@ -79,6 +79,7 @@
                 </div>
             </div>
             <script src="autocomplete2.js"></script>
+
         </nav>
 
         <div class="payment_section">
@@ -93,32 +94,31 @@
     
                         <div class="inputbox_left">
                             <span>First Name :</span>
-                            <input type="text" placeholder="Eg: Kenny" pattern="[A-Za-z]+" required>
+                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet)" pattern="[A-Za-z]{1,20}" required>
                             <!-- [A-Za-z]+  allows only alphabets (both lowercase and uppercase) and ensures that at least one alphabet character is present. -->
                         </div>
     
                         <div class="inputbox_left">
                             <span>Last Name :</span>
-                            <input type="text" placeholder="Eg: Tan" pattern="[A-Za-z]+" required>
+                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet) " pattern="[A-Za-z]{1,20}" required>
                         </div>
     
     
                         <div class="inputbox_left">
                             <span>Email Address :</span>
-                            <input type="email" placeholder="Eg: example@example.com" required>
+                            <input type="email" id="input_verify" placeholder="example@example.com" pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+
                         </div>
     
                         <div class="inputbox_left">
                             <span>Diamond :</span>
-                            <input type="number" id="diamondInput" name="diamondInput" readonly required>
+                            <input type="number"  id="diamondInput" name="diamondInput" readonly required>
                         </div>
     
                         <div class="inputbox_left">
                             <span>Amount to pay(RM):</span>
                             <input type="text" id="paymentInput" name="paymentInput" readonly required>
                         </div>
-                   
-    
                     </div>
     
                     <div class="col">
@@ -126,7 +126,7 @@
     
                         <div class="inputbox">
                             <span>Accepted card :</span>
-                            <img src="./wz_image/payment_cardphoto.png" alt="cardpayment_option">
+                            <img src="./image/payment_cardphoto.png" alt="cardpayment_option">
                         </div>
     
                         <div class="inputbox_select">
@@ -140,14 +140,14 @@
     
                         <div class="inputbox">
                             <span>Name on card :</span>
-                            <input type="text" placeholder="Eg: Michael Miebach" minlength="3" required>
+                            <input type="text" id="input_verify" placeholder="Min:3 | Max:20 (alphabet)" pattern="[A-Za-z]{3,20}" required>
                         </div>
     
     
                         <div class="inputbox">
                             <span>Card Number :</span>
-                            <input type="text" placeholder="Eg: 1234567812345678 (No space / '-' allowed)" inputmode="numeric"
-                            pattern="(^4[0-9]{12}(?:[0-9]{3})?$)|(^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$)" minlength="16" maxlength="19" 
+                            <input type="text" id="input_verify" placeholder="No space / '-' allowed" inputmode="numeric"
+                            pattern="(^4[0-9]{12}(?:[0-9]{3})?$)|(^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$)"  maxlength="16" 
                          required>
                     
                                  <!-- for visa and mastercard regular expression  eg 4848780062001715-->
@@ -156,7 +156,7 @@
     
                         <div class="inputbox">
                             <span>Card Expiration Date</span>
-                            <input type="month" id="expirydate" required>
+                            <input type="month" id="expirydate input_verify" required>
     
                         </div>
     

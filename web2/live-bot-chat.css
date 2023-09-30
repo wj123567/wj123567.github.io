@@ -1,54 +1,6 @@
 @charset "utf-8";
 
-.open-button > img {
-    width: 100px;
-}
-.open-button {
-    width: fit-content;
 
-    color: rgb(213, 203, 221);
-    background-color: hsl(266, 39%, 17%);
-
-    padding: 10px 10px;
-
-    position: absolute;
-    right: 30px;
-    bottom: 230px;
-
-    border-radius:70px;
-    border: none;
-    border-top: 2px solid rgb(35, 12, 74);
-    border-right: 2px solid rgb(35, 12, 74);
-
-    transition: padding 0.5s, font-size 0.5s; 
-
-}
-.open-button:hover {
-    cursor: pointer;
-
-    padding: 20px 20px;
-
-    color: rgb(226, 226, 226);
-    background-color: rgb(42, 14, 76);
-}
-.open-button:active {
-    background-color: rgb(63, 17, 119);
-}
-@media only screen and (max-width: 996px){
-    .open-button {
-        bottom: 300px;
-    }
-}
-@media only screen and (max-width: 650px){
-    .open-button {
-        bottom: 330px;
-    }
-}
-@media only screen and (max-width: 450px){
-    .open-button {
-        bottom: 340px;
-    }
-}
 /* livebottest */
 
 

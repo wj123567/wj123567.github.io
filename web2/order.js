@@ -30,8 +30,12 @@ const popupText =document.getElementById("popupText");
 confirmOrder.addEventListener("click", function(){
     popupOrder.classList.add("active");
     if(orderQuantity.value>0&&orderQuantity.value<=20 && dateInput.value != ''){
-        popupTextTitle.innerHTML=("Thank For Purchases")
+        popupTextTitle.innerHTML=("Thanks For Purchases")
         popupText.innerHTML=("Our buddy will contact you in a while")
+        closePopup.addEventListener("click",function(){
+            popupOrder.classList.remove("active");
+            history.back();
+        })
     }else if(orderQuantity.value<=0){
         popupTextTitle.innerHTML=("Invalid Quantity")
         popupText.innerHTML=("Quantity must be at least one")
