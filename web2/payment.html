@@ -94,13 +94,13 @@
     
                         <div class="inputbox_left">
                             <span>First Name :</span>
-                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet)" pattern="[A-Za-z]{1,20}" required>
+                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet)" pattern="^[A-Za-z ]{1,20}$" required>
                             <!-- [A-Za-z]+  allows only alphabets (both lowercase and uppercase) and ensures that at least one alphabet character is present. -->
                         </div>
     
                         <div class="inputbox_left">
                             <span>Last Name :</span>
-                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet) " pattern="[A-Za-z]{1,20}" required>
+                            <input type="text" id="input_verify" placeholder="Min:1 | Max:20 (alphabet) " pattern="[A-Za-z ]{1,20}$" required>
                         </div>
     
     
@@ -140,7 +140,7 @@
     
                         <div class="inputbox">
                             <span>Name on card :</span>
-                            <input type="text" id="input_verify" placeholder="Min:3 | Max:20 (alphabet)" pattern="[A-Za-z]{3,20}" required>
+                            <input type="text" id="input_verify" placeholder="Min:3 | Max:20 (alphabet)" pattern="[A-Za-z ]{3,40}$" required>
                         </div>
     
     
@@ -188,16 +188,24 @@
         paymentField.value = oriPaymentAmt;
     }
     
-        document.forms[0].onsubmit = function() {
-          if (this.checkValidity()) {
-          confirm ("Confirm transaction?");
-          alert("Payment Done");
-          window.location.href = "index.html";
-          return false; 
-          /* prevent the form from actually submitting. since we do not have actual server to receive form data*/
-          }
-       }
-       //validity test all passes then print tis message, if not will ask to fill in those required field
+    document.forms[0].onsubmit = function(event) {
+    if (!this.checkValidity()) {
+        // Form is not valid; let the default form submission happen.
+        return false;
+    }
+
+    var confirmed = confirm("Confirm transaction?");
+    if (!confirmed) {
+        // User clicked "Cancel" on the confirmation dialog.
+        // Prevent the default form submission and return to the payment page.
+        event.preventDefault();
+       
+    } else {
+        // User clicked "OK" on the confirmation dialog.
+        alert("Payment Done");
+        window.location.href = "index.html";
+    }
+};
     </script>
     
 
