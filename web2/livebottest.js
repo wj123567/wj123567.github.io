@@ -8,7 +8,7 @@ const bot_msg = [
     "I like to play games... But I don't know how to play!",
     "Sorry if my answers are not relevant. :)",
     "Yo! Whats up!",
-    "Here is live bot chat, we will be contact in you soon!"];
+    "Here is live bot chat! May I know what is your problem?"];
 
 const bot_img = "gamesenseiimage/bot.png";
 const user_img = "gamesenseiimage/user.png";
