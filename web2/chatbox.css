@@ -3,7 +3,7 @@
   display: flex;
   bottom: 20px;
   right: 20px;
-  max-width: 500px;
+  max-width: 300px;
   display: none;
   z-index: 2;
 }
@@ -18,12 +18,12 @@
 .chat-label {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 3%;
   background-color: #d83f87;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
 }
 
 .thumbnail {
@@ -44,13 +44,16 @@
 
 .user-message {
   background-color: #cd77ff;
-  text-align: right;
+  text-align: left;
+  max-width: 70%;
+  margin-left: auto;
 }
 
 .bot-message {
   background-color: #a4b3b6;
   text-align: left;
   margin-right: auto; /* Left justify receiver messages */
+  max-width: 70%;
 }
 
 /* Adjust send button and input box styles */
