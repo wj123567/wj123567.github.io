@@ -1,5 +1,16 @@
+//text rotator
+var text = document.getElementById('text');
+        var word = text.getElementsByTagName('span');
 
+        var i=0;
 
+        function rotator(){
+        word[i].style.display ='none';
+        i = (i+1) % word.length;
+        word[i].style.display ='initial';
+
+        }
+        setInterval(rotator,1500);
 
 // image slider
 var slides =document.querySelectorAll('.slide'); //the image
@@ -90,32 +101,33 @@ const testimonials=[
 ];
 
 //current slide
-    let i =0;
+    let a =0;
 // total slide
-    let j = testimonials.length;
+    let b = testimonials.length;
 
     let testimonialContainer=document.getElementById("testimonial_container");
     let nextBtn = document.getElementById("next");
     let prevBtn = document.getElementById("prev");
 
     nextBtn.addEventListener("click" , () =>{
-        i=(j+i+1)%j;
+        a=(b+a+1)%b;
         displayTestimonial();
     });
 
     prevBtn.addEventListener("click" , () =>{
-        i=(j+i-1)%j;
+        a=(b+a-1)%b;
         displayTestimonial();
     });
 
 
     let displayTestimonial = () => {
        testimonialContainer.innerHTML= `
-       <h2>${testimonials[i].title}</h2>
-       <p>${testimonials[i].testimonial}</p>
-       <img src=${testimonials[i].image}>
-       <h3>${testimonials[i].name}</h3>
-       <h6>${testimonials[i].job}</h6>
+       <h2>${testimonials[a].title}</h2>
+       <p>${testimonials[a].testimonial}</p>
+       <img src=${testimonials[a].image}>
+       <h3>${testimonials[a].name}</h3>
+       <h6>${testimonials[a].job}</h6>
         `;
-    }
+    };
+
     window.onload = displayTestimonial;
