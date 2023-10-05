@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function(){
             errormsg.innerHTML = "Registration successfully";
             signOut(auth);
             window.setTimeout(function(){
-              window.location.href = "login.html";}, 3000);
+              window.location.replace("login.html");}, 3000);
           })
           .catch((error) => {
             const errorCode = error.code;
